@@ -7,4 +7,66 @@ Starts on: 08/27/2019
 
 */
 
+/* VARIABLES */
+:root {
+  /* Colors */
+  --color-primary: #4D6863;
+  --color-text-grey-dark-1: #333;
+  --color-text-grey-light: #989898;
+  --color-text-grey-light-2: #EBEBEB;
+  --color-white: #FFFFFF;
+  --color-input: #C2BCAD;
+
+  /* Font-Families */
+  --font-unna: 'Unna', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-monserrat: 'Montserrat', sans-serif;
+}
+
 /* BASIC RESETS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem == 10px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* inherited from HTML */
+}
+
+body {
+  background-color: var(--color-white);
+  font-family: var(--font-lato);
+  line-height: 1.6;
+  color: var(--color-text-grey-dark-1);
+  /* position: relative; */
+}
+
+a:visited,
+a:link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:link:active,
+a:visited:active {
+  color: currentColor;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+::selection {
+  background-color: #8CD790;
+  color: var(--color-white);
+}
