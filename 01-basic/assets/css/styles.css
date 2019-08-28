@@ -31,7 +31,8 @@ Starts on: 08/27/2019
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 1rem == 10px */
+  font-size: 62.5%;
+  /* 1rem == 10px */
 }
 
 *,
@@ -69,4 +70,26 @@ li {
 ::selection {
   background-color: #8CD790;
   color: var(--color-white);
+}
+
+.main-header {
+  height: 100vh;
+
+}
+
+.main-header .container {
+  padding: 3.5rem 13rem;
+  background-image: url(../images/img-menu-bg.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  /* empty */
+}
+
+.navbar__items {
+  display: flex;
 }
