@@ -11,6 +11,7 @@ Starts on: 08/27/2019
 :root {
   /* Colors */
   --color-primary: #4D6863;
+  --color-secondary: #D7FFF1;
   --color-text-grey-dark-1: #333;
   --color-text-grey-light: #989898;
   --color-text-grey-light-2: #EBEBEB;
@@ -68,7 +69,7 @@ li {
 }
 
 ::selection {
-  background-color: #8CD790;
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -78,7 +79,7 @@ li {
 }
 
 .main-header .container {
-  padding: 3.5rem 13rem;
+  padding: 3.5rem 10%;
   background-image: url(../images/img-menu-bg.png);
   background-repeat: no-repeat;
   display: flex;
@@ -86,10 +87,31 @@ li {
   justify-content: space-between;
 }
 
+.logo {
+  flex-grow: 1;
+}
+
 .navbar {
-  /* empty */
+  flex-grow: 2;
 }
 
 .navbar__items {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__items {
+  display: flex;
+}
+
+.navbar__items--item a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  transition: all .3s;
+}
+
+.navbar__items--item a:hover {
+  color: var(--color-secondary);
+  transition: all .3s;
 }
