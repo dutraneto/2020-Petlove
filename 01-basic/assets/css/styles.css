@@ -73,6 +73,11 @@ li {
   color: var(--color-white);
 }
 
+@media only screen and (max-width: 1280px) {
+  body {
+    width: 1280px;
+  }
+}
 
 /* HEADER */
 .main-header {
