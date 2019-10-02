@@ -88,12 +88,13 @@ li {
   padding: 3.5rem 10%;
   background-image: url(../images/img-menu-bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
+.image {
   flex-grow: 1;
 }
 
@@ -111,7 +112,7 @@ li {
   display: flex;
 }
 
-.navbar__items--item a {
+.navbar__items-item a {
   color: var(--color-white);
   font-family: var(--font-monserrat);
   font-weight: 500;
@@ -120,7 +121,7 @@ li {
   transition: all .3s;
 }
 
-.navbar__items--item a:hover {
+.navbar__items-item a:hover {
   color: var(--color-secondary);
   transition: all .3s;
 }
