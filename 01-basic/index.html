@@ -1,105 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<noscript>
+			<div class="alert alert-danger" role="alert">
+				You need to enable JavaScript to run this app.
+			</div>
+		</noscript>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <noscript>
-        <div class="alert alert-danger" role="alert">
-            You need to enable JavaScript to run this app.
-        </div>
-    </noscript>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- Robots.txt -->
+		<meta name="robots" content="index, follow" />
 
-    <!-- Robots.txt -->
-    <meta name="robots" content="index, follow" />
+		<!-- Info -->
+		<title>PetLove</title>
+		<meta name="description" content="Your smartest way to buy pet stuffs" />
+		<meta name=" keywords" content="e-commerce, pets" />
 
-    <!-- Info -->
-    <title>PetLove</title>
-    <meta name="description" content="Your smartest way to buy pet stuffs" />
-    <meta name=" keywords" content="e-commerce, pets" />
+		<!-- Recommended favicon format -->
+		<link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- Recommended favicon format -->
-    <link rel="icon" type="image/png" href="favicon.png" />
+		<!-- Apple Touch Icon (at least 200x200px) -->
+		<!-- TODO: you must provide relative path -->
+		<link rel="apple-touch-icon" sizes="192x192" href="tile-192X192.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="tile-512x512.png" />
 
-    <!-- Apple Touch Icon (at least 200x200px) -->
-    <!-- TODO: you must provide relative path -->
-    <link rel="apple-touch-icon" sizes="192x192" href="tile-192X192.png" />
-    <link rel="apple-touch-icon" sizes="512x512" href="tile-512x512.png" />
+		<!-- To run web application in full-screen -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <!-- To run web application in full-screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+		<!-- Has no effect unless you have the previous meta tag -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- Status Bar Style (see Supported Meta Tags below for available values) -->
 
-    <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
-    <!-- Has no effect unless you have the previous meta tag -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+		<!-- THEME COLORS FOR ANDROID -->
+		<meta name="theme-color" content="black" />
 
-    <!-- THEME COLORS FOR ANDROID -->
-    <meta name="theme-color" content="black" />
+		<!-- Microsoft Tiles -->
+		<meta name="msapplication-config" content="browserconfig.xml" />
 
-    <!-- Microsoft Tiles -->
-    <meta name="msapplication-config" content="browserconfig.xml" />
+		<!-- Helps prevent duplicate content issues -->
+		<link rel="canonical" href="https://petlove.com" />
 
-    <!-- Helps prevent duplicate content issues -->
-    <link rel="canonical" href="https://petlove.com" />
+		<!-- MANIFEST -->
+		<link rel="manifest" href="./manifest.json" />
 
-    <!-- MANIFEST -->
-    <link rel="manifest" href="./manifest.json" />
+		<!-- Facebook Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://petlove.com" />
+		<meta property="og:title" content="PetLove" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content="Your smartest way to buy pet stuffs" />
+		<meta property="og:site_name" content="PetLove - Your smartest way to buy pet stuffs" />
+		<meta property="og:locale" content="en_US" />
+		<!-- Next tags are optional but recommended -->
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 
-    <!-- Facebook Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://petlove.com" />
-    <meta property="og:title" content="PetLove" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="Your smartest way to buy pet stuffs" />
-    <meta property="og:site_name" content="PetLove - Your smartest way to buy pet stuffs" />
-    <meta property="og:locale" content="en_US" />
-    <!-- Next tags are optional but recommended -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+		<!-- Twitter card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@petlove" />
+		<meta name="twitter:creator" content="@glacial" />
+		<meta name="twitter:url" content="https://petlove.com" />
+		<meta name="twitter:title" content="Your smartest way to buy pet stuffs" />
+		<meta name="twitter:description" content="PetLove - Your smartest way to buy pet stuffs" />
+		<meta
+			name="twitter:image"
+			content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+		/>
+		<!-- Styles -->
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<link rel="stylesheet" href="./assets/css/normalize.css" />
 
-    <!-- Twitter card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@petlove" />
-    <meta name="twitter:creator" content="@glacial" />
-    <meta name="twitter:url" content="https://petlove.com" />
-    <meta name="twitter:title" content="Your smartest way to buy pet stuffs" />
-    <meta name="twitter:description" content="PetLove - Your smartest way to buy pet stuffs" />
-    <meta name="twitter:image"
-        content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+		<!-- Fonts: Monserrat & Unna & Lato -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:500,700|Unna:400,700"
+			rel="stylesheet"
+		/>
+	</head>
 
-    <!-- Fonts: Monserrat & Unna & Lato -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:500,700|Unna:400,700"
-        rel="stylesheet" />
-</head>
-
-<body>
-    <header class="main-header">
-        <div class="container">
-            <a href="./" title="Home page" class="image">
-                <picture>
-                    <img class="logo" src="assets/images/petlove-logo.png" alt="Site Logo" />
-                </picture>
-            </a>
-            <nav class="navbar">
-                <ul class="navbar__items">
-                    <li class="navbar__items-item"><a href="">DOGS</a></li>
-                    <li class="navbar__items-item"><a href="">CATS</a></li>
-                    <li class="navbar__items-item"><a href="">BIRDS</a></li>
-                    <li class="navbar__items-item"><a href="">FISH</a></li>
-                    <li class="navbar__items-item"><a href="">SMALL PETS</a></li>
-                    <li class="navbar__items-item"><a href="">SERVICES</a></li>
-                    <li class="navbar__items-item"><a href="">ABOUT US</a></li>
-                    <li class="navbar__items-item">
-                        <a href=""><img src="./assets/images/bag-icon.png" alt="Image bag" /></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-</body>
-
+	<body>
+		<header class="main-header">
+			<div class="container">
+				<div class="row">
+					<a href="./" title="Home page" class="image">
+						<picture>
+							<img class="logo" src="assets/images/petlove-logo.png" alt="Site Logo" />
+						</picture>
+					</a>
+					<nav class="navbar">
+						<ul class="navbar__items">
+							<li class="navbar__items-item"><a href="">DOGS</a></li>
+							<li class="navbar__items-item"><a href="">CATS</a></li>
+							<li class="navbar__items-item"><a href="">BIRDS</a></li>
+							<li class="navbar__items-item"><a href="">FISH</a></li>
+							<li class="navbar__items-item"><a href="">SMALL PETS</a></li>
+							<li class="navbar__items-item"><a href="">SERVICES</a></li>
+							<li class="navbar__items-item"><a href="">ABOUT US</a></li>
+							<li class="navbar__items-item">
+								<a href=""><img src="./assets/images/bag-icon.png" alt="Image bag"/></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+	</body>
 </html>
