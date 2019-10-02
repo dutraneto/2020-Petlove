@@ -9,119 +9,119 @@ Starts on: 08/27/2019
 
 /* VARIABLES */
 :root {
-  /* Colors */
-  --color-primary: #4D6863;
-  --color-secondary: #D7FFF1;
-  --color-text-grey-dark-1: #333;
-  --color-text-grey-light: #989898;
-  --color-text-grey-light-2: #EBEBEB;
-  --color-white: #FFFFFF;
-  --color-input: #C2BCAD;
+    /* Colors */
+    --color-primary: #4D6863;
+    --color-secondary: #D7FFF1;
+    --color-text-grey-dark-1: #333;
+    --color-text-grey-light: #989898;
+    --color-text-grey-light-2: #EBEBEB;
+    --color-white: #FFFFFF;
+    --color-input: #C2BCAD;
 
-  /* Font-Families */
-  --font-unna: 'Unna', sans-serif;
-  --font-lato: 'Lato', sans-serif;
-  --font-monserrat: 'Montserrat', sans-serif;
+    /* Font-Families */
+    --font-unna: 'Unna', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+    --font-monserrat: 'Montserrat', sans-serif;
 }
 
 /* BASIC RESETS */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /* 1rem == 10px */
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem == 10px */
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  /* inherited from HTML */
+    box-sizing: inherit;
+    /* inherited from HTML */
 }
 
 body {
-  background-color: var(--color-white);
-  font-family: var(--font-lato);
-  line-height: 1.6;
-  color: var(--color-text-grey-dark-1);
-  /* position: relative; */
+    background-color: var(--color-white);
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    color: var(--color-text-grey-dark-1);
+    /* position: relative; */
 }
 
 a:visited,
 a:link {
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
 }
 
 a:link:active,
 a:visited:active {
-  color: currentColor;
+    color: currentColor;
 }
 
 ul,
 ol,
 li {
-  list-style: none;
+    list-style: none;
 }
 
 ::selection {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 @media only screen and (max-width: 1280px) {
-  body {
-    width: 1280px;
-  }
+    body {
+        width: 1280px;
+    }
 }
 
 /* HEADER */
 .main-header {
-  height: 100vh;
+    height: 100vh;
 }
 
 .main-header .container {
-  padding: 3.5rem 10%;
-  background-image: url(../images/img-menu-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 3.5rem 10%;
+    background-image: url(../images/img-menu-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .image {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .navbar {
-  flex-grow: 2;
+    flex-grow: 2;
 }
 
 .navbar__items {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar__items {
-  display: flex;
+    display: flex;
 }
 
 .navbar__items-item a {
-  color: var(--color-white);
-  font-family: var(--font-monserrat);
-  font-weight: 500;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  transition: all .3s;
+    color: var(--color-white);
+    font-family: var(--font-monserrat);
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all .3s;
 }
 
 .navbar__items-item a:hover {
-  color: var(--color-secondary);
-  transition: all .3s;
+    color: var(--color-secondary);
+    transition: all .3s;
 }
