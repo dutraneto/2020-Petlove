@@ -10,13 +10,13 @@ Starts on: 08/27/2019
 /* VARIABLES */
 :root {
     /* Colors */
-    --color-primary: #4D6863;
-    --color-secondary: #D7FFF1;
+    --color-primary: #4d6863;
+    --color-secondary: #d7fff1;
     --color-text-grey-dark-1: #333;
     --color-text-grey-light: #989898;
-    --color-text-grey-light-2: #EBEBEB;
-    --color-white: #FFFFFF;
-    --color-input: #C2BCAD;
+    --color-text-grey-light-2: #ebebeb;
+    --color-white: #ffffff;
+    --color-input: #c2bcad;
 
     /* Font-Families */
     --font-unna: 'Unna', sans-serif;
@@ -105,6 +105,7 @@ li {
 
 .navbar__items-item:not(:last-child) {
     margin-right: 2em;
+    text-transform: uppercase;
 }
 
 .navbar__items-item a {
@@ -113,17 +114,16 @@ li {
     font-weight: 500;
     font-size: 0.75rem;
     letter-spacing: 1px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .navbar__items-item a:hover {
     color: var(--color-secondary);
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 /* medias */
 @media only screen and (max-width: 1024px) {
-
     .main-header .container .row {
         padding: 2rem 0;
     }
