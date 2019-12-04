@@ -73,15 +73,15 @@ li {
 
 /* HEADER */
 .main-header {
-    height: 100vh;
+    /* height: auto; */
+    position: relative;
+    z-index: 999;
 }
 
 .main-header .container {
+    background-color: transparent;
     display: flex;
     justify-content: center;
-    background-image: url(../images/img-menu-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .main-header .container .row {
@@ -141,4 +141,29 @@ li {
     .navbar__items {
         display: none;
     }
+}
+
+/* HOME-HERO */
+.hero {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    background-image: url(../images/hero-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__slides {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    margin-left: 7.5rem;
+    transform: translateY(-50%);
 }
