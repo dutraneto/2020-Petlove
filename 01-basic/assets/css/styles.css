@@ -152,42 +152,41 @@ li {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 90vh;
+    min-height: 83vh;
     background-image: url(../images/hero-bg.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero__slides {
-    position: relative;
     display: flex;
     flex-direction: column;
-    top: 50%;
     margin-left: 7.5rem;
-    transform: translateY(-50%);
 }
 
 .hero__slides-heading p {
     font-family: var(--font-monserrat);
     color: var(--color-white);
     font-size: 0.75rem;
-    line-height: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 .hero__slides-heading h1 {
     font-family: var(--font-unna);
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: -3px;
     color: var(--color-white);
     word-break: break-word;
-    line-height: 4.5rem;
+    line-height: 4rem;
     margin: 1rem 0 2rem 0;
-    width: 40%;
+    width: 50%;
 }
 
 a.btn {
@@ -195,15 +194,45 @@ a.btn {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 1rem 2.75rem;
+    padding: 0.7rem 2.2rem;
     background-color: transparent;
     border: 2px solid var(--color-white);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     align-self: flex-start;
+    letter-spacing: 2px;
 }
 
-.btn:hover {
+a.btn:hover {
     background-color: var(--color-white);
     color: currentColor;
+}
+
+.hero__controls {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 5%;
+    transform: translateX(150%);
+}
+
+.hero__controls-item {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__controls-item:hover {
+    background-color: var(--color-white);
+}
+
+.hero__controls .active {
+    background-color: var(--color-white);
+}
+
+.hero__controls-item:not(:last-child) {
+    margin-right: 10px;
 }
