@@ -122,27 +122,6 @@ li {
     transition: all 0.3s;
 }
 
-/* medias */
-@media only screen and (max-width: 1024px) {
-    .main-header .container .row {
-        padding: 2rem 0;
-    }
-
-    .logo {
-        width: 8.75rem;
-    }
-
-    .navbar__items-item:not(:last-child) {
-        margin-right: 1em;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar__items {
-        display: none;
-    }
-}
-
 /* HOME-HERO */
 .hero {
     position: absolute;
@@ -152,11 +131,12 @@ li {
     left: 0;
     bottom: 0;
     right: 0;
-    min-height: 83vh;
+    height: 83vh;
     background-image: url(../images/hero-bg.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: scale-down;
     opacity: 0.9;
     display: flex;
     flex-direction: column;
@@ -235,4 +215,76 @@ a.btn:hover {
 
 .hero__controls-item:not(:last-child) {
     margin-right: 10px;
+}
+
+/* Header medias */
+@media only screen and (max-width: 1096px) {
+    .main-header .container .row {
+        padding: 2rem 0;
+    }
+
+    .logo {
+        width: 8.75rem;
+    }
+
+    .navbar__items-item:not(:last-child) {
+        margin-right: 1em;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero__slides {
+        margin-left: 5rem;
+    }
+
+    .hero__slides-heading h1 {
+        font-size: 3.1rem;
+        margin: 0.5rem 0 1.5rem 0;
+    }
+
+    .hero__controls {
+        transform: translateX(130%);
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    .navbar__items {
+        display: none;
+    }
+
+    .hero {
+        min-height: 80vh;
+        background-position: top right 40%;
+    }
+
+    .hero__slides {
+        margin-left: 4rem;
+    }
+
+    .hero__controls {
+        transform: translateX(100%);
+    }
+
+    .hero__slides-heading h1 {
+        font-size: 2.75rem;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .hero__slides {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .hero__controls {
+        display: none;
+    }
+
+    .hero__slides-heading h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
 }
