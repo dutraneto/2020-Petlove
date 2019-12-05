@@ -154,23 +154,12 @@ li {
 
 /* HOME-HERO */
 .hero {
+    background-image: linear-gradient(#080808, 50%, var(--color-primary));
     position: absolute;
+    height: 80vh;
     width: 100%;
-    z-index: -1;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    height: 83vh;
-    background-image: url(../images/hero-bg.png);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -o-object-fit: scale-down;
-    object-fit: scale-down;
-    opacity: 0.9;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -179,6 +168,7 @@ li {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .hero__slides {
@@ -199,6 +189,7 @@ li {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: normal;
+    margin-bottom: 1rem;
 }
 
 .hero__slides-heading h1 {
@@ -208,7 +199,8 @@ li {
     color: var(--color-white);
     word-break: break-word;
     line-height: 4rem;
-    margin: 1rem 0 2rem 0;
+    margin: 0;
+    margin-bottom: 2rem;
     width: 50%;
 }
 
@@ -217,7 +209,7 @@ a.btn {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 0.7rem 2.2rem;
+    padding: 0.8rem 2.2rem;
     background-color: transparent;
     border: 2px solid var(--color-white);
     cursor: pointer;
