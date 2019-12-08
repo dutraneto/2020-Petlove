@@ -154,25 +154,64 @@ li {
 
 /* HOME-HERO */
 .hero {
-    /* overflow: hidden; */
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__slides-container {
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    position: relative;
     height: inherit;
-    align-content: center;
-    justify-content: center;
+    display: flex;
+}
+
+.hero__slides-btn {
+    position: absolute;
+    top: 50%;
+    width: 1.2vmax;
+    height: 1.2vmax;
+    z-index: 1;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: transparent;
+    border: 2px solid var(--color-text-grey-light-2);
+    cursor: pointer;
+    filter: opacity(0.5);
+    transition: filter 0.2s ease-in;
+}
+
+.hero__slides-btn:hover {
+    filter: opacity(0.9);
+}
+
+.hero__slides-btn--left {
+    left: 1rem;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero__slides-btn--right {
+    right: 1rem;
+    border-top: none;
+    border-left: none;
+}
+
+.hero__slides {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .hero__slides-description {
-    margin-left: 7.5rem;
+    top: 0;
+    left: 0;
+    margin-left: 7rem;
+    transform: translateY(100%);
 }
 
 .hero__slides-description p {
@@ -221,11 +260,14 @@ a.btn:hover {
 
 .hero__slides-image img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .hero__controls {
@@ -238,15 +280,13 @@ a.btn:hover {
     -ms-flex-direction: row;
     flex-direction: row;
     bottom: 5%;
-    -webkit-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    transform: translateX(200%);
+    margin-left: 7rem;
 }
 
 .hero__controls-item {
     width: 0.5rem;
     height: 0.5rem;
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-text-grey-light-2);
     border-radius: 50%;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
@@ -254,12 +294,16 @@ a.btn:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.hero__controls-item:hover {
-    background-color: var(--color-white);
+.move {
+    background-position: 10% 50%;
 }
 
-.hero__controls .active {
-    background-color: var(--color-white);
+.hero__controls-item:hover {
+    background-color: var(--color-text-grey-light-2);
+}
+
+.hero__controls .current-slide {
+    background-color: var(--color-text-grey-light-2);
 }
 
 .hero__controls-item:not(:last-child) {
@@ -280,7 +324,7 @@ a.btn:hover {
         margin-right: 1em;
     }
 
-    .hero {
+    /* .hero {
         height: 60vh;
     }
 
@@ -297,7 +341,7 @@ a.btn:hover {
         -webkit-transform: translateX(130%);
         -ms-transform: translateX(130%);
         transform: translateX(130%);
-    }
+    } */
 }
 
 @media only screen and (max-width: 856px) {
@@ -305,7 +349,7 @@ a.btn:hover {
         display: none;
     }
 
-    .hero {
+    /* .hero {
         min-height: 80vh;
         background-position: top right 40%;
     }
@@ -323,10 +367,10 @@ a.btn:hover {
     .hero__slides-heading h1 {
         font-size: 2.75rem;
         width: 70%;
-    }
+    } */
 }
 
-@media only screen and (max-width: 540px) {
+/* @media only screen and (max-width: 540px) {
     .hero__slides {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -340,4 +384,4 @@ a.btn:hover {
         font-size: 2rem;
         width: 100%;
     }
-}
+} */
