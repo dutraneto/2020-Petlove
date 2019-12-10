@@ -50,7 +50,6 @@ body {
     font-family: var(--font-lato);
     line-height: 1.6;
     color: var(--color-text-grey-dark-1);
-    /* position: relative; */
 }
 
 a:visited,
@@ -158,25 +157,23 @@ li {
     z-index: -1;
     top: 0;
     left: 0;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    background: #222;
 }
 
-.hero__slides-container {
-    overflow: hidden;
+.hero__carrousel {
     position: relative;
-    height: inherit;
-    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
-.hero__slides-btn {
+.hero__carrousel-btn {
     position: absolute;
     top: 50%;
-    width: 1.2vmax;
-    height: 1.2vmax;
-    z-index: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 4;
     transform: translateY(-50%) rotate(-45deg);
     background-color: transparent;
     border: 2px solid var(--color-text-grey-light-2);
@@ -185,36 +182,51 @@ li {
     transition: filter 0.2s ease-in;
 }
 
-.hero__slides-btn:hover {
+.hero__carrousel-btn:hover {
     filter: opacity(0.9);
 }
 
-.hero__slides-btn--left {
+.hero__carrousel-btn--left {
     left: 1rem;
     border-right: none;
     border-bottom: none;
 }
 
-.hero__slides-btn--right {
+.hero__carrousel-btn--right {
     right: 1rem;
     border-top: none;
     border-left: none;
 }
 
-.hero__slides {
+.hero__carrousel-container {
+    overflow: hidden;
     position: relative;
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
 }
 
-.hero__slides-description {
+.hero__carrousel-track {
+    position: relative;
+    height: 100%;
+    transition: transform ease-in-out 500ms;
+}
+
+.hero__carrousel-slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0;
-    left: 0;
-    margin-left: 7rem;
-    transform: translateY(100%);
+    bottom: 0;
 }
 
-.hero__slides-description p {
+.hero__carrousel-description {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7vw;
+    z-index: 1;
+}
+
+.hero__carrousel-description p {
     font-family: var(--font-monserrat);
     color: var(--color-white);
     font-size: 0.75rem;
@@ -224,7 +236,7 @@ li {
     margin-bottom: 1rem;
 }
 
-.hero__slides-description h1 {
+.hero__carrousel-description h1 {
     font-family: var(--font-unna);
     font-size: 4rem;
     font-weight: 400;
@@ -233,10 +245,10 @@ li {
     line-height: 4rem;
     margin: 0;
     margin-bottom: 2rem;
-    width: 70vmin;
+    width: 80vmin;
 }
 
-.hero__slides-description .btn {
+.hero__carrousel-description .btn {
     color: var(--color-white);
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -253,24 +265,18 @@ li {
     letter-spacing: 2px;
 }
 
-a.btn:hover {
+.hero__carrousel-description .btn:hover {
     background-color: var(--color-white);
     color: currentColor;
 }
 
-.hero__slides-image img {
+.hero__carrousel-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
-.hero__controls {
+.hero__carrousel-nav {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,12 +286,13 @@ a.btn:hover {
     -ms-flex-direction: row;
     flex-direction: row;
     bottom: 5%;
-    margin-left: 7rem;
+    margin-left: 7vw;
 }
 
-.hero__controls-item {
-    width: 0.5rem;
-    height: 0.5rem;
+.hero__carrousel-indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: transparent;
     border: 1px solid var(--color-text-grey-light-2);
     border-radius: 50%;
     cursor: pointer;
@@ -294,20 +301,20 @@ a.btn:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.move {
-    background-position: 10% 50%;
-}
-
-.hero__controls-item:hover {
+.hero__carrousel-indicator:hover {
     background-color: var(--color-text-grey-light-2);
 }
 
-.hero__controls .current-slide {
+.hero__carrousel-nav .current-slide {
     background-color: var(--color-text-grey-light-2);
 }
 
-.hero__controls-item:not(:last-child) {
+.hero__carrousel-indicator:not(:last-child) {
     margin-right: 10px;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Header medias */
