@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /*
 
 Title: PetLove - 2019
@@ -174,15 +176,23 @@ li {
     width: 1.5rem;
     height: 1.5rem;
     z-index: 4;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) rotate(-45deg);
     transform: translateY(-50%) rotate(-45deg);
     background-color: transparent;
     border: 2px solid var(--color-text-grey-light-2);
     cursor: pointer;
+    -webkit-filter: opacity(0.5);
     filter: opacity(0.5);
+    -webkit-transition: -webkit-filter 0.2s ease-in;
+    transition: -webkit-filter 0.2s ease-in;
+    -o-transition: filter 0.2s ease-in;
     transition: filter 0.2s ease-in;
+    transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
 }
 
 .hero__carrousel-btn:hover {
+    -webkit-filter: opacity(0.9);
     filter: opacity(0.9);
 }
 
@@ -207,7 +217,11 @@ li {
 .hero__carrousel-track {
     position: relative;
     height: 100%;
+    -webkit-transition: -webkit-transform ease-in-out 500ms;
+    transition: -webkit-transform ease-in-out 500ms;
+    -o-transition: transform ease-in-out 500ms;
     transition: transform ease-in-out 500ms;
+    transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
 }
 
 .hero__carrousel-slide {
@@ -221,6 +235,8 @@ li {
 .hero__carrousel-description {
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 7vw;
     z-index: 1;
@@ -273,6 +289,7 @@ li {
 .hero__carrousel-image {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -330,65 +347,10 @@ li {
     .navbar__items-item:not(:last-child) {
         margin-right: 1em;
     }
-
-    /* .hero {
-        height: 60vh;
-    }
-
-    .hero__slides {
-        margin-left: 5rem;
-    }
-
-    .hero__slides-heading h1 {
-        font-size: 3.1rem;
-        margin: 0.5rem 0 1.5rem 0;
-    }
-
-    .hero__controls {
-        -webkit-transform: translateX(130%);
-        -ms-transform: translateX(130%);
-        transform: translateX(130%);
-    } */
 }
 
 @media only screen and (max-width: 856px) {
     .navbar__items {
         display: none;
     }
-
-    /* .hero {
-        min-height: 80vh;
-        background-position: top right 40%;
-    }
-
-    .hero__slides {
-        margin-left: 4rem;
-    }
-
-    .hero__controls {
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-
-    .hero__slides-heading h1 {
-        font-size: 2.75rem;
-        width: 70%;
-    } */
 }
-
-/* @media only screen and (max-width: 540px) {
-    .hero__slides {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .hero__controls {
-        display: none;
-    }
-
-    .hero__slides-heading h1 {
-        font-size: 2rem;
-        width: 100%;
-    }
-} */
