@@ -1,6 +1,11 @@
+/*
+* Carrousel slider based on
+    https://fooobar.com/questions/17301564/multiple-carousels-on-one-page-not-working-single-carousel-works-great-2nd-carousel-disrupts-first
+*/
+
 const track = document.querySelector('.hero__carrousel-track')
 
-// track slides from aray
+// track slides from array
 const slides = Array.from(track.children)
 
 const nextButton = document.querySelector('.hero__carrousel-btn--right')
