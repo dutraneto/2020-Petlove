@@ -342,6 +342,7 @@ li {
 
     .logo {
         width: 8.75rem;
+        height: auto;
     }
 
     .navbar__items-item:not(:last-child) {
