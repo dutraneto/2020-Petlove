@@ -1,0 +1,356 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/*
+
+Title: PetLove - 2019
+Contributors: Marcelo Glacial & Jose Dutra
+Author URL: https: //github.com/marceloglacial/2019-petlove/
+Starts on: 08/27/2019
+
+*/
+
+/* VARIABLES */
+:root {
+    /* Colors */
+    --color-primary: #4d6863;
+    --color-secondary: #d7fff1;
+    --color-text-grey-dark-1: #333;
+    --color-text-grey-light: #989898;
+    --color-text-grey-light-2: #ebebeb;
+    --color-white: #ffffff;
+    --color-input: #c2bcad;
+
+    /* Font-Families */
+    --font-unna: 'Unna', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+    --font-monserrat: 'Montserrat', sans-serif;
+}
+
+/* BASIC RESETS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    /* inherited from HTML */
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    color: var(--color-text-grey-dark-1);
+}
+
+a:visited,
+a:link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a:link:active,
+a:visited:active {
+    color: currentColor;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* HEADER */
+.main-header {
+    /* height: auto; */
+    position: relative;
+    z-index: 999;
+}
+
+.main-header .container {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.main-header .container .row {
+    width: 85%;
+    padding: 2.2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+
+.navbar__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.navbar__items-item:not(:last-child) {
+    margin-right: 2em;
+    text-transform: uppercase;
+}
+
+.navbar__items-item a {
+    color: var(--color-white);
+    font-family: var(--font-monserrat);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar__items-item a:hover {
+    color: var(--color-secondary);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* HOME-HERO */
+.hero {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    background: #222;
+}
+
+.hero__carrousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hero__carrousel-btn {
+    position: absolute;
+    top: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 4;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: transparent;
+    border: 2px solid var(--color-text-grey-light-2);
+    cursor: pointer;
+    -webkit-filter: opacity(0.5);
+    filter: opacity(0.5);
+    -webkit-transition: -webkit-filter 0.2s ease-in;
+    transition: -webkit-filter 0.2s ease-in;
+    -o-transition: filter 0.2s ease-in;
+    transition: filter 0.2s ease-in;
+    transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+}
+
+.hero__carrousel-btn:hover {
+    -webkit-filter: opacity(0.9);
+    filter: opacity(0.9);
+}
+
+.hero__carrousel-btn--left {
+    left: 1rem;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero__carrousel-btn--right {
+    right: 1rem;
+    border-top: none;
+    border-left: none;
+}
+
+.hero__carrousel-container {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.hero__carrousel-track {
+    position: relative;
+    height: 100%;
+    -webkit-transition: -webkit-transform ease-in-out 500ms;
+    transition: -webkit-transform ease-in-out 500ms;
+    -o-transition: transform ease-in-out 500ms;
+    transition: transform ease-in-out 500ms;
+    transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
+}
+
+.hero__carrousel-slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.hero__carrousel-description {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 7vw;
+    z-index: 1;
+}
+
+.hero__carrousel-description p {
+    font-family: var(--font-monserrat);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.hero__carrousel-description h1 {
+    font-family: var(--font-unna);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-white);
+    word-break: break-word;
+    line-height: 4rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    width: 80vmin;
+}
+
+.hero__carrousel-description .btn {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.8rem 2.2rem;
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    letter-spacing: 2px;
+}
+
+.hero__carrousel-description .btn:hover {
+    background-color: var(--color-white);
+    color: currentColor;
+}
+
+.hero__carrousel-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.hero__carrousel-nav {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    bottom: 5%;
+    margin-left: 7vw;
+}
+
+.hero__carrousel-indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--color-text-grey-light-2);
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__carrousel-indicator:hover {
+    background-color: var(--color-text-grey-light-2);
+}
+
+.hero__carrousel-nav .current-slide {
+    background-color: var(--color-text-grey-light-2);
+}
+
+.hero__carrousel-indicator:not(:last-child) {
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header medias */
+@media only screen and (max-width: 1096px) {
+    .main-header .container .row {
+        padding: 2rem 0;
+    }
+
+    .logo {
+        width: 8.75rem;
+    }
+
+    .navbar__items-item:not(:last-child) {
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    .navbar__items {
+        display: none;
+    }
+}

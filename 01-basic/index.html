@@ -24,7 +24,7 @@
 
 	<!-- Apple Touch Icon (at least 200x200px) -->
 	<!-- TODO: you must provide relative path -->
-	<link rel="apple-touch-icon" sizes="192x192" href="tile-192X192.png" />
+	<link rel="apple-touch-icon" sizes="192x192" href="tile-192x192.png" />
 	<link rel="apple-touch-icon" sizes="512x512" href="tile-512x512.png" />
 
 	<!-- To run web application in full-screen -->
@@ -69,8 +69,8 @@
 	<meta name="twitter:image"
 		content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
 	<!-- Styles -->
-	<link rel="stylesheet" href="./assets/css/styles.css" />
-	<link rel="stylesheet" href="./assets/css/normalize.css" />
+	<link rel="stylesheet" href="./assets/styles/styles.css" />
+	<link rel="stylesheet" href="./assets/styles/normalize.css" />
 
 	<!-- Fonts: Monserrat & Unna & Lato -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:500,700|Unna:400,700"
@@ -86,7 +86,7 @@
 				</a>
 				<nav class="navbar">
 					<ul class="navbar__items">
-					   	<li class="navbar__items-item"><a href="">dogs</a></li>
+						<li class="navbar__items-item"><a href="">dogs</a></li>
 						<li class="navbar__items-item"><a href="">cats</a></li>
 						<li class="navbar__items-item"><a href="">birds</a></li>
 						<li class="navbar__items-item"><a href="">fish</a></li>
@@ -100,7 +100,57 @@
 				</nav>
 			</div>
 		</div>
+		<!-- HERO -->
+		<section class="hero">
+			<article class="hero__carrousel">
+				<button class="hero__carrousel-btn hero__carrousel-btn--left hidden" aria-label="left">
+				</button>
+				<button class="hero__carrousel-btn hero__carrousel-btn--right" aria-label="right">
+				</button>
+				<div class="hero__carrousel-description">
+					<p>cats jackets</p>
+					<h1>Protect your buddy during Winter</h1>
+					<a id="" class="btn" href="#">shop now</a>
+				</div>
+				<div class="hero__carrousel-container">
+					<ul class="hero__carrousel-track">
+						<!-- slider 1 -->
+						<li class="hero__carrousel-slide current-slide">
+							<picture>
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
+									alt="cat on snow image">
+							</picture>
+						</li>
+						<li class="hero__carrousel-slide">
+							<picture>
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
+									alt="cat on snow image">
+							</picture>
+						</li>
+						<li class="hero__carrousel-slide">
+							<picture>
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
+									alt="cat on snow image">
+							</picture>
+						</li>
+						<li class="hero__carrousel-slide">
+							<picture>
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
+									alt="cat on snow image">
+							</picture>
+						</li>
+					</ul>
+				</div>
+				<div class="hero__carrousel-nav">
+					<button class="hero__carrousel-indicator current-slide" aria-label="Dot button"></button>
+					<button class="hero__carrousel-indicator" aria-label="Dot button"></button>
+					<button class="hero__carrousel-indicator" aria-label="Dot button"></button>
+					<button class="hero__carrousel-indicator" aria-label="Dot button"></button>
+				</div>
+			</article>
+		</section>
 	</header>
+	<script src="assets/scripts/main.js"></script>
 </body>
 
 </html>
