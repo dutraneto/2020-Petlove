@@ -89,9 +89,8 @@ li {
 / HEADER
 */
 .main-header {
-    /* height: auto; */
     position: relative;
-    z-index: 999;
+    z-index: 99;
 }
 
 .main-header .container {
@@ -161,10 +160,6 @@ li {
 
 /* HOME-HERO */
 .hero {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
     height: 90vh;
     width: 100%;
     background: #222;
@@ -426,6 +421,9 @@ li {
 }
 
 /* UTILS */
+.u-m-lg {
+    margin: 6.25rem 0;
+}
 .u-mt-sm {
     margin-top: 0.6rem;
 }
@@ -446,14 +444,15 @@ li {
     margin-bottom: 7rem !important;
 }
 
-.u-mb-lg {
-    margin-bottom: 15rem !important;
-}
-
 .u-ml-sm {
     margin-left: 2rem;
 }
 
 .u-pd-sm {
     padding: 0 7vw !important;
+}
+
+.u-pos-absolute {
+    position: absolute;
+    width: 100%;
 }
