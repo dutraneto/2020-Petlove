@@ -28,7 +28,10 @@ Starts on: 08/27/2019
     --font-monserrat: 'Montserrat', sans-serif;
 }
 
-/* BASIC RESETS */
+/*
+//////////////////////////////////////////
+/ BASIC RESETS
+*/
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +84,10 @@ li {
     color: var(--color-white);
 }
 
-/* HEADER */
+/*
+//////////////////////////////////////////
+/ HEADER
+*/
 .main-header {
     /* height: auto; */
     position: relative;
@@ -334,6 +340,69 @@ li {
     display: none;
 }
 
+/*
+//////////////////////////////////////////
+/ CATALOGUE
+*/
+.catalog {
+    /* none */
+}
+
+.catalog h2 {
+    font-family: var(--font-unna);
+    font-size: 3.875rem;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.catalog__deals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.card {
+    min-width: 33.333333%;
+    height: auto;
+    margin-bottom: 3.5rem;
+}
+
+.card-deals {
+    text-align: center;
+}
+
+.card .card__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card .card__desc {
+    font-family: var(--font-unna);
+    text-transform: capitalize;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.card .card__price {
+    font-size: 0.875rem;
+    color: var(--color-text-grey-light);
+}
+
+.catalog #show {
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--color-text-grey-light);
+    text-transform: uppercase;
+}
+
+.hr {
+    border: 0.5px solid var(--color-text-grey-light-2);
+    margin: 0 auto;
+}
+
 /* Header medias */
 @media only screen and (max-width: 1096px) {
     .main-header .container .row {
@@ -354,4 +423,37 @@ li {
     .navbar__items {
         display: none;
     }
+}
+
+/* UTILS */
+.u-mt-sm {
+    margin-top: 0.6rem;
+}
+
+.u-mt-md {
+    margin-top: 3.5rem !important;
+}
+
+.u-mt-lg {
+    margin-top: 6.5rem;
+}
+
+.u-mb-sm {
+    margin-bottom: 3.5rem !important;
+}
+
+.u-mb-md {
+    margin-bottom: 7rem !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 15rem !important;
+}
+
+.u-ml-sm {
+    margin-left: 2rem;
+}
+
+.u-pd-sm {
+    padding: 0 7vw !important;
 }
