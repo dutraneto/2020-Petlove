@@ -359,10 +359,15 @@ li {
 }
 
 .card {
+    padding: 30px 0;
     min-width: 33.333333%;
     height: auto;
     margin-bottom: 3.5rem;
     transition: all 0.3s ease-in-out;
+}
+
+.card a {
+    display: block;
 }
 
 .card-deals {
@@ -373,9 +378,20 @@ li {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    transition: opacity 0.3s;
 }
 
+.card .card__img:hover {
+    opacity: 0.8;
+}
+
+/* .card .card__desc:hover,
+.card .card__price:hover {
+    text-decoration-line: underline;
+} */
+
 .card .card__desc {
+    position: relative;
     font-family: var(--font-unna);
     text-transform: capitalize;
     font-size: 1.375rem;
@@ -383,8 +399,38 @@ li {
 }
 
 .card .card__price {
+    position: relative;
     font-size: 0.875rem;
     color: var(--color-text-grey-light);
+}
+
+.hover {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.hover::before,
+.hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.5s;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.hover.hover-1:before,
+.hover.hover-1:after {
+    left: 35%;
+    right: 35%;
+}
+
+.hover:hover::before,
+.hover:hover::after {
+    width: 30%;
+    opacity: 1;
 }
 
 .catalog #show {
