@@ -80,9 +80,10 @@
 <body>
 	<header class="main-header">
 		<div class="container">
-			<div class="row">
+			<div class="row u-pos-absolute">
 				<a href="./" title="Home page">
-					<img class="logo" src="assets/images/petlove-logo.png" loading="lazy" alt="Site Logo" />
+					<img class="logo" src="assets/images/petlove-logo.png" loading="lazy" width="226" height="61"
+						alt="Site Logo" />
 				</a>
 				<nav class="navbar">
 					<ul class="navbar__items">
@@ -100,6 +101,9 @@
 				</nav>
 			</div>
 		</div>
+	</header>
+
+	<main>
 		<!-- HERO -->
 		<section class="hero">
 			<article class="hero__carrousel">
@@ -117,26 +121,26 @@
 						<!-- slider 1 -->
 						<li class="hero__carrousel-slide current-slide">
 							<picture>
-								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
-									alt="cat on snow image">
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png" loading="lazy"
+									width="1440" height="700" alt="cat on snow image">
 							</picture>
 						</li>
 						<li class="hero__carrousel-slide">
 							<picture>
-								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
-									alt="cat on snow image">
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png" loading="lazy"
+									width="1440" height="700" alt="cat on snow image">
 							</picture>
 						</li>
 						<li class="hero__carrousel-slide">
 							<picture>
-								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
-									alt="cat on snow image">
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png" loading="lazy"
+									width="1440" height="700" alt="cat on snow image">
 							</picture>
 						</li>
 						<li class="hero__carrousel-slide">
 							<picture>
-								<img class="hero__carrousel-image" src="assets/images/hero-bg.png"
-									alt="cat on snow image">
+								<img class="hero__carrousel-image" src="assets/images/hero-bg.png" loading="lazy"
+									width="1440" height="700" alt="cat on snow image">
 							</picture>
 						</li>
 					</ul>
@@ -149,7 +153,81 @@
 				</div>
 			</article>
 		</section>
-	</header>
+		<!-- CATALOGUE -->
+		<section class="catalog u-m-lg">
+			<h2>Deals of the Day</h2>
+
+			<div class="catalog__deals u-pd-sm">
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/bat-dog-toy.png" loading="lazy" width="350"
+							height="370" alt="Bat Dog Toy">
+						<figcaption>
+							<h3 class="card__desc">bat dog toy</h3>
+							<p class="card__price">$1.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/dog-food.png" loading="lazy" width="350" height="370"
+							alt="Savory Wet Dog Food">
+						<figcaption>
+							<h3 class="card__desc">savory wet dog food</h3>
+							<p class="card__price">$4.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/cat-tunnel.png" loading="lazy" width="350"
+							height="370" alt="Cat Tunnel">
+						<figcaption>
+							<h3 class="card__desc">cat tunnel</h3>
+							<p class="card__price">$10.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/ewok-hallowen-costume.png" loading="lazy" width="350"
+							height="370" alt="Ewok Hallowen Costume">
+						<figcaption>
+							<h3 class="card__desc">ewok hallowen costume</h3>
+							<p class="card__price">$15.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/batman-hallowen-costume.png" loading="lazy"
+							width="350" height="370" alt="Batman Costume">
+						<figcaption>
+							<h3 class="card__desc">batman costume</h3>
+							<p class="card__price">$10.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+				<figure class="card card-deals">
+					<a href="#" target="_blank">
+						<img class="card__img" src="content/images/superman-hallowen-costume.png" loading="lazy"
+							width="350" height="370" alt="Superman Costume">
+						<figcaption>
+							<h3 class="card__desc">superman costume</h3>
+							<p class="card__price">$10.99 (20% off)</p>
+						</figcaption>
+					</a>
+				</figure>
+			</div>
+			<div class="catalog__show u-pd-sm">
+				<hr class="hr">
+				<a href="#">
+					<p id="show">show all</p>
+				</a>
+				<hr class="hr">
+			</div>
+		</section>
+	</main>
 	<script src="assets/scripts/main.js"></script>
 </body>
 
