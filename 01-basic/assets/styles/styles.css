@@ -425,8 +425,45 @@ li {
 */
 .subscribe {
     width: 100%;
-    min-height: 6.7rem;
     background-color: var(--color-background);
+}
+
+.subscribe form {
+    padding: 2rem 12%;
+    line-height: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.subscribe form label {
+    font-family: var(--font-unna);
+    color: var(--color-white);
+    font-size: 2rem;
+}
+
+.subscribe form .form-control {
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    align-self: stretch;
+    flex-grow: 2;
+    margin-left: 2rem;
+    margin-right: 8px;
+}
+
+.subscribe-btn {
+    padding: 0 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: var(--color-white);
+    align-self: stretch;
+    cursor: pointer;
+    color: var(--color-text-grey-light);
 }
 
 /* Header medias */
