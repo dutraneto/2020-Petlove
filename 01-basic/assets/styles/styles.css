@@ -428,7 +428,7 @@ li {
     background-color: var(--color-background);
 }
 
-.subscribe #form-group {
+.subscribe .form-group {
     padding: 2rem 15%;
     /* line-height: 0; */
     display: flex;
@@ -504,7 +504,7 @@ li {
         margin-right: 1em;
     }
 
-    .subscribe #form-group {
+    .subscribe .form-group {
         padding: 2rem 0;
     }
 }
