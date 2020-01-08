@@ -430,7 +430,6 @@ li {
 
 .subscribe .form-group {
     padding: 2rem 15%;
-    /* line-height: 0; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
