@@ -16,6 +16,7 @@ Starts on: 08/27/2019
     /* Colors */
     --color-primary: #4d6863;
     --color-secondary: #d7fff1;
+    --color-background: #4e6863;
     --color-text-grey-dark-1: #333;
     --color-text-grey-light: #989898;
     --color-text-grey-light-2: #ebebeb;
@@ -418,6 +419,63 @@ li {
     margin: 0 auto;
 }
 
+/*
+//////////////////////////////////////////
+/ SUBSCRIBE
+*/
+.subscribe {
+    width: 100%;
+    background-color: var(--color-background);
+}
+
+.subscribe .form-group {
+    padding: 2rem 15%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.subscribe label {
+    font-family: var(--font-unna);
+    font-weight: 400;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.subscribe .subscribe__form-control {
+    padding: 1rem 1.25rem;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    align-self: stretch;
+    flex-grow: 3;
+    margin-left: 3.5rem;
+    margin-right: 8px;
+}
+
+.subscribe__btn {
+    width: 9.6rem;
+    min-height: 2.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    background-color: var(--color-white);
+    align-self: stretch;
+    cursor: pointer;
+    color: #a99f8c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.subscribe__btn:hover {
+    opacity: 90%;
+}
+
 /* Header medias */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
@@ -444,11 +502,29 @@ li {
     .navbar__items-item:not(:last-child) {
         margin-right: 1em;
     }
+
+    .subscribe .form-group {
+        padding: 2rem 0;
+    }
 }
 
 @media only screen and (max-width: 856px) {
     .navbar__items {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .subscribe #form-group {
+        flex-direction: column;
+    }
+
+    .subscribe .subscribe__form-control {
+        margin: 0 0 15px 0;
+    }
+
+    .subscribe__btn {
+        width: 100%;
     }
 }
 
