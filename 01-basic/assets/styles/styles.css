@@ -481,7 +481,18 @@ li {
 //////////////////////////////////////////
 / FOOTER
 */
-.footer-wrap {
+.footer-wrap h5 {
+    text-transform: uppercase;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.footer-wrap p {
+    font-size: 14px;
+    color: var(--color-text-grey-light-1);
+    line-height: 21px;
+    margin-bottom: 1rem;
 }
 
 .deliveries {
@@ -498,18 +509,15 @@ li {
     text-align: center;
 }
 
-.deliveries .deliveries__info h5 {
-    text-transform: uppercase;
-    margin: 8px 0;
-    font-size: 13px;
-    line-height: 30px;
+.social {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.deliveries .deliveries__info p {
-    font-size: 14px;
-    color: var(--color-text-grey-light-1);
-    line-height: 21px;
-    margin-bottom: 1rem;
+.social .social__logo {
+    display: flex;
+    align-items: center;
+    align-self: center;
 }
 
 /* Header medias */
