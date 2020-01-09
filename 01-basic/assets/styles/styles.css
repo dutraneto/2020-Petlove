@@ -19,6 +19,7 @@ Starts on: 08/27/2019
     --color-background: #4e6863;
     --color-text-grey-dark-1: #333;
     --color-text-grey-light: #989898;
+    --color-text-grey-light-1: #8d8d8d;
     --color-text-grey-light-2: #ebebeb;
     --color-white: #ffffff;
     --color-input: #c2bcad;
@@ -480,8 +481,36 @@ li {
 //////////////////////////////////////////
 / FOOTER
 */
+.footer-wrap {
+}
 
+.deliveries {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.deliveries .border-left {
+    border-left: 1px solid var(--color-text-grey-light-1);
+    align-self: stretch;
+}
+
+.deliveries .deliveries__info {
+    text-align: center;
+}
+
+.deliveries .deliveries__info h5 {
+    text-transform: uppercase;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.deliveries .deliveries__info p {
+    font-size: 14px;
+    color: var(--color-text-grey-light-1);
+    line-height: 21px;
+    margin-bottom: 1rem;
+}
 
 /* Header medias */
 @media only screen and (max-width: 1220px) {
