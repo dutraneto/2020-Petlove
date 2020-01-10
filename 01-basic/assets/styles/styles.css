@@ -533,8 +533,15 @@ li {
     height: 1.5rem;
 }
 
-.social .social__follow-us .social__icons a:hover {
-    opacity: 0.8;
+.social .social__follow-us .social__icons svg:hover {
+    opacity: 0.7;
+}
+
+.social .social__follow-us .social__icons .social__icons--facebook,
+.social .social__follow-us .social__icons .social__icons--instagram,
+.social .social__follow-us .social__icons .social__icons--twitter,
+.social .social__follow-us .social__icons .social__icons--gplus {
+    fill: var(--color-text-grey-light-1);
 }
 
 .social .social__logo {
@@ -562,7 +569,6 @@ li {
     width: 2.8rem;
     height: 2.8rem;
     font-size: 16px;
-    font-weight: 700;
     border: none;
     background-color: #0d0d0d;
     cursor: pointer;
