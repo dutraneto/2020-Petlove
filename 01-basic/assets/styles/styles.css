@@ -497,6 +497,7 @@ li {
 
 .deliveries {
     display: flex;
+    padding: 0 7vw;
 }
 
 .deliveries .borders {
@@ -513,7 +514,7 @@ li {
 
 .social {
     display: flex;
-    justify-content: space-evenly;
+    padding: 0 7vw;
 }
 
 .social__follow-us,
@@ -552,7 +553,7 @@ li {
 
 .social .social__contact .social__contact-wrap div {
     position: relative;
-    padding: 0 3rem;
+    padding: 0 1.5rem;
 }
 
 .social .social__contact .social__contact-control {
@@ -575,7 +576,7 @@ li {
     color: var(--color-white);
     position: absolute;
     bottom: 0;
-    right: 3rem;
+    right: 0;
 }
 
 .social .social__contact .social__contact-btn:hover {
@@ -612,6 +613,11 @@ li {
     .subscribe .form-group {
         padding: 2rem 0;
     }
+
+    .deliveries,
+    .social {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 856px) {
@@ -621,7 +627,7 @@ li {
 }
 
 @media only screen and (max-width: 690px) {
-    .subscribe #form-group {
+    .subscribe .form-group {
         flex-direction: column;
     }
 
