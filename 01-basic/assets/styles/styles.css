@@ -497,15 +497,17 @@ li {
 
 .deliveries {
     display: flex;
-    justify-content: space-evenly;
 }
 
-.deliveries .border-left {
+.deliveries .borders {
     border-left: 1px solid var(--color-text-grey-light-1);
+    border-right: 1px solid var(--color-text-grey-light-1);
     align-self: stretch;
 }
 
 .deliveries .deliveries__info {
+    min-width: 33.333333%;
+    height: auto;
     text-align: center;
 }
 
@@ -514,10 +516,64 @@ li {
     justify-content: space-evenly;
 }
 
+.social__follow-us,
+.social__logo,
+.social__contact {
+    min-width: 33.333333%;
+    height: auto;
+    text-align: center;
+}
+
+.social .social__follow-us .social__icons a:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.social .social__follow-us .social__icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.social .social__follow-us .social__icons a:hover {
+    opacity: 0.8;
+}
+
 .social .social__logo {
     display: flex;
-    align-items: center;
     align-self: center;
+    justify-content: center;
+}
+
+.social .social__contact .social__contact-wrap div {
+    position: relative;
+    padding: 0 3rem;
+}
+
+.social .social__contact .social__contact-control {
+    width: 100%;
+    height: 2.8rem;
+    padding-left: 8px;
+    border: 1px solid var(--color-text-grey-light-2);
+    font-size: 16px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.social .social__contact .social__contact-btn {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background-color: #0d0d0d;
+    cursor: pointer;
+    color: var(--color-white);
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+}
+
+.social .social__contact .social__contact-btn:hover {
+    opacity: 0.8;
 }
 
 /* Header medias */
