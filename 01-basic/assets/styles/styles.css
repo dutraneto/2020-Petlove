@@ -561,6 +561,8 @@ li {
     height: 2.8rem;
     padding-left: 8px;
     border: 1px solid var(--color-text-grey-light-2);
+    border-radius: 0;
+    -webkit-appearance: none;
     font-size: 16px;
     background-color: var(--color-white);
     color: var(--color-primary);
@@ -572,11 +574,12 @@ li {
     font-size: 16px;
     border: none;
     background-color: #0d0d0d;
+    border: 1px solid var(--color-text-grey-light-2);
+    border-left: none;
     cursor: pointer;
     color: var(--color-white);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    right: 1.5rem;
 }
 
 .social .social__contact .social__contact-btn:hover {
@@ -624,6 +627,14 @@ li {
     .navbar__items {
         display: none;
     }
+
+    .social .social__contact .social__contact-wrap div {
+        padding: 0;
+    }
+
+    .social .social__contact .social__contact-btn {
+        right: 0;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -637,6 +648,31 @@ li {
 
     .subscribe__btn {
         width: 100%;
+    }
+
+    .deliveries,
+    .social {
+        flex-direction: column;
+    }
+
+    .social__follow-us,
+    .social__logo,
+    .social__contact,
+    .deliveries__info {
+        width: 100%;
+    }
+
+    .deliveries .borders {
+        border: none;
+    }
+
+    .social__follow-us,
+    .social__contact {
+        margin-bottom: 3rem;
+    }
+
+    .social__logo {
+        order: 3;
     }
 }
 
