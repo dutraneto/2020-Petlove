@@ -17,9 +17,10 @@ Starts on: 08/27/2019
     --color-primary: #4d6863;
     --color-secondary: #d7fff1;
     --color-background: #4e6863;
-    --color-text-grey-dark-1: #333;
-    --color-text-grey-light: #989898;
-    --color-text-grey-light-2: #ebebeb;
+    --color-text-grey-dark: #333;
+    --color-text-grey: #989898;
+    --color-text-grey-medium: #8d8d8d;
+    --color-text-grey-lighter: #ebebeb;
     --color-white: #ffffff;
     --color-input: #c2bcad;
 
@@ -55,7 +56,7 @@ body {
     background-color: var(--color-white);
     font-family: var(--font-lato);
     line-height: 1.6;
-    color: var(--color-text-grey-dark-1);
+    color: var(--color-text-grey-dark);
 }
 
 a:visited,
@@ -182,7 +183,7 @@ li {
     -ms-transform: translateY(-50%) rotate(-45deg);
     transform: translateY(-50%) rotate(-45deg);
     background-color: transparent;
-    border: 2px solid var(--color-text-grey-light-2);
+    border: 2px solid var(--color-text-grey-lighter);
     cursor: pointer;
     -webkit-filter: opacity(0.5);
     filter: opacity(0.5);
@@ -312,7 +313,7 @@ li {
     width: 0.75rem;
     height: 0.75rem;
     background: transparent;
-    border: 1px solid var(--color-text-grey-light-2);
+    border: 1px solid var(--color-text-grey-lighter);
     border-radius: 50%;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
@@ -321,11 +322,11 @@ li {
 }
 
 .hero__carrousel-indicator:hover {
-    background-color: var(--color-text-grey-light-2);
+    background-color: var(--color-text-grey-lighter);
 }
 
 .hero__carrousel-nav .current-slide {
-    background-color: var(--color-text-grey-light-2);
+    background-color: var(--color-text-grey-lighter);
 }
 
 .hero__carrousel-indicator:not(:last-child) {
@@ -397,7 +398,7 @@ li {
 .card .card__price {
     position: relative;
     font-size: 0.875rem;
-    color: var(--color-text-grey-light);
+    color: var(--color-text-grey);
     transition: all 0.3s ease;
 }
 
@@ -405,7 +406,7 @@ li {
     font-size: 0.75rem;
     margin: 1rem 0;
     text-align: center;
-    color: var(--color-text-grey-light);
+    color: var(--color-text-grey);
     text-transform: uppercase;
     transition: opacity 0.3s;
 }
@@ -415,7 +416,7 @@ li {
 }
 
 .hr {
-    border: 0.5px solid var(--color-text-grey-light-2);
+    border: 0.5px solid var(--color-text-grey-lighter);
     margin: 0 auto;
 }
 
@@ -476,6 +477,115 @@ li {
     opacity: 90%;
 }
 
+/*
+//////////////////////////////////////////
+/ FOOTER
+*/
+.footer-wrap h5 {
+    text-transform: uppercase;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.footer-wrap p {
+    font-size: 14px;
+    color: var(--color-text-grey-medium);
+    line-height: 21px;
+    margin-bottom: 1rem;
+}
+
+.deliveries {
+    display: flex;
+    padding: 0 7vw;
+}
+
+.deliveries .borders {
+    border-left: 1px solid var(--color-text-grey-medium);
+    border-right: 1px solid var(--color-text-grey-medium);
+    align-self: stretch;
+}
+
+.deliveries .deliveries__info {
+    min-width: 33.333333%;
+    height: auto;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    padding: 0 7vw;
+}
+
+.social__follow-us,
+.social__logo,
+.social__contact {
+    min-width: 33.333333%;
+    height: auto;
+    text-align: center;
+}
+
+.social .social__follow-us .social__icons a:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.social .social__follow-us .social__icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.social .social__follow-us .social__icons svg:hover {
+    opacity: 0.7;
+}
+
+.social .social__follow-us .social__icons .social__icons--facebook,
+.social .social__follow-us .social__icons .social__icons--instagram,
+.social .social__follow-us .social__icons .social__icons--twitter,
+.social .social__follow-us .social__icons .social__icons--gplus {
+    fill: var(--color-text-grey-medium);
+}
+
+.social .social__logo {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.social .social__contact .social__contact-wrap .social__signup {
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.social .social__contact .social__signup-control {
+    width: 100%;
+    height: 2.8rem;
+    padding-left: 8px;
+    border: 1px solid var(--color-text-grey-lighter);
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-size: 16px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+.social .social__contact .social__contact-btn {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 16px;
+    border: none;
+    background-color: #0d0d0d;
+    border: 1px solid var(--color-text-grey-lighter);
+    border-left: none;
+    cursor: pointer;
+    color: var(--color-white);
+    position: absolute;
+    right: 1.5rem;
+}
+
+.social .social__contact .social__contact-btn:hover {
+    opacity: 0.8;
+}
+
 /* Header medias */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
@@ -506,16 +616,29 @@ li {
     .subscribe .form-group {
         padding: 2rem 0;
     }
+
+    .deliveries,
+    .social {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 856px) {
     .navbar__items {
         display: none;
     }
+
+    .social .social__contact .social__contact-wrap .social__signup {
+        padding: 0;
+    }
+
+    .social .social__contact .social__contact-btn {
+        right: 0;
+    }
 }
 
 @media only screen and (max-width: 690px) {
-    .subscribe #form-group {
+    .subscribe .form-group {
         flex-direction: column;
     }
 
@@ -525,6 +648,31 @@ li {
 
     .subscribe__btn {
         width: 100%;
+    }
+
+    .deliveries,
+    .social {
+        flex-direction: column;
+    }
+
+    .social__follow-us,
+    .social__logo,
+    .social__contact,
+    .deliveries__info {
+        width: 100%;
+    }
+
+    .deliveries .borders {
+        border: none;
+    }
+
+    .social__follow-us,
+    .social__contact {
+        margin-bottom: 3rem;
+    }
+
+    .social__logo {
+        order: 3;
     }
 }
 
