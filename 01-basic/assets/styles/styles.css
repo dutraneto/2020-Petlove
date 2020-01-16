@@ -597,6 +597,16 @@ li {
     background-size: cover;
 }
 
+.shopping-list {
+    margin-top: 2.5rem;
+}
+
+.shopping-list__select-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2.5rem;
+}
+
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
@@ -689,10 +699,10 @@ li {
 
 /* UTILS */
 .u-m-lg {
-    margin: 6.25rem 0;
+    margin: 6.25rem 0 !important;
 }
 .u-mt-sm {
-    margin-top: 0.6rem;
+    margin-top: 0.6rem !important;
 }
 
 .u-mt-md {
@@ -700,7 +710,7 @@ li {
 }
 
 .u-mt-lg {
-    margin-top: 6.5rem;
+    margin-top: 6.5rem !important;
 }
 
 .u-mb-sm {
@@ -712,7 +722,7 @@ li {
 }
 
 .u-ml-sm {
-    margin-left: 2rem;
+    margin-left: 2rem !important;
 }
 
 .u-pd-sm {
