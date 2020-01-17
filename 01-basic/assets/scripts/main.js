@@ -83,3 +83,14 @@ dotsNav.addEventListener('click', e => {
 
     moveToSlide(currentSlide, targetSlide, targetDot, targetIndex)
 })
+
+// toggle accordion function for hiding checkboxes
+function toggleAccordion () {
+    let acc = document.querySelectorAll(".accordion")
+    let accordion = Array.from(acc)
+    accordion.forEach(element => {
+        element.classList.toggle("active")
+        let panel = element.nextElementSibling;
+        panel.style.maxHeight ? panel.style.maxHeight = null : panel.style.maxHeight = panel.scrollHeight + "px"
+    })
+}

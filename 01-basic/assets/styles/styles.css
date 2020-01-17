@@ -643,7 +643,23 @@ li {
     font-family: var(--font-Lato);
     font-size: 0.875rem;
     text-transform: capitalize;
-    background: url(../images/down-arrow.png) 100% 5%/ 9% no-repeat;
+    background: url(../images/down-arrow.png) 100% 10% / 8% no-repeat;
+    cursor: pointer;
+}
+
+.accordion {
+    transition: all 0.3s ease-out;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.active,
+.accordion:hover {
+    color: var(--color-text-grey);
 }
 
 /* MEDIAS */
