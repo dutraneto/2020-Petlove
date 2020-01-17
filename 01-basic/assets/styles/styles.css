@@ -607,6 +607,19 @@ li {
     margin-bottom: 2.5rem;
 }
 
+.shopping-list__products {
+    display: flex;
+}
+
+.shopping-list__label {
+    font-family: var(--font-unna);
+    font-size: 20px;
+}
+
+.shopping-list__controls {
+    margin-top: 1.3rem;
+}
+
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
