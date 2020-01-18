@@ -22,7 +22,7 @@ Starts on: 08/27/2019
     --color-text-grey-medium: #8d8d8d;
     --color-text-grey-lighter: #ebebeb;
     --color-white: #ffffff;
-    --color-input: #c2bcad;
+    --color-input: #998e76;
 
     /* Font-Families */
     --font-unna: 'Unna', sans-serif;
@@ -630,21 +630,22 @@ li {
 }
 
 .shopping-list .shopping-list__products .shopping-list__category {
-    /*  */
+    width: 25%;
 }
 
 .shopping-list .shopping-list__products .shopping-list__label {
     font-family: var(--font-unna);
     font-size: 20px;
+    display: inline-block;
+    margin-bottom: 1.1rem;
 }
 
 .shopping-list .shopping-list__products .shopping-list__controls {
     margin-bottom: 0.9rem;
     font-family: var(--font-Lato);
-    font-size: 0.875rem;
+    font-size: 14px;
     text-transform: capitalize;
-    background: url(../images/down-arrow.png) 100% 10% / 8% no-repeat;
-    cursor: pointer;
+    background: url(../images/down-arrow.png) 95% 10% no-repeat;
 }
 
 .accordion {
@@ -660,6 +661,43 @@ li {
 .active,
 .accordion:hover {
     color: var(--color-text-grey);
+}
+
+.checkbox-wrap {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+
+.checkbox-wrap label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.checkbox-control input[type='checkbox'] {
+    visibility: hidden;
+}
+
+.checkbox-wrap .checkbox-control {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    outline: 1px solid var(--color-input);
+}
+
+input[type='checkbox']:checked + label {
+    background-color: var(--color-input);
+}
+
+.checkbox-model {
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    bottom: 1px;
+    right: 1px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* MEDIAS */
@@ -777,7 +815,7 @@ li {
 }
 
 .u-ml-sm {
-    margin-left: 2rem !important;
+    margin-left: 1.25rem !important;
 }
 
 .u-pd-sm {
