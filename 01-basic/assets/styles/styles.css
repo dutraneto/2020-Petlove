@@ -385,6 +385,10 @@ li {
     text-align: center;
 }
 
+.card-dogs {
+    margin-bottom: 1.5rem;
+}
+
 .card .card__img {
     max-width: 100%;
     height: auto;
