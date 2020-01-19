@@ -377,7 +377,8 @@ li {
     display: block;
 }
 
-.card-deals {
+.card-deals,
+.card-dogs {
     text-align: center;
 }
 
@@ -804,6 +805,16 @@ input[type='checkbox']:checked + label {
     color: var(--color-white);
     background-color: var(--color-input);
 }
+
+.shopping-list .shopping-list__products .shopping-list__catalogue {
+    width: calc(100% - 22%);
+}
+
+.shopping-list .shopping-list__products .shopping-list__catalogue .shopping-list__catalogue-wrap {
+    display: flex;
+}
+
+
 
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
