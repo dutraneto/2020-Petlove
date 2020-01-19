@@ -622,6 +622,12 @@ li {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
+    transition: all 0.3s ease;
+}
+
+.arrow-selection:hover {
+    filter: opacity(0.8);
+    transform: translateY(1px);
 }
 
 .shopping-list .shopping-list__select {
