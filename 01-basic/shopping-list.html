@@ -114,8 +114,9 @@
                     <option value="">sort by pet</option>
                 </select>
             </div>
-            <!-- filters -->
+
             <div class="shopping-list__products">
+                <!-- filters -->
                 <aside class="shopping-list__category">
                     <form action="#">
                         <div class="shopping-list__wrap">
@@ -248,10 +249,67 @@
                                     step="10" min="0" max="10000" value="7200" oninput="updatePriceLabels()">
                             </div>
                         </div>
+                        <div class="shopping-list__wrap">
+                            <label class="shopping-list__label">Size</label>
+                            <div class="shopping-list__sizes-row ">
+                                <div class="shopping-list__sizes-col">
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input class="" id="xs" type="checkbox" name="xs" checked>
+                                            <label class="checkbox-model" for="xs"></label>
+                                        </div>
+                                        <label for="xs">XS</label>
+                                    </div>
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input id="s" type="checkbox" name="s">
+                                            <label class="checkbox-model" for="s"></label>
+                                        </div>
+                                        <label for="s">S</label>
+                                    </div>
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input id="m" type="checkbox" name="m">
+                                            <label class="checkbox-model" for="m"></label>
+                                        </div>
+                                        <label for="m">M</label>
+                                    </div>
+                                </div>
+                                <div class="shopping-list__sizes-col">
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input id="l" type="checkbox" name="l">
+                                            <label class="checkbox-model" for="l"></label>
+                                        </div>
+                                        <label for="l">L</label>
+                                    </div>
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input id="xl" type="checkbox" name="xl">
+                                            <label class="checkbox-model" for="xl"></label>
+                                        </div>
+                                        <label for="xl">XL</label>
+                                    </div>
+                                    <div class="checkbox-wrap">
+                                        <div class="checkbox-control">
+                                            <input id="xxl" type="checkbox" name="xxl">
+                                            <label class="checkbox-model" for="xxl"></label>
+                                        </div>
+                                        <label for="xxl">XXL</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping-list__wrap">
+                            <input type="submit" class="filter-btn" name="" value="reset filter">
+                        </div>
                     </form>
                 </aside>
             </div>
         </div>
+
+
+
         <!-- SUBSCRIBE -->
         <section class="subscribe u-pd-sm">
             <form class="form-group" action="#" method="POST">
@@ -346,7 +404,6 @@
                             width="140" height="32" alt="Footer Black Logo" />
                     </a>
                 </div>
-
                 <!-- FORM EMAIL -->
                 <div class="social__contact">
                     <form action="#" method="POST">
