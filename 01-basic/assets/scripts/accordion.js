@@ -1,5 +1,5 @@
 // toggle accordion function for hiding checkboxes
-function toggleAccordion () {
+function toggleAccordion (evt) {
     let acc = document.querySelectorAll(".accordion")
     let accordion = Array.from(acc)
     accordion.forEach(element => {
