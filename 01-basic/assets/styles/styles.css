@@ -732,6 +732,10 @@ li {
     border: none;
 }
 
+.active > .btn-arrow {
+    transform: rotate(-180deg);
+}
+
 .accordion {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -763,6 +767,7 @@ li {
 .accordion:hover,
 .btn-arrow:hover {
     opacity: 0.7;
+    transition: all 0.3s ease;
 }
 
 .checkbox-wrap {
