@@ -1,7 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
 /*
 
 Title: PetLove - 2019
@@ -354,8 +350,15 @@ li {
 }
 
 .catalog__deals {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 4rem;
 }
@@ -363,11 +366,14 @@ li {
 .card {
     min-width: 33.333333%;
     height: auto;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     opacity: 0.8;
+    -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
 }
 
@@ -392,6 +398,7 @@ li {
 .card .card__img {
     max-width: 100%;
     height: auto;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -407,6 +414,8 @@ li {
     position: relative;
     font-size: 0.875rem;
     color: var(--color-text-grey);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -417,6 +426,8 @@ li {
     text-align: center;
     color: var(--color-text-grey);
     text-transform: uppercase;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
 }
 
@@ -440,10 +451,20 @@ li {
 
 .subscribe .form-group {
     padding: 2rem 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -461,7 +482,11 @@ li {
     font-size: 1rem;
     background-color: var(--color-white);
     color: var(--color-primary);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
     flex-grow: 3;
     margin-left: 3.5rem;
     margin-right: 8px;
@@ -474,11 +499,15 @@ li {
     font-weight: 700;
     border: none;
     background-color: var(--color-white);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
     cursor: pointer;
     color: #a99f8c;
     text-transform: uppercase;
     letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -505,6 +534,8 @@ li {
 }
 
 .deliveries {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -512,6 +543,8 @@ li {
 .deliveries .borders {
     border-left: 1px solid var(--color-text-grey-medium);
     border-right: 1px solid var(--color-text-grey-medium);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
 }
 
@@ -522,6 +555,8 @@ li {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -555,8 +590,13 @@ li {
 }
 
 .social .social__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -611,7 +651,11 @@ li {
 }
 
 .shopping-list .shopping-list__select-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom: 0.5rem;
 }
@@ -620,13 +664,19 @@ li {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    -moz-appearance: none;
     appearance: none;
     -webkit-appearance: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .arrow-selection:hover {
+    -webkit-filter: opacity(0.8);
     filter: opacity(0.8);
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
     transform: translateY(1px);
 }
 
@@ -641,6 +691,8 @@ li {
 }
 
 .shopping-list .shopping-list__products {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -667,9 +719,12 @@ li {
 }
 
 .btn-arrow {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     height: 10px;
     width: 13px;
+    background-color: transparent;
     background-size: contain;
     background-image: url(../images/down-arrow.png);
     background-repeat: no-repeat;
@@ -678,9 +733,17 @@ li {
 }
 
 .accordion {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
@@ -691,6 +754,8 @@ li {
 .panel {
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
 }
 
@@ -701,8 +766,12 @@ li {
 }
 
 .checkbox-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 12px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -762,10 +831,14 @@ input[type='checkbox']:checked + label {
     left: 5px;
     bottom: 5px;
     pointer-events: none;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .shopping-list__control-search[type='search']:focus + .content-label {
+    -webkit-transform: translate(-2px, -20px);
+    -ms-transform: translate(-2px, -20px);
     transform: translate(-2px, -20px);
     font-size: 12px;
 }
@@ -777,9 +850,18 @@ input[type='checkbox']:checked + label {
 }
 
 .shopping-list__range .shopping-list__range-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
 }
 
@@ -833,12 +915,20 @@ input[type='checkbox']:checked + label {
 }
 
 .shopping-list__sizes-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .shopping-list__sizes-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
 }
 
@@ -853,6 +943,8 @@ input[type='checkbox']:checked + label {
     border: 1px solid var(--color-input);
     background-color: transparent;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -867,13 +959,22 @@ input[type='checkbox']:checked + label {
 }
 
 .shopping-list .shopping-list__products .shopping-list__catalogue .shopping-list__catalogue-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
 .shopping-list__pages a {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -884,13 +985,23 @@ input[type='checkbox']:checked + label {
 .shopping-list__seq {
     font-family: var(--font-monserrat);
     padding: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .shopping-list__seq ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -907,6 +1018,8 @@ input[type='checkbox']:checked + label {
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .card {
@@ -957,6 +1070,9 @@ input[type='checkbox']:checked + label {
 
 @media only screen and (max-width: 690px) {
     .subscribe .form-group {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -970,6 +1086,9 @@ input[type='checkbox']:checked + label {
 
     .deliveries,
     .social {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -990,6 +1109,8 @@ input[type='checkbox']:checked + label {
     }
 
     .social__logo {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
     }
 }
