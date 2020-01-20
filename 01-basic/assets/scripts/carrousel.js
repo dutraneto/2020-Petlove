@@ -83,4 +83,3 @@ dotsNav.addEventListener('click', e => {
 
     moveToSlide(currentSlide, targetSlide, targetDot, targetIndex)
 })
-jhjhjh
