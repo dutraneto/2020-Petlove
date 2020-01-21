@@ -645,12 +645,21 @@ li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 3px 5px var(--color-text-grey);
+    z-index: 99;
 }
 
 /*
 //////////////////////////////////////////
 / PAGE SINGLE CONTENT - About Us
 */
+
+.page-single {
+    margin-top: calc(12rem - 3px);
+}
 
 .page-single .page-article {
     margin-top: 4.125rem;
