@@ -659,12 +659,40 @@ li {
 .page-single .page-article h2,
 .page-single .page-article .page-article__info {
     text-align: center;
+    margin-bottom: calc(2.5rem - 8px);
 }
 
 .page-single .page-article h6 {
     font-size: 11px;
     color: var(--color-text-grey);
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-article__info ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-article__info ul li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--color-text-grey-medium);
+}
+
+.page-article__info ul li:hover {
+    filter: opacity(70%);
+}
+
+.page-article__info ul li:not(:last-child) {
+    margin-right: 1.875rem;
+}
+
+.page-article__info ul li span {
+    margin-left: 12px;
 }
 
 /* MEDIAS */
