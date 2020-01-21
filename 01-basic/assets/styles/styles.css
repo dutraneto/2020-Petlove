@@ -341,7 +341,8 @@ li {
     /* none */
 }
 
-.catalog h2 {
+.catalog h2,
+.page-single .page-article h2 {
     font-family: var(--font-unna);
     font-size: 3.875rem;
     letter-spacing: 2px;
@@ -644,6 +645,26 @@ li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/*
+//////////////////////////////////////////
+/ PAGE SINGLE CONTENT - About Us
+*/
+
+.page-single .page-article {
+    margin-top: 4.125rem;
+}
+.page-single .page-article h6,
+.page-single .page-article h2,
+.page-single .page-article .page-article__info {
+    text-align: center;
+}
+
+.page-single .page-article h6 {
+    font-size: 11px;
+    color: var(--color-text-grey);
+    text-transform: uppercase;
 }
 
 /* MEDIAS */
