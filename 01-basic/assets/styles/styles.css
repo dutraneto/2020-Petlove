@@ -1,7 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
 /*
 
 Title: PetLove - 2019
@@ -22,7 +18,7 @@ Starts on: 08/27/2019
     --color-text-grey-medium: #8d8d8d;
     --color-text-grey-lighter: #ebebeb;
     --color-white: #ffffff;
-    --color-input: #c2bcad;
+    --color-input: #998e76;
 
     /* Font-Families */
     --font-unna: 'Unna', sans-serif;
@@ -107,7 +103,7 @@ li {
 
 .main-header .container .row {
     width: 85%;
-    padding: 2.2rem 0;
+    padding: 1.9rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -354,22 +350,30 @@ li {
 }
 
 .catalog__deals {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 4rem;
 }
 
 .card {
-    padding: 30px 0;
     min-width: 33.333333%;
     height: auto;
-    margin-bottom: 3.5rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     opacity: 0.8;
+    -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
 }
 
@@ -378,12 +382,23 @@ li {
 }
 
 .card-deals {
+    padding: 30px 0;
+    margin-bottom: 3.5rem;
+}
+
+.card-deals,
+.card-pets {
     text-align: center;
+}
+
+.card-pets {
+    margin-bottom: 1rem;
 }
 
 .card .card__img {
     max-width: 100%;
     height: auto;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -392,22 +407,27 @@ li {
     font-family: var(--font-unna);
     text-transform: capitalize;
     font-size: 1.375rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .card .card__price {
     position: relative;
     font-size: 0.875rem;
     color: var(--color-text-grey);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.catalog #show {
+.catalog #show,
+.shopping-list__catalogue #show {
     font-size: 0.75rem;
     margin: 1rem 0;
     text-align: center;
     color: var(--color-text-grey);
     text-transform: uppercase;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
 }
 
@@ -431,10 +451,20 @@ li {
 
 .subscribe .form-group {
     padding: 2rem 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -452,7 +482,11 @@ li {
     font-size: 1rem;
     background-color: var(--color-white);
     color: var(--color-primary);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
     flex-grow: 3;
     margin-left: 3.5rem;
     margin-right: 8px;
@@ -465,11 +499,15 @@ li {
     font-weight: 700;
     border: none;
     background-color: var(--color-white);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
     cursor: pointer;
     color: #a99f8c;
     text-transform: uppercase;
     letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -496,6 +534,8 @@ li {
 }
 
 .deliveries {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -503,6 +543,8 @@ li {
 .deliveries .borders {
     border-left: 1px solid var(--color-text-grey-medium);
     border-right: 1px solid var(--color-text-grey-medium);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
 }
 
@@ -513,6 +555,8 @@ li {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -546,8 +590,13 @@ li {
 }
 
 .social .social__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -586,9 +635,22 @@ li {
     opacity: 0.8;
 }
 
-/* Header medias */
+/*
+//////////////////////////////////////////
+/ SHOPPING LIST LAYOUT
+*/
+.bg-stamp-green {
+    background-image: url(../images/img-menu-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .card {
@@ -639,6 +701,9 @@ li {
 
 @media only screen and (max-width: 690px) {
     .subscribe .form-group {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -652,6 +717,9 @@ li {
 
     .deliveries,
     .social {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -672,16 +740,18 @@ li {
     }
 
     .social__logo {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
     }
 }
 
 /* UTILS */
-.u-m-lg {
-    margin: 6.25rem 0;
+.u-m-md {
+    margin: 5rem 0 !important;
 }
 .u-mt-sm {
-    margin-top: 0.6rem;
+    margin-top: 0.6rem !important;
 }
 
 .u-mt-md {
@@ -689,7 +759,11 @@ li {
 }
 
 .u-mt-lg {
-    margin-top: 6.5rem;
+    margin-top: 6.5rem !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 2.25rem !important;
 }
 
 .u-mb-sm {
@@ -697,11 +771,11 @@ li {
 }
 
 .u-mb-md {
-    margin-bottom: 7rem !important;
+    margin-bottom: 5rem !important;
 }
 
 .u-ml-sm {
-    margin-left: 2rem;
+    margin-left: 1.25rem !important;
 }
 
 .u-pd-sm {
