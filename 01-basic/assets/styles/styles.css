@@ -659,6 +659,7 @@ li {
 
 .page-single {
     margin-top: calc(12rem - 3px);
+    margin-bottom: calc(7.75rem - 6px);
 }
 
 .page-single .page-article {
@@ -708,8 +709,9 @@ li {
 }
 
 .page-article__about {
-    padding-left: 20%;
-    padding-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45vw;
     margin-bottom: calc(7.75rem - 10px);
 }
 
@@ -729,6 +731,20 @@ li {
     line-height: 32px;
     font-weight: 300;
 }
+
+.page-article__img {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    text-align: center;
+}
+
+.page-article__img img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
