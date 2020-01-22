@@ -570,23 +570,23 @@ li {
     text-align: center;
 }
 
-.social .social__follow-us .social__icons a:not(:last-child) {
+.social-icons a:not(:last-child) {
     margin-right: 1.5rem;
 }
 
-.social .social__follow-us .social__icons svg {
+.social-icons svg {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.social .social__follow-us .social__icons svg:hover {
+.social-icons svg:hover {
     opacity: 0.7;
 }
 
-.social .social__follow-us .social__icons .social__icons--facebook,
-.social .social__follow-us .social__icons .social__icons--instagram,
-.social .social__follow-us .social__icons .social__icons--twitter,
-.social .social__follow-us .social__icons .social__icons--gplus {
+.social-icons .social-icons--facebook,
+.social-icons .social-icons--instagram,
+.social-icons .social-icons--twitter,
+.social-icons .social-icons--gplus {
     fill: var(--color-text-grey-medium);
 }
 
