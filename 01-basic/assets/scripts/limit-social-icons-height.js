@@ -19,13 +19,13 @@ https://stackoverflow.com/questions/8653025/stop-fixed-position-at-footer
             iconsListTop + bodyScrollTop + iconsListOffSet >=
             subscribeTop + bodyScrollTop + subscribeOffset - iconsListSize // iconsListSize is the size of icons list in pixels
         ) {
-            iconsList.style.position = 'absolute'
-            iconsList.style.bottom = '5%' // freeze iconsList on 5% of the bottom
+            iconsList.classList.remove("follow-us--fixed")
+            iconsList.classList.add("follow-us--absolute")
         }
         // When scrolls back, returns to its initial position
         if (bodyScrollTop + window.innerHeight + iconsListSize < subscribeTop + bodyScrollTop) {
-            iconsList.style.position = 'fixed'
-            iconsList.style.bottom = '50%'
+            iconsList.classList.add("follow-us--fixed")
+            iconsList.classList.remove("follow-us--absolute")
         }
     })
 })()
