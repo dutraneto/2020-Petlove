@@ -685,11 +685,6 @@ li {
     text-align: center;
 }
 
-.page-single .page-single__follow-us .social-icons svg {
-    width: 1rem;
-    height: 1rem;
-}
-
 .page-single .page-single__follow-us .social-icons .social-icons__share {
     font-size: 12px;
     text-transform: uppercase;
