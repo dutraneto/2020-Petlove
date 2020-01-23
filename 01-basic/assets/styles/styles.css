@@ -666,8 +666,8 @@ li {
 .page-single .page-single__follow-us {
     display: inline-block;
     position: fixed;
-    max-height: 100%;
-    top: 50%;
+    bottom: 50%;
+    transform: translateY(50%);
 }
 
 .page-single .page-single__follow-us .social-icons {
