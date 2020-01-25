@@ -647,6 +647,11 @@ li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 3px 5px var(--color-text-grey);
+    z-index: 99;
 }
 
 .shopping-list {
@@ -661,6 +666,7 @@ li {
     -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom: 0.5rem;
+    margin-top: calc(9.5rem + 5px);
 }
 
 .arrow-selection {
