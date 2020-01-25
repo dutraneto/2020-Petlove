@@ -675,7 +675,8 @@ li {
 
 .follow-us--fixed {
     position: fixed;
-    bottom: calc(20% - 2.5rem + 4px);
+    bottom: 50%;
+    transform: translateY(50%);
     transition: all 0.5s ease-in-out;
 }
 
