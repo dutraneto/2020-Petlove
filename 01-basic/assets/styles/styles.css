@@ -982,7 +982,7 @@ input[type='checkbox']:checked + label {
     flex-flow: row wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
@@ -1031,7 +1031,8 @@ input[type='checkbox']:checked + label {
 
 /* MEDIAS */
 @media only screen and (max-width: 1220px) {
-    .catalog__deals {
+    .catalog__deals,
+    .shopping-list__catalogue-wrap {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
