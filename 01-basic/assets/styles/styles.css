@@ -523,11 +523,14 @@ li {
 //////////////////////////////////////////
 / FOOTER
 */
-.footer-wrap h5 {
+.footer-wrap h5,
+.footer-wrap label {
+    display: block;
     text-transform: uppercase;
     margin: 8px 0;
     font-size: 13px;
     line-height: 30px;
+    font-weight: 700;
 }
 
 .footer-wrap p {
@@ -897,7 +900,7 @@ li {
         max-width: 100%;
     }
 
-    .social-icons {
+    .page-single__follow-us .social-icons {
         display: none;
     }
 
