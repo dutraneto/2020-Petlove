@@ -783,22 +783,28 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 12px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 0.8rem;
 }
 
 .checkbox-wrap label {
     margin-left: 10px;
     cursor: pointer;
+    font-size: 13px;
+}
+
+.label-item {
+    line-height: 0;
 }
 
 .checkbox-control input[type='checkbox'] {
-    visibility: hidden;
+    display: none;
 }
 
 .checkbox-wrap .checkbox-control {
+    align-self: center;
     position: relative;
     width: 12px;
     height: 12px;
@@ -814,7 +820,7 @@ input[type='checkbox']:checked + label {
     z-index: 2;
     width: 10px;
     height: 10px;
-    bottom: 1px;
+    top: 1px;
     right: 1px;
     background-color: transparent;
     cursor: pointer;
