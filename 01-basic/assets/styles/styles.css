@@ -1049,6 +1049,14 @@ input[type='checkbox']:checked + label {
     .card .card__img {
         width: 100%;
     }
+
+    .shopping-list .shopping-list__products .shopping-list__category {
+        width: 30%;
+    }
+
+    .shopping-list .shopping-list__products .shopping-list__catalogue {
+        width: calc(100% - 30% - (5px));
+    }
 }
 
 @media only screen and (max-width: 1096px) {
@@ -1133,6 +1141,15 @@ input[type='checkbox']:checked + label {
         -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
         order: 3;
+    }
+
+    .shopping-list .shopping-list__products {
+        flex-direction: column;
+    }
+
+    .shopping-list .shopping-list__products .shopping-list__category,
+    .shopping-list .shopping-list__products .shopping-list__catalogue {
+        width: 100%;
     }
 }
 
