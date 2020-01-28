@@ -692,7 +692,7 @@ li {
 .shopping-list .shopping-list__select {
     padding: 0.5rem 0.75rem 0.5rem 0;
     font-family: var(--font-monserrat);
-    font-size: 0.75rem;
+    font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -837,6 +837,8 @@ input[type='checkbox']:checked + label {
     border: none;
     border-bottom: 1px solid var(--color-text-grey);
     background-color: transparent;
+    -webkit-appearance: none;
+    border-radius: none;
     color: var(--color-input);
     font-size: 16px;
     padding-left: 2px;
@@ -966,6 +968,7 @@ input[type='checkbox']:checked + label {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+    -webkit-border-radius: 0;
 }
 
 .filter-btn:hover {
@@ -1150,6 +1153,24 @@ input[type='checkbox']:checked + label {
     .shopping-list .shopping-list__products .shopping-list__category,
     .shopping-list .shopping-list__products .shopping-list__catalogue {
         width: 100%;
+    }
+
+    .shopping-list .shopping-list__select,
+    label.shopping-list__label,
+    .shopping-list__controls p,
+    .shopping-list__controls .label-item,
+    .checkbox-control input,
+    .checkbox-control .checkbox-model,
+    .label-item,
+    .shopping-list__content .shopping-list__control-search,
+    .content-label .search-label,
+    .shopping-list__sizes-col label,
+    .filter-btn {
+        font-size: 18px !important;
+    }
+
+    .filter-btn {
+        height: 3.75rem;
     }
 }
 
