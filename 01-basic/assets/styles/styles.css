@@ -1,7 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
 /*
 
 Title: PetLove - 2019
@@ -22,7 +18,7 @@ Starts on: 08/27/2019
     --color-text-grey-medium: #8d8d8d;
     --color-text-grey-lighter: #ebebeb;
     --color-white: #ffffff;
-    --color-input: #c2bcad;
+    --color-input: #998e76;
 
     /* Font-Families */
     --font-unna: 'Unna', sans-serif;
@@ -107,7 +103,7 @@ li {
 
 .main-header .container .row {
     width: 85%;
-    padding: 2.2rem 0;
+    padding: 1.9rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -345,7 +341,11 @@ li {
     /* none */
 }
 
-.catalog h2 {
+.catalog h2,
+.page-single .page-article h2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45vw;
     font-family: var(--font-unna);
     font-size: 3.875rem;
     letter-spacing: 2px;
@@ -354,22 +354,30 @@ li {
 }
 
 .catalog__deals {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 4rem;
 }
 
 .card {
-    padding: 30px 0;
     min-width: 33.333333%;
     height: auto;
-    margin-bottom: 3.5rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     opacity: 0.8;
+    -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
 }
 
@@ -378,12 +386,23 @@ li {
 }
 
 .card-deals {
+    padding: 30px 0;
+    margin-bottom: 3.5rem;
+}
+
+.card-deals,
+.card-pets {
     text-align: center;
+}
+
+.card-pets {
+    margin-bottom: 1rem;
 }
 
 .card .card__img {
     max-width: 100%;
     height: auto;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -392,22 +411,27 @@ li {
     font-family: var(--font-unna);
     text-transform: capitalize;
     font-size: 1.375rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .card .card__price {
     position: relative;
     font-size: 0.875rem;
     color: var(--color-text-grey);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.catalog #show {
+.catalog #show,
+.shopping-list__catalogue #show {
     font-size: 0.75rem;
     margin: 1rem 0;
     text-align: center;
     color: var(--color-text-grey);
     text-transform: uppercase;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
 }
 
@@ -431,10 +455,20 @@ li {
 
 .subscribe .form-group {
     padding: 2rem 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -452,7 +486,11 @@ li {
     font-size: 1rem;
     background-color: var(--color-white);
     color: var(--color-primary);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
     flex-grow: 3;
     margin-left: 3.5rem;
     margin-right: 8px;
@@ -465,11 +503,15 @@ li {
     font-weight: 700;
     border: none;
     background-color: var(--color-white);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
     cursor: pointer;
     color: #a99f8c;
     text-transform: uppercase;
     letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -481,11 +523,14 @@ li {
 //////////////////////////////////////////
 / FOOTER
 */
-.footer-wrap h5 {
+.footer-wrap h5,
+.footer-wrap label {
+    display: block;
     text-transform: uppercase;
     margin: 8px 0;
     font-size: 13px;
     line-height: 30px;
+    font-weight: 700;
 }
 
 .footer-wrap p {
@@ -496,6 +541,8 @@ li {
 }
 
 .deliveries {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -503,6 +550,8 @@ li {
 .deliveries .borders {
     border-left: 1px solid var(--color-text-grey-medium);
     border-right: 1px solid var(--color-text-grey-medium);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
     align-self: stretch;
 }
 
@@ -513,6 +562,8 @@ li {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 7vw;
 }
@@ -525,29 +576,34 @@ li {
     text-align: center;
 }
 
-.social .social__follow-us .social__icons a:not(:last-child) {
+.social__follow-us .social-icons a:not(:last-child) {
     margin-right: 1.5rem;
 }
 
-.social .social__follow-us .social__icons svg {
+.social-icons svg {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.social .social__follow-us .social__icons svg:hover {
+.social-icons svg:hover {
     opacity: 0.7;
 }
 
-.social .social__follow-us .social__icons .social__icons--facebook,
-.social .social__follow-us .social__icons .social__icons--instagram,
-.social .social__follow-us .social__icons .social__icons--twitter,
-.social .social__follow-us .social__icons .social__icons--gplus {
+.social-icons .social-icons--facebook,
+.social-icons .social-icons--instagram,
+.social-icons .social-icons--twitter,
+.social-icons .social-icons--gplus {
     fill: var(--color-text-grey-medium);
 }
 
 .social .social__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -586,9 +642,158 @@ li {
     opacity: 0.8;
 }
 
-/* Header medias */
+/*
+//////////////////////////////////////////
+/ SHOPPING LIST LAYOUT
+*/
+.bg-stamp-green {
+    background-image: url(../images/img-menu-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 3px 5px var(--color-text-grey);
+    z-index: 99;
+}
+
+/*
+//////////////////////////////////////////
+/ PAGE SINGLE CONTENT - About Us
+*/
+
+.page-single {
+    position: relative;
+    margin-top: calc(12rem - 3px);
+    margin-bottom: calc(7.75rem - 6px);
+}
+
+.page-single .page-single__follow-us {
+    display: inline-block;
+}
+
+.follow-us--fixed {
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.follow-us--absolute {
+    position: absolute;
+    bottom: 0;
+}
+
+.page-single .page-single__follow-us .social-icons {
+    text-align: center;
+}
+
+.page-single .page-single__follow-us .social-icons .social-icons__share {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color-text-grey);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.page-single .page-single__follow-us .social-icons a {
+    display: block;
+}
+
+.page-single .page-single__follow-us .social-icons a:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.page-single .page-article {
+    margin-top: 4.125rem;
+}
+.page-single .page-article h6,
+.page-single .page-article h2 {
+    text-align: center;
+    margin-bottom: calc(2.5rem - 8px);
+}
+
+.page-single .page-article h6 {
+    font-size: 11px;
+    color: var(--color-text-grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-single .page-article .page-article__info {
+    margin-bottom: 3.812rem;
+}
+
+.page-article__info ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-article__info ul li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--color-text-grey-medium);
+}
+
+.page-article__info ul li:hover {
+    filter: opacity(70%);
+}
+
+.page-article__info ul li:not(:last-child) {
+    margin-right: 1.875rem;
+}
+
+.page-article__info ul li span {
+    margin-left: 12px;
+}
+
+.page-article__about {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45vw;
+    margin-bottom: calc(7.75rem - 10px);
+}
+
+.page-article__about h3 {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.page-article__about h3,
+.page-article__about p {
+    margin-bottom: 1.75rem;
+}
+
+.page-article__about p {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.page-article__img {
+    max-width: 70%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-article__img img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* MEDIAS */
 @media only screen and (max-width: 1220px) {
     .catalog__deals {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .card {
@@ -635,10 +840,19 @@ li {
     .social .social__contact .social__contact-btn {
         right: 0;
     }
+
+    .catalog h2,
+    .page-single .page-article h2,
+    .page-article__about {
+        max-width: 70%;
+    }
 }
 
 @media only screen and (max-width: 690px) {
     .subscribe .form-group {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -652,6 +866,9 @@ li {
 
     .deliveries,
     .social {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -672,16 +889,34 @@ li {
     }
 
     .social__logo {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
+    }
+
+    .catalog h2,
+    .page-single .page-article h2,
+    .page-article__img,
+    .page-article__about {
+        max-width: 100%;
+    }
+
+    .page-single__follow-us .social-icons {
+        display: none;
+    }
+
+    .page-article__info ul li {
+        font-size: 10px;
+        letter-spacing: 0;
     }
 }
 
 /* UTILS */
-.u-m-lg {
-    margin: 6.25rem 0;
+.u-m-md {
+    margin: 5rem 0 !important;
 }
 .u-mt-sm {
-    margin-top: 0.6rem;
+    margin-top: 0.6rem !important;
 }
 
 .u-mt-md {
@@ -689,7 +924,11 @@ li {
 }
 
 .u-mt-lg {
-    margin-top: 6.5rem;
+    margin-top: 6.5rem !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 2.25rem !important;
 }
 
 .u-mb-sm {
@@ -697,11 +936,11 @@ li {
 }
 
 .u-mb-md {
-    margin-bottom: 7rem !important;
+    margin-bottom: 5rem !important;
 }
 
 .u-ml-sm {
-    margin-left: 2rem;
+    margin-left: 1.25rem !important;
 }
 
 .u-pd-sm {
