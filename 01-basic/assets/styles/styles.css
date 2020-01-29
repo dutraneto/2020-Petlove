@@ -1156,7 +1156,6 @@ input[type='checkbox']:checked + label {
     }
 
     .shopping-list .shopping-list__select,
-    label.shopping-list__label,
     .shopping-list__controls p,
     .shopping-list__controls .label-item,
     .checkbox-control input,
