@@ -337,10 +337,6 @@ li {
 //////////////////////////////////////////
 / CATALOGUE
 */
-.catalog {
-    /* none */
-}
-
 .catalog h2,
 .page-single .page-article h2 {
     margin-left: auto;
@@ -644,8 +640,10 @@ li {
 
 /*
 //////////////////////////////////////////
-/ SHOPPING LIST LAYOUT
+/ PAGE SINGLE CONTENT - About Us
 */
+
+/* simple nav */
 .bg-stamp-green {
     background-image: url(../images/img-menu-bg.png);
     background-position: center;
@@ -657,11 +655,6 @@ li {
     box-shadow: 0 3px 5px var(--color-text-grey);
     z-index: 99;
 }
-
-/*
-//////////////////////////////////////////
-/ PAGE SINGLE CONTENT - About Us
-*/
 
 .page-single {
     position: relative;
@@ -788,6 +781,11 @@ li {
     -o-object-fit: cover;
     object-fit: cover;
 }
+
+/*
+//////////////////////////////////////////
+/ SHOPPING LIST LAYOUT
+*/
 
 .shopping-list {
     margin-top: 1.8rem;
@@ -960,6 +958,7 @@ input[type='checkbox']:checked + label {
     background-color: transparent;
     cursor: pointer;
 }
+
 /* search input */
 .shopping-list__content {
     position: relative;
@@ -1090,6 +1089,7 @@ input[type='checkbox']:checked + label {
     flex-basis: 50%;
 }
 
+/* filter button */
 .filter-btn {
     font-size: 0.75rem;
     font-weight: 300;
@@ -1112,6 +1112,7 @@ input[type='checkbox']:checked + label {
     background-color: var(--color-input);
 }
 
+/* catalogue */
 .shopping-list .shopping-list__products .shopping-list__catalogue {
     margin-left: 5px;
     width: calc(100% - 22% - (5px));
@@ -1174,7 +1175,10 @@ input[type='checkbox']:checked + label {
     margin-right: 20px;
 }
 
-/* MEDIAS */
+/*
+//////////////////////////////////////////
+/ MEDIA QUERIES
+*/
 @media only screen and (max-width: 1220px) {
     .catalog__deals,
     .shopping-list__catalogue-wrap {
