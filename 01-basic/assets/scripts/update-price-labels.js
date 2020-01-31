@@ -17,7 +17,6 @@ function updatePriceLabels() {
     labels[1].innerHTML = "$ " + price2
 }
 
-// reset all selected filters
 (function resetFilters() {
     const reset = document.getElementsByClassName("filter-btn")[0]
     const ranges = document.querySelectorAll(".shopping-list__range input")
