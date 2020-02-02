@@ -1176,6 +1176,56 @@ input[type='checkbox']:checked + label {
     margin-right: 20px;
 }
 
+.page-single__wrap {
+    height: 20rem;
+}
+
+.page-single__wrap .page-single__content {
+    display: flex;
+    height: inherit;
+}
+
+.page-single__contact-info,
+.page-single__contact-form {
+    height: inherit;
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.page-single__contact-info .page-single__heading h3 {
+    font-size: 1.5rem;
+    line-height: 35px;
+    font-weight: normal;
+}
+
+.page-single__contact-info h5 {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 22px;
+    font-weight: normal;
+}
+.page-single__contact-info p {
+    font-size: 1rem;
+    line-height: 19px;
+    font-weight: 300;
+    color: var(--color-text-grey-medium);
+}
+
+.page-single__contact-info .page-single__social h5 {
+    margin-bottom: 7px;
+}
+
+.page-single__social-wrap .social-icons a:not(:last-child) {
+    margin-right: 15px;
+}
+
+.page-single__social-wrap .social-icons a svg {
+    fill: var(--color-input);
+}
+
 /*
 //////////////////////////////////////////
 / MEDIA QUERIES
