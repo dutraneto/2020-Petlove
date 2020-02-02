@@ -347,6 +347,7 @@ li {
     letter-spacing: 2px;
     text-align: center;
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 .catalog__deals {
