@@ -175,7 +175,23 @@
                             </div>
                     </aside>
                     <aside class="page-single__contact-form">
-
+                        <form action="">
+                            <div class="form-group">
+                                <label for="page-single__name">name</label>
+                                <input id="page-single__name" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="page-single__email">email address</label>
+                                <input id="page-single__email" type="email" class="form-control"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="page-single__message">message</label>
+                                <textarea name="" id="page-single__message" cols="30" rows="10" class="form-control"
+                                    required></textarea>
+                            </div>
+                            <button class="">send</button>
+                        </form>
                     </aside>
                 </div>
             </div>

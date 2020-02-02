@@ -1176,23 +1176,25 @@ input[type='checkbox']:checked + label {
     margin-right: 20px;
 }
 
-.page-single__wrap {
-    height: 20rem;
-}
+/*
+//////////////////////////////////////////
+/ PAGE SINGLE FORMS
+*/
 
 .page-single__wrap .page-single__content {
     display: flex;
-    height: inherit;
 }
 
 .page-single__contact-info,
 .page-single__contact-form {
-    height: inherit;
     width: calc(50% - 20px);
+}
+
+.page-single__contact-info,
+.page-single__contact-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
 }
 
 .page-single__contact-info .page-single__heading h3 {
@@ -1224,6 +1226,23 @@ input[type='checkbox']:checked + label {
 
 .page-single__social-wrap .social-icons a svg {
     fill: var(--color-input);
+}
+
+.page-single__contact-form {
+    height: 25rem;
+}
+
+.page-single__contact-form form {
+    height: 100%;
+}
+
+.page-single__contact-form .form-control {
+    width: 100%;
+}
+
+.page-single__contact-form .form-group label,
+.page-single__contact-form .form-group .form-control {
+    display: block;
 }
 
 /*
