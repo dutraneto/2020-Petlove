@@ -1186,7 +1186,9 @@ input[type='checkbox']:checked + label {
 
 .page-single__wrap .page-single__content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .page-single__contact-info,
@@ -1200,15 +1202,13 @@ input[type='checkbox']:checked + label {
     flex-direction: column;
 }
 
+.page-single__contact-form,
 .page-single__contact-info {
-    justify-content: space-evenly;
-}
-
-.page-single__contact-form {
     margin-bottom: 4.125rem;
 }
 
-.page-single__contact-form form {
+.page-single__contact-form form,
+.page-single__contact-info {
     justify-content: space-between;
 }
 
@@ -1243,6 +1243,10 @@ input[type='checkbox']:checked + label {
 
 .page-single__social-wrap .social-icons a svg {
     fill: var(--color-input);
+}
+
+.page-single__contact-info {
+    height: 20rem;
 }
 
 .page-single__contact-form {
@@ -1371,6 +1375,11 @@ input[type='checkbox']:checked + label {
 }
 
 @media only screen and (max-width: 690px) {
+    .catalog h2,
+    .page-single .page-article h2 {
+        font-size: 9vw;
+    }
+
     .subscribe .form-group {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1466,6 +1475,20 @@ input[type='checkbox']:checked + label {
     .filter-btn {
         height: 3.75rem;
     }
+
+    .page-single__wrap .page-single__content {
+        flex-direction: column;
+    }
+
+    .page-single__contact-info,
+    .page-single__contact-form {
+        width: 100%;
+    }
+
+    .page-single__contact-info {
+        order: 1;
+        text-align: center;
+    }
 }
 
 /* UTILS */
@@ -1520,5 +1543,5 @@ input[type='checkbox']:checked + label {
 }
 
 .u-box-shadow {
-    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.1);
 }
