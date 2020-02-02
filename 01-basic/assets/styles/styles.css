@@ -1106,6 +1106,8 @@ input[type='checkbox']:checked + label {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .filter-btn:hover {
@@ -1271,6 +1273,8 @@ input[type='checkbox']:checked + label {
     font-size: 16px;
     color: var(--color-input);
     padding-left: 10px;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 
 .page-single__contact-form .form-message {
@@ -1299,7 +1303,10 @@ input[type='checkbox']:checked + label {
     color: var(--color-white);
     font-size: 0.75rem;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     transition: filter 0.3s;
+    border: none;
 }
 
 .page-single__btn:hover {
