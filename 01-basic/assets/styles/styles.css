@@ -1183,6 +1183,7 @@ input[type='checkbox']:checked + label {
 
 .page-single__wrap .page-single__content {
     display: flex;
+    justify-content: space-between;
 }
 
 .page-single__contact-info,
@@ -1203,7 +1204,8 @@ input[type='checkbox']:checked + label {
     font-weight: normal;
 }
 
-.page-single__contact-info h5 {
+.page-single__contact-info h5,
+.page-single__contact-form .form-group label {
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 22px;
@@ -1216,7 +1218,8 @@ input[type='checkbox']:checked + label {
     color: var(--color-text-grey-medium);
 }
 
-.page-single__contact-info .page-single__social h5 {
+.page-single__contact-info .page-single__social h5,
+.page-single__contact-form .form-group label {
     margin-bottom: 7px;
 }
 
@@ -1229,20 +1232,57 @@ input[type='checkbox']:checked + label {
 }
 
 .page-single__contact-form {
-    height: 25rem;
+    height: 30rem;
 }
 
 .page-single__contact-form form {
     height: 100%;
 }
 
-.page-single__contact-form .form-control {
+.page-single__contact-form form:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.page-single__contact-form .form-control,
+.page-single__contact-form .form-message {
     width: 100%;
+    border: 1px solid var(--color-text-grey-lighter);
+    font-size: 16px;
+    color: var(--color-input);
+    padding-left: 10px;
+}
+
+.page-single__contact-form .form-message {
+    padding-top: 10px;
 }
 
 .page-single__contact-form .form-group label,
-.page-single__contact-form .form-group .form-control {
+.page-single__contact-form .form-group .form-control,
+.page-single__contact-form .form-group .form-message {
     display: block;
+}
+
+.page-single__contact-form .form-group label {
+    cursor: pointer;
+}
+
+.page-single__contact-form .form-group .form-control,
+.page-single__btn {
+    height: 3rem;
+}
+
+.page-single__btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: var(--color-input);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.page-single__btn:hover {
+    filter: saturate(1.5);
 }
 
 /*
