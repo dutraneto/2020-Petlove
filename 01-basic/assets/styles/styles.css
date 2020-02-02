@@ -1180,6 +1180,9 @@ input[type='checkbox']:checked + label {
 //////////////////////////////////////////
 / PAGE SINGLE FORMS
 */
+.page-single .page-single__container {
+    padding-top: 1px;
+}
 
 .page-single__wrap .page-single__content {
     display: flex;
@@ -1195,6 +1198,17 @@ input[type='checkbox']:checked + label {
 .page-single__contact-form form {
     display: flex;
     flex-direction: column;
+}
+
+.page-single__contact-info {
+    justify-content: space-evenly;
+}
+
+.page-single__contact-form {
+    margin-bottom: 4.125rem;
+}
+
+.page-single__contact-form form {
     justify-content: space-between;
 }
 
@@ -1232,7 +1246,7 @@ input[type='checkbox']:checked + label {
 }
 
 .page-single__contact-form {
-    height: 30rem;
+    height: 28rem;
 }
 
 .page-single__contact-form form {
@@ -1487,10 +1501,24 @@ input[type='checkbox']:checked + label {
 }
 
 .u-pd-sm {
-    padding: 0 7vw !important;
+    padding-left: 7vw !important;
+    padding-right: 7vw !important;
+}
+
+.u-py-sm {
+    padding-top: 0.1rem;
+}
+
+.u-mx-md {
+    margin-left: 10vw !important;
+    margin-right: 10vw !important;
 }
 
 .u-pos-absolute {
     position: absolute;
     width: 100%;
+}
+
+.u-box-shadow {
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.05);
 }
