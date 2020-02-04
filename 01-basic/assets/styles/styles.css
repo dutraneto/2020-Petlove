@@ -441,6 +441,10 @@ li {
     margin: 0 auto;
 }
 
+.w-10 {
+    width: 10%;
+}
+
 /*
 //////////////////////////////////////////
 / SUBSCRIBE
@@ -1217,9 +1221,8 @@ input[type='checkbox']:checked + label {
     justify-content: space-between;
 }
 
-.page-single__contact-info .page-single__heading h3 {
+.page-single__heading h3 {
     font-size: 1.5rem;
-    line-height: 35px;
     font-weight: normal;
 }
 
@@ -1527,6 +1530,10 @@ input[type='checkbox']:checked + label {
 
 .u-mb-md {
     margin-bottom: 5rem !important;
+}
+
+.u-mb-0 {
+    margin-bottom: 0 !important;
 }
 
 .u-ml-sm {
