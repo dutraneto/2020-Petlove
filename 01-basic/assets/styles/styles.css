@@ -1197,7 +1197,7 @@ input[type='checkbox']:checked + label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .page-single__contact-info,
