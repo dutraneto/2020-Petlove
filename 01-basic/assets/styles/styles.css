@@ -1321,13 +1321,13 @@ input[type='checkbox']:checked + label {
 / PAGE SERVICES, PAGE ABOUT US
 */
 .page-services,
-.page-about-us {
+.page-aboutus {
     margin-top: calc(12rem - 3px);
     margin-bottom: calc(7.75rem - 6px);
 }
 
 .page-services .page-services__container,
-.page-about-us .page-about-us__container {
+.page-aboutus .page-aboutus__container {
     max-width: 1024px;
     height: auto;
     padding-top: calc(2.5rem - 8px);
@@ -1336,18 +1336,21 @@ input[type='checkbox']:checked + label {
     padding-bottom: 90px;
 }
 
-.page-services__wrap {
+.page-services__wrap,
+.page-aboutus__wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.page-services-card {
+.page-services-card,
+.page-aboutus-card {
     width: calc(50%);
     height: 100%;
 }
 
-.page-services-card .page-services-card__fig {
+.page-services-card .page-services-card__fig,
+.page-aboutus-card .page-aboutus-card__fig {
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -1356,7 +1359,8 @@ input[type='checkbox']:checked + label {
     position: relative;
 }
 
-.page-services-card .page-services-card__caption {
+.page-services-card .page-services-card__caption,
+.page-aboutus-card .page-aboutus-card__caption {
     position: absolute;
     color: var(--color-white);
     top: 50%;
@@ -1370,7 +1374,8 @@ input[type='checkbox']:checked + label {
     transition: all 1s ease;
 }
 
-.page-services-card .page-services-card__img {
+.page-services-card .page-services-card__img,
+.page-aboutus-card .page-aboutus-card__img {
     width: 100%;
     height: auto;
     -o-object-fit: cover;
@@ -1379,11 +1384,13 @@ input[type='checkbox']:checked + label {
     transition: filter 2s ease;
 }
 
-.page-services-card .page-services-card__img:hover {
+.page-services-card .page-services-card__img:hover,
+.page-aboutus-card .page-aboutus-card__img:hover {
     filter: brightness(100%);
 }
 
-.page-services-card__img:hover + .page-services-card__caption {
+.page-services-card__img:hover + .page-services-card__caption,
+.page-aboutus-card__img:hover + .page-aboutus-card__caption {
     background-color: var(--color-primary);
     opacity: 90%;
 }
