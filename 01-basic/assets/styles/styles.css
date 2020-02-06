@@ -338,7 +338,7 @@ li {
 / CATALOGUE
 */
 .catalog h2,
-.page-single .page-article h2 {
+.page-article h2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 45vw;
@@ -1314,6 +1314,58 @@ input[type='checkbox']:checked + label {
 
 .page-single__btn:hover {
     filter: saturate(1.5);
+}
+
+/*
+//////////////////////////////////////////
+/ PAGE SERVICES, PAGE ABOUT US
+*/
+.page-services,
+.page-about-us {
+    margin-top: calc(12rem - 3px);
+    margin-bottom: calc(7.75rem - 6px);
+}
+
+.page-services .page-services__container,
+.page-about-us .page-about-us__container {
+    max-width: 1024px;
+    height: auto;
+    padding-top: calc(2.5rem - 8px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 90px;
+}
+
+.page-services__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.page-services-card {
+    width: calc(50%);
+    height: 100%;
+}
+
+.page-services-card .page-services-card__fig {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.page-services-card .page-services-card__img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: filter 0.5s;
+}
+
+.page-services-card .page-services-card__img:hover {
+    filter: brightness(100%);
 }
 
 /*
