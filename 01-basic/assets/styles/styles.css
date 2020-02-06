@@ -1346,7 +1346,7 @@ input[type='checkbox']:checked + label {
 .page-services-card,
 .page-aboutus-card {
     width: calc(50%);
-    height: 100%;
+    height: auto;
 }
 
 .page-services-card .page-services-card__fig,
@@ -1359,6 +1359,13 @@ input[type='checkbox']:checked + label {
     position: relative;
 }
 
+.page-services-card a,
+.page-aboutus-card a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .page-services-card .page-services-card__caption,
 .page-aboutus-card .page-aboutus-card__caption {
     position: absolute;
@@ -1367,7 +1374,7 @@ input[type='checkbox']:checked + label {
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: capitalize;
-    font-size: 5vw;
+    font-size: 2.6rem;
     font-family: var(--font-unna);
     width: 70%;
     text-align: center;
@@ -1463,6 +1470,11 @@ input[type='checkbox']:checked + label {
     .page-article__heading h2,
     .page-article__about {
         max-width: 70%;
+    }
+
+    .page-services-card .page-services-card__caption,
+    .page-aboutus-card .page-aboutus-card__caption {
+        font-size: 2rem;
     }
 }
 
@@ -1602,6 +1614,12 @@ input[type='checkbox']:checked + label {
     .page-aboutus-card__caption {
         background-color: var(--color-background);
         opacity: 90%;
+    }
+
+    .page-services-card .page-services-card__caption,
+    .page-aboutus-card .page-aboutus-card__caption {
+        font-size: 1.5rem;
+        width: 90%;
     }
 }
 
