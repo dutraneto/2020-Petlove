@@ -1353,6 +1353,21 @@ input[type='checkbox']:checked + label {
     justify-content: center;
     width: 100%;
     height: auto;
+    position: relative;
+}
+
+.page-services-card .page-services-card__caption {
+    position: absolute;
+    color: var(--color-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    font-size: 5vw;
+    font-family: var(--font-unna);
+    width: 70%;
+    text-align: center;
+    transition: all 1s ease;
 }
 
 .page-services-card .page-services-card__img {
@@ -1361,11 +1376,16 @@ input[type='checkbox']:checked + label {
     -o-object-fit: cover;
     object-fit: cover;
     filter: brightness(50%);
-    transition: filter 0.5s;
+    transition: filter 2s ease;
 }
 
 .page-services-card .page-services-card__img:hover {
     filter: brightness(100%);
+}
+
+.page-services-card__img:hover + .page-services-card__caption {
+    background-color: var(--color-primary);
+    opacity: 90%;
 }
 
 /*
