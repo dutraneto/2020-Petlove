@@ -1384,7 +1384,7 @@ input[type='checkbox']:checked + label {
 .page-services-card .page-services-card__img,
 .page-aboutus-card .page-aboutus-card__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     filter: brightness(50%);
@@ -1619,7 +1619,6 @@ input[type='checkbox']:checked + label {
     .page-services-card .page-services-card__caption,
     .page-aboutus-card .page-aboutus-card__caption {
         font-size: 1.5rem;
-        width: 90%;
     }
 }
 
