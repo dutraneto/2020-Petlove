@@ -338,7 +338,7 @@ li {
 / CATALOGUE
 */
 .catalog h2,
-.page-article h2 {
+.page-article__heading h2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 45vw;
@@ -707,7 +707,7 @@ li {
     margin-top: 4.125rem;
 }
 .page-single .page-article h6,
-.page-single .page-article h2 {
+.page-article__heading h2 {
     text-align: center;
     margin-bottom: calc(2.5rem - 8px);
 }
@@ -1391,7 +1391,7 @@ input[type='checkbox']:checked + label {
 
 .page-services-card__img:hover + .page-services-card__caption,
 .page-aboutus-card__img:hover + .page-aboutus-card__caption {
-    background-color: var(--color-primary);
+    background-color: var(--color-background);
     opacity: 90%;
 }
 
@@ -1460,7 +1460,7 @@ input[type='checkbox']:checked + label {
     }
 
     .catalog h2,
-    .page-single .page-article h2,
+    .page-article__heading h2,
     .page-article__about {
         max-width: 70%;
     }
@@ -1468,7 +1468,7 @@ input[type='checkbox']:checked + label {
 
 @media only screen and (max-width: 690px) {
     .catalog h2,
-    .page-single .page-article h2 {
+    .page-article__heading h2 {
         font-size: 9vw;
     }
 
@@ -1518,7 +1518,7 @@ input[type='checkbox']:checked + label {
     }
 
     .catalog h2,
-    .page-single .page-article h2,
+    .page-article__heading h2,
     .page-article__img,
     .page-article__about {
         max-width: 100%;
@@ -1580,6 +1580,28 @@ input[type='checkbox']:checked + label {
     .page-single__contact-info {
         order: 1;
         text-align: center;
+    }
+
+    .page-services-card,
+    .page-aboutus-card {
+        width: 100%;
+    }
+
+    .page-services-card .page-services-card__img,
+    .page-aboutus-card .page-aboutus-card__img {
+        filter: brightness(100%);
+    }
+
+    .page-services-card .page-services-card__fig,
+    .page-aboutus-card .page-aboutus-card__fig {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-services-card__caption,
+    .page-aboutus-card__caption {
+        background-color: var(--color-background);
+        opacity: 90%;
     }
 }
 
