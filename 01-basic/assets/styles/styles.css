@@ -338,7 +338,7 @@ li {
 / CATALOGUE
 */
 .catalog h2,
-.page-single .page-article h2 {
+.page-article__heading h2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 45vw;
@@ -707,7 +707,7 @@ li {
     margin-top: 4.125rem;
 }
 .page-single .page-article h6,
-.page-single .page-article h2 {
+.page-article__heading h2 {
     text-align: center;
     margin-bottom: calc(2.5rem - 8px);
 }
@@ -1318,6 +1318,92 @@ input[type='checkbox']:checked + label {
 
 /*
 //////////////////////////////////////////
+/ PAGE SERVICES, PAGE ABOUT US
+*/
+.page-services,
+.page-aboutus {
+    margin-top: calc(12rem - 3px);
+    margin-bottom: calc(7.75rem - 6px);
+}
+
+.page-services .page-services__container,
+.page-aboutus .page-aboutus__container {
+    max-width: 1024px;
+    height: auto;
+    padding-top: calc(2.5rem - 8px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 90px;
+}
+
+.page-services__wrap,
+.page-aboutus__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.page-services-card,
+.page-aboutus-card {
+    width: calc(50%);
+    height: auto;
+}
+
+.page-services-card .page-services-card__fig,
+.page-aboutus-card .page-aboutus-card__fig {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.page-services-card a,
+.page-aboutus-card a {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.page-services-card .page-services-card__caption,
+.page-aboutus-card .page-aboutus-card__caption {
+    position: absolute;
+    color: var(--color-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    font-size: 2.6rem;
+    font-family: var(--font-unna);
+    width: 70%;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.page-services-card .page-services-card__img,
+.page-aboutus-card .page-aboutus-card__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: filter 2s ease;
+}
+
+.page-services-card .page-services-card__img:hover,
+.page-aboutus-card .page-aboutus-card__img:hover {
+    filter: brightness(100%);
+}
+
+.page-services-card__img:hover + .page-services-card__caption,
+.page-aboutus-card__img:hover + .page-aboutus-card__caption {
+    background-color: var(--color-background);
+    opacity: 90%;
+}
+
+/*
+//////////////////////////////////////////
 / MEDIA QUERIES
 */
 @media only screen and (max-width: 1220px) {
@@ -1381,15 +1467,20 @@ input[type='checkbox']:checked + label {
     }
 
     .catalog h2,
-    .page-single .page-article h2,
+    .page-article__heading h2,
     .page-article__about {
         max-width: 70%;
+    }
+
+    .page-services-card .page-services-card__caption,
+    .page-aboutus-card .page-aboutus-card__caption {
+        font-size: 2rem;
     }
 }
 
 @media only screen and (max-width: 690px) {
     .catalog h2,
-    .page-single .page-article h2 {
+    .page-article__heading h2 {
         font-size: 9vw;
     }
 
@@ -1439,7 +1530,7 @@ input[type='checkbox']:checked + label {
     }
 
     .catalog h2,
-    .page-single .page-article h2,
+    .page-article__heading h2,
     .page-article__img,
     .page-article__about {
         max-width: 100%;
@@ -1501,6 +1592,33 @@ input[type='checkbox']:checked + label {
     .page-single__contact-info {
         order: 1;
         text-align: center;
+    }
+
+    .page-services-card,
+    .page-aboutus-card {
+        width: 100%;
+    }
+
+    .page-services-card .page-services-card__img,
+    .page-aboutus-card .page-aboutus-card__img {
+        filter: brightness(100%);
+    }
+
+    .page-services-card .page-services-card__fig,
+    .page-aboutus-card .page-aboutus-card__fig {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-services-card__caption,
+    .page-aboutus-card__caption {
+        background-color: var(--color-background);
+        opacity: 90%;
+    }
+
+    .page-services-card .page-services-card__caption,
+    .page-aboutus-card .page-aboutus-card__caption {
+        font-size: 1.5rem;
     }
 }
 
