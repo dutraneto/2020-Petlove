@@ -121,6 +121,30 @@ li {
     object-fit: fill;
 }
 
+/* MENU */
+.menu-close,
+.menu-toggle {
+    display: none;
+}
+
+.navbar .fa-close,
+.menu-toggle .fa-bars {
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .navbar__items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1454,6 +1478,10 @@ input[type='checkbox']:checked + label {
 }
 
 @media only screen and (max-width: 856px) {
+    .mobile-navbar {
+        display: block;
+    }
+
     .navbar__items {
         display: none;
     }
@@ -1475,6 +1503,10 @@ input[type='checkbox']:checked + label {
     .page-services-card .page-services-card__caption,
     .page-aboutus-card .page-aboutus-card__caption {
         font-size: 2rem;
+    }
+
+    .menu-toggle {
+        display: inline-block;
     }
 }
 
