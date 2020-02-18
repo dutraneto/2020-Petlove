@@ -122,15 +122,54 @@ li {
 }
 
 /* MENU */
-.menu-close,
-.menu-toggle {
+.navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    width: 30%;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 2.5rem 3.3rem 0 2.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    opacity: 90%;
+}
+
+.menu-close {
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.menu-open {
     display: none;
 }
 
-.navbar .fa-close,
-.menu-toggle .fa-bars {
-    font-size: 30px;
+.menu-open .fa-bars,
+.menu-close .fa-close {
     color: var(--color-white);
+    font-size: 24px;
+}
+.menu-open:hover .fa-bars,
+.menu-close:hover .fa-close {
+    color: var(--color-secondary);
+}
+
+.navbar-mobile.open {
+    transform: translateX(0);
+}
+
+.navbar-mobile .navbar__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 50vh;
 }
 
 /* Screen reader only */
@@ -1478,12 +1517,24 @@ input[type='checkbox']:checked + label {
 }
 
 @media only screen and (max-width: 856px) {
-    .mobile-navbar {
-        display: block;
+    .navbar {
+        display: none;
+        transition: all 0.5s ease;
+        right: -255px;
     }
 
-    .navbar__items {
-        display: none;
+    .navbar__items--column {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .navbar__items .navbar__items-item {
+        margin-bottom: 1rem;
+    }
+
+    .menu-open {
+        display: inline-block;
     }
 
     .social .social__contact .social__contact-wrap .social__signup {
@@ -1504,13 +1555,14 @@ input[type='checkbox']:checked + label {
     .page-aboutus-card .page-aboutus-card__caption {
         font-size: 2rem;
     }
-
-    .menu-toggle {
-        display: inline-block;
-    }
 }
 
 @media only screen and (max-width: 690px) {
+    .navbar-mobile {
+        left: 40%;
+        width: 60%;
+    }
+
     .catalog h2,
     .page-article__heading h2 {
         font-size: 9vw;
