@@ -1526,7 +1526,6 @@ input[type='checkbox']:checked + label {
     .navbar {
         display: none;
         transition: all 0.5s ease;
-        right: -255px;
     }
 
     .navbar__items--column {
