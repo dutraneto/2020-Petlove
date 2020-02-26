@@ -87,7 +87,12 @@
 						alt="Site Logo" />
 				</a>
 
-				<nav id="main-menu" class="navbar navbar--primary" aria-label="Main menu">
+				<nav id="main-menu" class="navbar" aria-label="Navigation">
+					<a href="#main-menu-toggle" role="button" id="main-menu-close" class="menu-close"
+						aria-label="Close main menu" tabindex="-1">
+						<span class="sr-only">Close main menu</span>
+						<span class="fa fa-close" aria-hidden="true"></span>
+					</a>
 					<ul class="navbar__items">
 						<li class="navbar__items-item"><a href="./shopping-list.html">dogs</a></li>
 						<li class="navbar__items-item"><a href="./shopping-list.html">cats</a></li>
@@ -101,30 +106,12 @@
 						</li>
 					</ul>
 				</nav>
+
 				<a href="#main-menu-toggle" role="button" id="main-menu-open" class="menu-open"
-					aria-label="Open main menu">
+					aria-label="Open navigation">
 					<span class="sr-only">open main menu</span>
 					<span class="fa fa-bars" aria-hidden="true"></span>
 				</a>
-				<nav id="main-menu-toggle" class="navbar-mobile" aria-label="Mobile navbar">
-					<a href="#main-menu-toggle" role="button" id="main-menu-close" class="menu-close"
-						aria-label="Close main menu" tabindex="-1">
-						<span class="sr-only">Close main menu</span>
-						<span class="fa fa-close" aria-hidden="true"></span>
-					</a>
-					<ul class="navbar-mobile__items">
-						<li class="navbar__items-item"><a href="./shopping-list.html" tabindex="-1">dogs</a></li>
-						<li class="navbar__items-item"><a href="./shopping-list.html" tabindex="-1">cats</a></li>
-						<li class="navbar__items-item"><a href="./shopping-list.html" tabindex="-1">birds</a></li>
-						<li class="navbar__items-item"><a href="./shopping-list.html" tabindex="-1">fish</a></li>
-						<li class="navbar__items-item"><a href="./shopping-list.html" tabindex="-1">small pets</a></li>
-						<li class="navbar__items-item"><a href="page-services.html" tabindex="-1">services</a></li>
-						<li class="navbar__items-item"><a href="./page-about-us.html" tabindex="-1">about us</a></li>
-						<li class="navbar__items-item">
-							<a href="./"><img src="./assets/images/bag-icon.png" alt="Image bag" tabindex="-1" /></a>
-						</li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</header>
