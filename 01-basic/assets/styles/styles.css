@@ -134,10 +134,6 @@ li {
     align-self: flex-end;
 }
 
-/* .menu-open {
-    display: none;
-} */
-
 .menu-open .fa-bars,
 .menu-close .fa-close {
     color: var(--color-white);
