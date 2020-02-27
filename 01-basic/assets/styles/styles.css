@@ -128,6 +128,7 @@ li {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
+
 .menu-open,
 .menu-close {
     display: none;
@@ -1522,6 +1523,8 @@ input[type='checkbox']:checked + label {
         align-items: flex-start;
         justify-content: space-between;
         height: 70vh;
+        overflow-y: scroll;
+        width: 100%;
     }
 
     .navbar .navbar__items-item {
