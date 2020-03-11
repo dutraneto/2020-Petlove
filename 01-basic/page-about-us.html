@@ -71,6 +71,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Fonts: Monserrat & Unna & Lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300,500,700|Unna:400,700"
@@ -85,20 +86,32 @@
                     <img class="logo" src="assets/images/petlove-logo.png" loading="lazy" width="226" height="61"
                         alt="Site Logo" />
                 </a>
-                <nav class="navbar">
+
+                <nav id="main-menu" class="navbar" aria-label="Navigation">
+                    <a href="#main-menu-toggle" role="button" id="main-menu-close" class="menu-close"
+                        aria-label="Close main menu" tabindex="-1">
+                        <span class="sr-only">Close main menu</span>
+                        <span class="fa fa-close" aria-hidden="true"></span>
+                    </a>
                     <ul class="navbar__items">
-                        <li class="navbar__items-item"><a href="shopping-list.html">dogs</a></li>
-                        <li class="navbar__items-item"><a href="">cats</a></li>
-                        <li class="navbar__items-item"><a href="">birds</a></li>
-                        <li class="navbar__items-item"><a href="">fish</a></li>
-                        <li class="navbar__items-item"><a href="">small pets</a></li>
+                        <li class="navbar__items-item"><a href="./shopping-list.html">dogs</a></li>
+                        <li class="navbar__items-item"><a href="./shopping-list.html">cats</a></li>
+                        <li class="navbar__items-item"><a href="./shopping-list.html">birds</a></li>
+                        <li class="navbar__items-item"><a href="./shopping-list.html">fish</a></li>
+                        <li class="navbar__items-item"><a href="./shopping-list.html">small pets</a></li>
                         <li class="navbar__items-item"><a href="page-services.html">services</a></li>
-                        <li class="navbar__items-item"><a href="page-about-us.html">about us</a></li>
+                        <li class="navbar__items-item"><a href="./page-about-us.html">about us</a></li>
                         <li class="navbar__items-item">
                             <a href=""><img src="./assets/images/bag-icon.png" alt="Image bag" /></a>
                         </li>
                     </ul>
                 </nav>
+
+                <a href="#main-menu-toggle" role="button" id="main-menu-open" class="menu-open"
+                    aria-label="Open navigation">
+                    <span class="sr-only">open main menu</span>
+                    <span class="fa fa-bars" aria-hidden="true"></span>
+                </a>
             </div>
         </div>
     </header>
@@ -265,6 +278,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/scripts/menu-toggle.js"></script>
 </body>
 
 </html>

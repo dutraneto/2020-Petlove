@@ -121,6 +121,42 @@ li {
     object-fit: fill;
 }
 
+/* MENU */
+
+/* no scrolling on active mobile menu */
+.no-scroll {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-open,
+.menu-close {
+    display: none;
+    align-self: flex-end;
+}
+
+.menu-open .fa-bars,
+.menu-close .fa-close {
+    color: var(--color-white);
+    font-size: 24px;
+}
+.menu-open:hover .fa-bars,
+.menu-close:hover .fa-close {
+    color: var(--color-secondary);
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .navbar__items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1454,8 +1490,54 @@ input[type='checkbox']:checked + label {
 }
 
 @media only screen and (max-width: 856px) {
-    .navbar__items {
-        display: none;
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 70%;
+        width: 30%;
+        height: 100vh;
+        z-index: 999;
+        background: linear-gradient(to right, var(--color-primary), var(--color-background));
+        text-align: center;
+        padding: 2.5rem;
+        transform: translateX(100%);
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar.open {
+        transition: all 0.3s ease-in-out;
+        transform: translateX(0);
+    }
+
+    .navbar.close {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar .navbar__items {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 70vh;
+        overflow-y: scroll;
+        width: 100%;
+    }
+
+    .navbar .navbar__items-item {
+        margin-bottom: 1rem;
+    }
+
+    .menu-open {
+        align-self: center;
+    }
+
+    .menu-open,
+    .menu-close {
+        display: inline-block;
     }
 
     .social .social__contact .social__contact-wrap .social__signup {
@@ -1479,6 +1561,24 @@ input[type='checkbox']:checked + label {
 }
 
 @media only screen and (max-width: 690px) {
+    .navbar {
+        left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar .navbar__items {
+        align-items: center;
+    }
+
+    .navbar .navbar__items-item {
+        margin-right: 0;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
     .catalog h2,
     .page-article__heading h2 {
         font-size: 9vw;
