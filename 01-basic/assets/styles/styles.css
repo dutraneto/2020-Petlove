@@ -19,6 +19,7 @@ Starts on: 08/27/2019
     --color-text-grey-lighter: #ebebeb;
     --color-white: #ffffff;
     --color-input: #998e76;
+    --color-box-product: #25c682;
 
     /* Font-Families */
     --font-unna: 'Unna', sans-serif;
@@ -1436,6 +1437,13 @@ input[type='checkbox']:checked + label {
 .page-aboutus-card__img:hover + .page-aboutus-card__caption {
     background-color: var(--color-background);
     opacity: 90%;
+}
+
+/* product page */
+.product-page {
+    position: relative;
+    margin-top: 12rem;
+    margin-bottom: 7.75rem;
 }
 
 /*
