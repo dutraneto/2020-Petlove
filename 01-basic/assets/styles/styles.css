@@ -1446,7 +1446,7 @@ input[type='checkbox']:checked + label {
 .product-page {
     position: relative;
     margin-top: 12rem;
-    margin-bottom: 7.75rem;
+    margin-bottom: 3.75rem;
     display: flex;
     align-items: center;
 }
@@ -1513,8 +1513,8 @@ input[type='checkbox']:checked + label {
     flex-direction: column;
     align-items: flex-start;
     max-width: 800px;
-    width: calc(60% - 20px);
-    margin-left: 20px;
+    width: calc(60% - 2.5rem);
+    margin-left: 2.5rem;
 }
 
 .product-page__bag-breadcrumb {
@@ -1545,14 +1545,14 @@ input[type='checkbox']:checked + label {
     font-family: var(--font-lato);
     line-height: 1.375rem;
     color: var(--color-text-grey-medium);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     width: 80%;
 }
 
 .product-page__bag-selector {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     display: flex;
-    width: 60%;
+    width: 80%;
     justify-content: space-between;
 }
 
@@ -1591,7 +1591,7 @@ input[type='checkbox']:checked + label {
 .product-page__bag-addbag {
     width: 100%;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .product-page__btn {
@@ -1645,6 +1645,14 @@ input[type='checkbox']:checked + label {
     font-size: 1.75rem;
     color: var(--color-text-grey-dark);
     margin-left: 1.5rem;
+}
+
+.product-page__bag-more a {
+    display: block;
+    font-family: var(--font-lato);
+    font-size: 14px;
+    color: var(--color-text-grey);
+    margin-bottom: 1rem;
 }
 
 /*
