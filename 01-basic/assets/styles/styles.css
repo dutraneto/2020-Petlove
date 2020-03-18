@@ -1622,12 +1622,12 @@ input[type='checkbox']:checked + label {
     margin-left: 6px;
 }
 
-.icon-heart {
-    transition: transform 0.3s;
+.btn-heart:hover > .icon-heart {
+    animation: heartbeat alternate 0.5s infinite;
 }
 
-.icon-heart:hover {
-    animation: heartbeat alternate 0.5s infinite;
+.icon-heart {
+    transition: transform 0.3s;
 }
 
 @keyframes heartbeat {
