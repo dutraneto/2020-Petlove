@@ -1557,8 +1557,13 @@ input[type='checkbox']:checked + label {
     justify-content: space-between;
 }
 
-.product-page__bag-color h3,
-.product-page__bag-size h3,
+.product-page__bag-color label,
+.product-page__bag-size label {
+    display: block;
+}
+
+.product-page__bag-color label,
+.product-page__bag-size label,
 .product-page__bag-selector-mysize {
     font-size: 0.75rem;
     font-family: var(--font-monserrat);
