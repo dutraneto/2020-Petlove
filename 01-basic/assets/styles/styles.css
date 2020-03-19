@@ -1482,6 +1482,7 @@ input[type='checkbox']:checked + label {
     transform: scale(1.5);
 }
 .product-page__content-mirror {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -1591,6 +1592,7 @@ input[type='checkbox']:checked + label {
 .product-page__bag-addbag {
     width: 100%;
     display: flex;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 
@@ -1617,6 +1619,7 @@ input[type='checkbox']:checked + label {
     color: var(--color-input);
     background-color: var(--color-white);
     border: 2px solid var(--color-input);
+    min-width: 3rem;
     width: 3rem;
     height: 3rem;
     margin-left: 6px;
@@ -1645,6 +1648,10 @@ input[type='checkbox']:checked + label {
     font-size: 1.75rem;
     color: var(--color-text-grey-dark);
     margin-left: 1.5rem;
+}
+
+.product-page__bag-more {
+    width: 100%;
 }
 
 .product-page__bag-more a {
@@ -1774,6 +1781,33 @@ input[type='checkbox']:checked + label {
     .page-services-card .page-services-card__caption,
     .page-aboutus-card .page-aboutus-card__caption {
         font-size: 2rem;
+    }
+
+    /* product page */
+    .product-page__bag-breadcrumb,
+    .product-page__bag-desc h2 {
+        margin-bottom: 0;
+    }
+
+    .product-page__bag-desc h2 {
+        font-size: 2rem;
+    }
+
+    .product-page__bag-desc p {
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .product-page__bag-selector {
+        width: 100%;
+    }
+
+    .product-page__bag-more {
+        display: flex;
+    }
+
+    .product-page__bag-more a {
+        margin-right: 20px;
     }
 }
 
@@ -1936,6 +1970,32 @@ input[type='checkbox']:checked + label {
     .page-services-card .page-services-card__caption,
     .page-aboutus-card .page-aboutus-card__caption {
         font-size: 1.5rem;
+    }
+
+    .product-page {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-page__content {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .product-page__content-main img {
+        height: auto;
+    }
+
+    .product-page__bag {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .product-page__bag-desc p {
+        width: 100%;
+        font-size: 0.875rem;
     }
 }
 
