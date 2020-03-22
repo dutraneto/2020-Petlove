@@ -1601,6 +1601,11 @@ input[type='checkbox']:checked + label {
     margin-bottom: 1.5rem;
 }
 
+.product-page__bag-addbag__btn-wrap {
+    display: flex;
+    align-items: center;
+}
+
 .product-page__btn {
     border-radius: 0;
     text-transform: uppercase;
@@ -1813,6 +1818,15 @@ input[type='checkbox']:checked + label {
 
     .product-page__bag-more a {
         margin-right: 20px;
+    }
+
+    .product-page__bag-addbag {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .product-page__bag-price {
+        margin-left: 0;
     }
 }
 
