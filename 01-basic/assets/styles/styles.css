@@ -1374,20 +1374,23 @@ input[type='checkbox']:checked + label {
 }
 
 .page-services__wrap,
-.page-aboutus__wrap {
+.page-aboutus__wrap,
+.team__wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .page-services-card,
-.page-aboutus-card {
+.page-aboutus-card,
+.team-card {
     width: calc(50%);
     height: auto;
 }
 
 .page-services-card .page-services-card__fig,
-.page-aboutus-card .page-aboutus-card__fig {
+.page-aboutus-card .page-aboutus-card__fig,
+.team-card .team-card__fig {
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -1678,6 +1681,42 @@ input[type='checkbox']:checked + label {
     font-size: 14px;
     color: var(--color-text-grey);
     margin-bottom: 1rem;
+}
+
+/*  */
+.team {
+    max-width: 690px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team .team-card__caption {
+    position: absolute;
+    color: var(--color-white);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-family: var(--font-monserrat);
+    font-weight: 500;
+    letter-spacing: 1px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-text-grey-medium);
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all 1s ease;
+}
+
+.team .team-card__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: filter 2s ease;
 }
 
 /*
