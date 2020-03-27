@@ -1685,10 +1685,14 @@ input[type='checkbox']:checked + label {
 
 /*  */
 .team {
-    max-width: 690px;
+    max-width: 600px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+.team .team-card__img {
+    border: 2px solid var(--color-box-product);
 }
 
 .team .team-card__caption {
@@ -1883,6 +1887,11 @@ input[type='checkbox']:checked + label {
     .product-page__bag-price {
         margin-left: 0;
     }
+
+    /* Our team */
+    .page-single-team .page-single__follow-us .social-icons {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -2020,7 +2029,8 @@ input[type='checkbox']:checked + label {
     }
 
     .page-services-card,
-    .page-aboutus-card {
+    .page-aboutus-card,
+    .team-card {
         width: 100%;
     }
 
