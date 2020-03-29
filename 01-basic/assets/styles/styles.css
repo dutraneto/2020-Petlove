@@ -374,6 +374,9 @@ li {
 //////////////////////////////////////////
 / CATALOGUE
 */
+.catalog {
+    max-width: 1440px;
+}
 .catalog h2,
 .page-article__heading h2 {
     margin-left: auto;
@@ -508,6 +511,8 @@ li {
     align-items: center;
     -ms-flex-line-pack: center;
     align-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .subscribe label {
@@ -741,6 +746,9 @@ li {
 }
 
 .page-single .page-article {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 4.125rem;
 }
 .page-single .page-article h6,
@@ -1158,6 +1166,8 @@ input[type='checkbox']:checked + label {
 
 /* catalogue */
 .shopping-list .shopping-list__products .shopping-list__catalogue {
+    max-width: 1440px;
+    margin-right: auto;
     margin-left: 5px;
     width: calc(100% - 22% - (5px));
 }
@@ -1447,6 +1457,9 @@ input[type='checkbox']:checked + label {
 / Page Product
 */
 .product-page {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     margin-top: 12rem;
     margin-bottom: 3.75rem;
@@ -1456,6 +1469,7 @@ input[type='checkbox']:checked + label {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: center;
 }
 
 .product-page__photos {
@@ -2121,7 +2135,7 @@ input[type='checkbox']:checked + label {
 
 /* UTILS */
 .u-m-md {
-    margin: 5rem 0 !important;
+    margin: 5rem auto 5rem auto !important;
 }
 .u-mt-sm {
     margin-top: 0.6rem !important;
