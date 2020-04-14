@@ -6,155 +6,165 @@ const uglify = require('gulp-minify')
 const imagemin = require('gulp-imagemin')
 const autoprefixer = require('gulp-autoprefixer')
 const htmlmin = require('gulp-htmlmin')
-const handleBars = require('gulp-compile-handlebars')
+const handlebars = require('gulp-compile-handlebars')
 const rename = require('gulp-rename')
 const sourcemaps = require('gulp-sourcemaps')
-const plumber = require('gulp-plumber')
-const postcss = require('gulp-postcss')
-const cssnano = require('cssnano')
 const concat = require('gulp-concat')
 const cache = require('gulp-cache')
 const babel = require('gulp-babel')
 
-// files
-const files = {
+// input files
+const input = {
     root: '/',
     source: 'src/',
     all: 'src/**/*.*',
-    html: 'src/components/**/*.html',
-    sass: 'src/components/**/*.scss',
+    handlebarsPath: 'src/**/*.handlebars',
+    sassPath: 'src/**/*.scss',
     jsPath: 'src/assets/scripts/*.js',
+    imgPath: 'src/assets/images/*',
+    contentPath: 'src/content/images/*',
+    port: 4000,
+}
+
+const output = {
     public: 'public/',
-    port: 4000
+    jsPath: 'public/assets/scripts/',
+    cssPath: 'public/assets/styles/',
+    imgPath: 'public/assets/images/',
+    contentPath: 'public/content/images/',
 }
 
 /** FUNCTIONS --------*/
 // serve files
-function serve (source = files.source ? files.source : files.public, port = files.port) {
+function serve() {
+    gulp.watch(input.source)
+    .on('change', gulp.series('buildAll', reloadBrowser))
+
     browserSync.init({
         browser: 'Google Chrome',
         watch: true,
         server: {
-            baseDir: source
+            baseDir: output.public,
         },
-        port: port
+        port: input.port,
     })
-    gulp.parallel(
-        gulp.watch(files.sass)
-            .on('change', gulp.series(buildCss, reloadBrowser)),
-        gulp.watch(files.html)
-            .on('change', gulp.series(buildHtml, reloadBrowser))
-    )
-
 }
 
 // function that reloads browsers
-function reloadBrowser () {
+function reloadBrowser() {
     browserSync.reload()
 }
 
 // clear the cache browser
-function clearCache () {
+function clearCache() {
     cache.clearAll()
 }
 
 // Minimize JS
-function buildJs () {
-    return gulp.src(files.jsPath, {
-        sourcemaps: true
-    })
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
+function buildJs() {
+    return gulp
+        .src(input.jsPath, {
+            sourcemaps: true,
+        })
+        .pipe(
+            babel({
+                presets: ['@babel/env'],
+            })
+        )
         .pipe(concat(`main.js`))
         .pipe(uglify())
-        .pipe(gulp.dest(`public/assets/scripts/`))
+        .pipe(gulp.dest(output.jsPath))
 }
 
 // Minify CSS and ADD vendor prefix
-function buildCss () {
+function buildCss() {
     let sassOptions = {
-        outputStyle: 'compressed'
+        outputStyle: 'compressed',
     }
-    return gulp.src("src/**/*.scss")
+    return gulp
+        .src(input.sassPath)
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(concat('main.min.css'))
-        .pipe(gulp.dest(`${files.public}/assets/styles/`))
+        .pipe(concat('styles.min.css'))
+        .pipe(gulp.dest(output.cssPath))
 }
 
 // Compile Templates
-function templates() {
-    var templateData = {},
+function buildHtml() {
+    let templateData = {},
         options = {
             ignorePartials: true,
-            batch: [partials]
+            batch: [input.source + '/' + 'components'],
         }
-    return gulp.src(files.html)
+    return gulp
+        .src(input.handlebarsPath)
         .pipe(handlebars(templateData, options))
-        .pipe(gulp.dest(files.public))
+        .pipe(rename('index.html'))
+        .pipe(
+            htmlmin({
+                removeComments: true,
+                collapseWhitespace: true,
+            })
+        )
+        .pipe(gulp.dest(output.public))
 }
 
-// // Minify HTML
+// Minify HTML
 // const buildHtml = () => {
-//     return pipeline(
-//         src(files.html),
-//         htmlmin({
+//     return gulp.src(input.html)
+//         .pipe(htmlmin({
 //             removeComments: true,
 //             collapseWhitespace: true
-//         }),
-//         dest(files.public)
-//     )
+//         }))
+//         .pipe(dest(files.public))
 // }
 
-// // Copy files to public
+// Copy files to public
 // const buildCopy = () => {
 //     let sourceFiles = [
-//         files.all,
-//         `!${files.sass}`,
-//         `!${files.source}assets/img/*`,
-//         `!${files.source}assets/js/*`,
-//         `!${files.source}assets/css/maps/main.min.css.map`,
-//         `!${files.source}assets/css/main.css`,
+//         input.all,
+//         `!${input.source}components`,
+//         `!${input.source}assets/images/*`,
+//         `!${files.source}assets/scripts/*`,
+//         `!${files.source}assets/styles`,
 //         `!${files.html}`
 //     ]
-//     return src(sourceFiles).pipe(dest(files.public))
+//     return src(sourceFiles).pipe(dest(output.public))
 // }
 
-// // Optimize images
-// const buildImg = () => {
-//     return pipeline(
-//         src('src/assets/img/*'),
-//         imagemin({
-//             optimizationLevel: 3,
-//             progressive: true,
-//             interlaced: true
-//         }),
-//         dest('public/assets/img')
-//     )
-// }
+// Optimize images
+function buildImg() {
+    const options = {
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true,
+    }
+    return gulp
+        .src(input.imgPath)
+        .pipe(cache(imagemin(options)))
+        .pipe(gulp.dest(output.imgPath))
+        .pipe(gulp.src(input.contentPath))
+        .pipe(cache(imagemin(options)))
+        .pipe(gulp.dest(output.contentPath))
+}
 
-// // Clean public and tmp
-// const buildClean = () => {
-//     return del([`${files.public}`, 'tmp/**/*'])
-// }
-
-// // del only css files
-// const delCss = () => {
-//     return del(['src/assets/css/*.min.css'])
-// }
+// Clean public and tmp
+function cleanBuild() {
+    return del([output.public, 'tmp/**/*'])
+}
 
 /** TASKS --------*/
-gulp.task("serve", () => serve(files.source, files.port))
-// exports.serve = () => serve(files.source, 5000)
-// exports.clearCache = clearCache
-// exports.buildHtml = buildHtml
-gulp.task("buildJs", () => buildJs())
-gulp.task("buildCss", () => buildCss())
-// exports.buildCss = buildCss
-// exports.buildImg = buildImg
+gulp.task('serve', () => serve())
+gulp.task('buildHtml', () => buildHtml())
+gulp.task('buildJs', () => buildJs())
+gulp.task('buildCss', () => buildCss())
+gulp.task('buildImg', () => buildImg())
+// clear image caches
+gulp.task('clearCache', () => cache.clearAll())
+gulp.task('cleanBuild', () => cleanBuild())
 // exports.buildCopy = buildCopy
-// exports.buildClean = buildClean
-// exports.delCss = delCss
-// exports.buildAll = series(buildClean, buildCss, buildJs, buildHtml, buildCopy, buildImg)
+gulp.task(
+    'buildAll',
+    gulp.series('cleanBuild', gulp.parallel('buildImg', 'buildCss', 'buildJs', 'buildHtml'))
+)
