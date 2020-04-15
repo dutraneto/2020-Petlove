@@ -18,7 +18,6 @@
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@babel/preset-env": "^7.9.5",
-        "autoprefixer": "^9.7.6",
         "browser-sync": "^2.26.7",
         "cssnano": "^4.1.10",
         "del": "^5.1.0",
@@ -39,5 +38,6 @@
         "gulp-sourcemaps": "^2.6.5",
         "gulp-uglify": "^3.0.2",
         "node-sass": "^4.13.1"
-    }
+    },
+    "dependencies": {}
 }

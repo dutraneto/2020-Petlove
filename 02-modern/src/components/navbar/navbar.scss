@@ -1,0 +1,38 @@
+.navbar {
+    &__items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 2em;
+                text-transform: uppercase;
+            }
+
+            a {
+                color: var(--color-white);
+                font-family: var(--font-monserrat);
+                font-weight: 500;
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: var(--color-secondary);
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

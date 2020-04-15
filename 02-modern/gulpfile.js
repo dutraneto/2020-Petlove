@@ -18,7 +18,7 @@ const input = {
     root: '/',
     source: 'src/',
     all: 'src/**/*.*',
-    handlebarsPath: 'src/**/*.handlebars',
+    handlebarsPath: 'src/*.handlebars',
     sassPath: 'src/**/*.scss',
     jsPath: 'src/assets/scripts/*.js',
     imgPath: 'src/assets/images/*',
@@ -100,7 +100,9 @@ function buildCss() {
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(concat('styles.min.css'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(output.cssPath))
+        .pipe(browserSync.stream())
 }
 
 // Compile Templates
