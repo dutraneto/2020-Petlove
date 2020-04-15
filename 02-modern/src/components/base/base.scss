@@ -9,19 +9,19 @@
 * {
     margin: 0;
     padding: 0;
+
+    &,
+    &::before,
+    &::after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        /* inherited from HTML */
+    }
 }
 
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-    /* inherited from HTML */
 }
 
 body {
@@ -31,15 +31,15 @@ body {
     color: var(--color-text-grey-dark);
 }
 
-a:visited,
-a:link {
-    color: currentColor;
-    text-decoration: none;
-}
-
-a:link:active,
-a:visited:active {
-    color: currentColor;
+a {
+    &:link,
+    &:visited {
+        color: currentColor;
+        text-decoration: none;
+        &:active {
+            color: currentColor;
+        }
+    }
 }
 
 ul,

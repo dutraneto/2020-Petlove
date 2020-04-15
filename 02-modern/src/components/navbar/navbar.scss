@@ -1,4 +1,12 @@
+@import '../base/breakpoints';
+
 .navbar {
+    @include respond(phone) {
+        left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
     &__items {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -14,6 +22,10 @@
             &:not(:last-child) {
                 margin-right: 2em;
                 text-transform: uppercase;
+
+                @include respond(phone) {
+                    margin-right: 0;
+                }
             }
 
             a {
@@ -31,6 +43,10 @@
                     -webkit-transition: all 0.3s;
                     -o-transition: all 0.3s;
                     transition: all 0.3s;
+                }
+
+                @include respond(phone) {
+                    font-size: 1rem;
                 }
             }
         }
