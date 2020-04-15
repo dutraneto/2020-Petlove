@@ -1,0 +1,58 @@
+@use './variables';
+@use './reset.scss';
+
+/*
+//////////////////////////////////////////
+/ BASIC RESETS
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    /* inherited from HTML */
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    color: var(--color-text-grey-dark);
+}
+
+a:visited,
+a:link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a:link:active,
+a:visited:active {
+    color: currentColor;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}

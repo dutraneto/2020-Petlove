@@ -1,0 +1,127 @@
+/*
+//////////////////////////////////////////
+/ HEADER
+*/
+.main-header {
+    position: relative;
+    z-index: 99;
+
+    .container {
+        background-color: transparent;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        .row {
+            width: 85%;
+            padding: 1.9rem 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+}
+
+/* MENU */
+/* no scrolling on active mobile menu */
+.no-scroll {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-open {
+    display: none;
+    align-self: flex-end;
+
+    &:hover {
+        .fa-bars {
+            color: var(--color-secondary);
+        }
+    }
+
+    .fa-bars {
+        color: var(--color-white);
+        font-size: 24px;
+    }
+}
+
+.menu-close {
+    display: none;
+    align-self: flex-end;
+
+    &:hover {
+        .fa-close {
+            color: var(--color-secondary);
+        }
+    }
+
+    .fa-close {
+        color: var(--color-secondary);
+    }
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.navbar {
+    &__items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 2em;
+                text-transform: uppercase;
+            }
+
+            a {
+                color: var(--color-white);
+                font-family: var(--font-monserrat);
+                font-weight: 500;
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: var(--color-secondary);
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

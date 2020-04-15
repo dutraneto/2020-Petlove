@@ -50,6 +50,19 @@ function serve() {
     })
 }
 
+function watchSass() {
+    gulp.watch(input.sassPath).on('change', gulp.series('buildCss', reloadBrowser))
+
+    browserSync.init({
+        browser: 'Google Chrome',
+        watch: true,
+        server: {
+            baseDir: output.public,
+        },
+        port: input.port,
+    })
+}
+
 // function that reloads browsers
 function reloadBrowser() {
     browserSync.reload()
@@ -156,6 +169,7 @@ function cleanBuild() {
 
 /** TASKS --------*/
 gulp.task('serve', () => serve())
+gulp.task('watchSass', () => watchSass())
 gulp.task('buildHtml', () => buildHtml())
 gulp.task('buildJs', () => buildJs())
 gulp.task('buildCss', () => buildCss())
