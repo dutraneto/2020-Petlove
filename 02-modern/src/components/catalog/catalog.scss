@@ -1,3 +1,5 @@
+@import '../base/breakpoints';
+
 /*
 //////////////////////////////////////////
 / CATALOGUE
@@ -15,6 +17,15 @@
         text-align: center;
         font-weight: 400;
         text-transform: capitalize;
+
+        @include respond(tab-port) {
+            max-width: 70%;
+        }
+
+        @include respond(phone) {
+            font-size: 9vw;
+            max-width: 100%;
+        }
     }
 
     &__deals {
@@ -29,6 +40,12 @@
         -ms-flex-pack: justify;
         justify-content: space-between;
         margin-top: 4rem;
+
+        @include respond(laptop) {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
     }
 
     #show {
@@ -53,6 +70,10 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+
+    @include respond(laptop) {
+        min-width: 40%;
+    }
 
     &:hover {
         opacity: 0.8;
@@ -80,6 +101,10 @@
         height: auto;
         -o-object-fit: cover;
         object-fit: cover;
+
+        @include respond(laptop) {
+            width: 100%;
+        }
     }
 
     &__desc {
