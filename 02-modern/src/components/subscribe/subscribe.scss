@@ -1,3 +1,5 @@
+@import '../base/breakpoints';
+
 /*
 //////////////////////////////////////////
 / SUBSCRIBE
@@ -25,6 +27,18 @@
         align-content: center;
         max-width: 1440px;
         margin: 0 auto;
+
+        @include respond(tab-land) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include respond(phone) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
     }
 
     label {
@@ -49,6 +63,10 @@
         flex-grow: 3;
         margin-left: 3.5rem;
         margin-right: 8px;
+
+        @include respond(phone) {
+            margin: 0 0 15px 0;
+        }
     }
 
     &__btn {
@@ -71,6 +89,10 @@
 
         &:hover {
             opacity: 90%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
         }
     }
 }
