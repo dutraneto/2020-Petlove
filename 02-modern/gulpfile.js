@@ -4,7 +4,9 @@ const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
 const uglify = require('gulp-minify')
 const imagemin = require('gulp-imagemin')
-const autoprefixer = require('gulp-autoprefixer')
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
+const postcss = require('gulp-postcss')
 const htmlmin = require('gulp-htmlmin')
 const handlebars = require('gulp-compile-handlebars')
 const rename = require('gulp-rename')
@@ -19,7 +21,7 @@ const input = {
     source: 'src/',
     all: 'src/**/*.*',
     handlebarsPath: 'src/*.handlebars',
-    sassPath: 'src/**/*.scss',
+    sassPath: 'src/components/base/index.scss',
     jsPath: 'src/assets/scripts/*.js',
     imgPath: 'src/assets/images/*',
     contentPath: 'src/content/images/*',
@@ -94,11 +96,15 @@ function buildCss() {
     let sassOptions = {
         outputStyle: 'compressed',
     }
+    let plugins = [
+        autoprefixer(),
+        cssnano()
+    ]
     return gulp
         .src(input.sassPath)
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on('error', sass.logError))
-        .pipe(autoprefixer())
+        .pipe(postcss(plugins))
         .pipe(concat('styles.min.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(output.cssPath))
