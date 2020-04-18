@@ -35,15 +35,6 @@
         }
     }
 
-    .menu-open {
-        align-self: center;
-    }
-
-    .menu-open,
-    .menu-close {
-        display: inline-block;
-    }
-
     &__items {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -54,6 +45,21 @@
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+
+        @include respond(tab-port) {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 70vh;
+            overflow-y: scroll;
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            align-items: center;
+        }
 
         &-item {
             &:not(:last-child) {

@@ -35,6 +35,11 @@
     width: 100%;
     -o-object-fit: fill;
     object-fit: fill;
+
+    @include respond(tab-land) {
+        width: 8.75rem;
+        height: auto;
+    }
 }
 
 /* MENU */
@@ -71,7 +76,8 @@
     }
 
     .fa-close {
-        color: var(--color-secondary);
+        color: var(--color-white);
+        font-size: 24px;
     }
 }
 
@@ -85,4 +91,17 @@
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.menu-open {
+    @include respond(tab-port) {
+        align-self: center;
+    }
+}
+
+.menu-open,
+.menu-close {
+    @include respond(tab-port) {
+        display: inline-block;
+    }
 }

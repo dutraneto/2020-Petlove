@@ -1,0 +1,1 @@
+"use strict";!function(){var e=document.getElementsByClassName("img-to-select"),t=document.getElementById("selected-img");Array.from(e).forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),t.src=this.src})})}();

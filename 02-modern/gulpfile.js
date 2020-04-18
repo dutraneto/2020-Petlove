@@ -1,8 +1,8 @@
-const gulp = require('gulp')
+const {src, watch, series, parallel, dest, task} = require('gulp')
 const del = require('del')
 const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
-const uglify = require('gulp-minify')
+const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
@@ -15,12 +15,14 @@ const concat = require('gulp-concat')
 const cache = require('gulp-cache')
 const babel = require('gulp-babel')
 
+
 // input files
 const input = {
     root: '/',
     source: 'src/',
     all: 'src/**/*.*',
-    handlebarsPath: 'src/*.handlebars',
+    components: 'src/components',
+    home: 'src/components/home/*.handlebars',
     sassPath: 'src/components/base/index.scss',
     jsPath: 'src/assets/scripts/*.js',
     imgPath: 'src/assets/images/*',
@@ -38,22 +40,9 @@ const output = {
 
 /** FUNCTIONS --------*/
 // serve files
-function serve() {
-    gulp.watch(input.source)
-    .on('change', gulp.series('buildAll', reloadBrowser))
-
-    browserSync.init({
-        browser: 'Google Chrome',
-        watch: true,
-        server: {
-            baseDir: output.public,
-        },
-        port: input.port,
-    })
-}
-
-function watchSass() {
-    gulp.watch(input.sassPath).on('change', gulp.series('buildCss', reloadBrowser))
+const serve = () => {
+    watch(input.source)
+    .on('change', series('buildAll', reloadBrowser))
 
     browserSync.init({
         browser: 'Google Chrome',
@@ -66,33 +55,26 @@ function watchSass() {
 }
 
 // function that reloads browsers
-function reloadBrowser() {
-    browserSync.reload()
-}
+const reloadBrowser = () => browserSync.reload()
 
 // clear the cache browser
-function clearCache() {
-    cache.clearAll()
-}
+const clearCache = () => cache.clearAll()
 
 // Minimize JS
-function buildJs() {
-    return gulp
-        .src(input.jsPath, {
-            sourcemaps: true,
-        })
+const buildJs = () => {
+    return src(input.jsPath)
         .pipe(
             babel({
                 presets: ['@babel/env'],
             })
         )
-        .pipe(concat(`main.js`))
+        // .pipe(concat(`main.js`, {newLine: ';'}))
         .pipe(uglify())
-        .pipe(gulp.dest(output.jsPath))
+        .pipe(dest(output.jsPath))
 }
 
 // Minify CSS and ADD vendor prefix
-function buildCss() {
+const buildCss = () => {
     let sassOptions = {
         outputStyle: 'compressed',
     }
@@ -100,26 +82,26 @@ function buildCss() {
         autoprefixer(),
         cssnano()
     ]
-    return gulp
-        .src(input.sassPath)
+    return src(input.sassPath)
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(postcss(plugins))
         .pipe(concat('styles.min.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(output.cssPath))
+        .pipe(dest(output.cssPath))
         .pipe(browserSync.stream())
 }
 
 // Compile Templates
-function buildHtml() {
-    let templateData = {},
-        options = {
-            ignorePartials: true,
-            batch: [input.source + '/' + 'components'],
+const buildHtml = () => {
+    const templateData = {
+        title: 'Petlove | Home',
+    },
+    options = {
+            // ignorePartials: true,
+            batch: [input.components],
         }
-    return gulp
-        .src(input.handlebarsPath)
+    return src(input.home)
         .pipe(handlebars(templateData, options))
         .pipe(rename('index.html'))
         .pipe(
@@ -128,18 +110,8 @@ function buildHtml() {
                 collapseWhitespace: true,
             })
         )
-        .pipe(gulp.dest(output.public))
+        .pipe(dest(output.public))
 }
-
-// Minify HTML
-// const buildHtml = () => {
-//     return gulp.src(input.html)
-//         .pipe(htmlmin({
-//             removeComments: true,
-//             collapseWhitespace: true
-//         }))
-//         .pipe(dest(files.public))
-// }
 
 // Copy files to public
 // const buildCopy = () => {
@@ -155,38 +127,35 @@ function buildHtml() {
 // }
 
 // Optimize images
-function buildImg() {
+const buildImg = () => {
     const options = {
         optimizationLevel: 5,
         progressive: true,
         interlaced: true,
     }
-    return gulp
-        .src(input.imgPath)
+    return src(input.imgPath)
         .pipe(cache(imagemin(options)))
-        .pipe(gulp.dest(output.imgPath))
-        .pipe(gulp.src(input.contentPath))
+        .pipe(dest(output.imgPath))
+        .pipe(src(input.contentPath))
         .pipe(cache(imagemin(options)))
-        .pipe(gulp.dest(output.contentPath))
+        .pipe(dest(output.contentPath))
 }
 
 // Clean public and tmp
-function cleanBuild() {
-    return del([output.public, 'tmp/**/*'])
-}
+const cleanBuild = () => del([output.public, 'tmp/**/*'])
+
 
 /** TASKS --------*/
-gulp.task('serve', () => serve())
-gulp.task('watchSass', () => watchSass())
-gulp.task('buildHtml', () => buildHtml())
-gulp.task('buildJs', () => buildJs())
-gulp.task('buildCss', () => buildCss())
-gulp.task('buildImg', () => buildImg())
+task('serve', () => serve())
+task('buildHtml', () => buildHtml())
+task('buildJs', () => buildJs())
+task('buildCss', () => buildCss())
+task('buildImg', () => buildImg())
 // clear image caches
-gulp.task('clearCache', () => cache.clearAll())
-gulp.task('cleanBuild', () => cleanBuild())
+task('clearCache', () => clearCache())
+task('cleanBuild', () => cleanBuild())
 // exports.buildCopy = buildCopy
-gulp.task(
+task(
     'buildAll',
-    gulp.series('cleanBuild', gulp.parallel('buildImg', 'buildCss', 'buildJs', 'buildHtml'))
+    series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs'))
 )
