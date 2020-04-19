@@ -14,6 +14,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const concat = require('gulp-concat')
 const cache = require('gulp-cache')
 const babel = require('gulp-babel')
+const useref = require('gulp-useref')
 
 
 // input files
@@ -22,7 +23,8 @@ const input = {
     source: 'src/',
     all: 'src/**/*.*',
     components: 'src/components',
-    home: 'src/components/home/*.handlebars',
+    home: 'src/components/home/*.html',
+    list: 'src/components/shopping-list/*.html',
     sassPath: 'src/components/base/index.scss',
     jsPath: 'src/assets/scripts/*.js',
     imgPath: 'src/assets/images/*',
@@ -101,9 +103,9 @@ const buildHtml = () => {
             // ignorePartials: true,
             batch: [input.components],
         }
-    return src(input.home)
+    return src([input.home, input.list])
         .pipe(handlebars(templateData, options))
-        .pipe(rename('index.html'))
+        // .pipe(rename('index.html'))
         .pipe(
             htmlmin({
                 removeComments: true,

@@ -6,6 +6,19 @@
     position: relative;
     z-index: 99;
 
+    /* simple nav */
+    .bg-stamp-green {
+        background-image: url(../images/img-menu-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 3px 5px var(--color-text-grey);
+        z-index: 99;
+    }
+
     .container {
         background-color: transparent;
         display: -webkit-box;

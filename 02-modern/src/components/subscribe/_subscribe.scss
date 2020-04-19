@@ -86,7 +86,8 @@
         transition: all 0.3s;
 
         &:hover {
-            opacity: 90%;
+            -webkit-filter: opacity(0.9);
+            filter: opacity(0.9);
         }
 
         @include respond(phone) {
