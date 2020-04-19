@@ -12,7 +12,8 @@
 	<meta name="robots" content="index, follow" />
 
 	<!-- Info -->
-	<title>{{ title }}</title>
+	<!-- If there is a title: title, else: Petlove -->
+	<title>{{#if title}} {{ title }} {{ petlove }} {{/if}}</title>
 	<meta name="description" content="Your smartest way to buy pet stuffs" />
 	<meta name=" keywords" content="e-commerce, pets" />
 

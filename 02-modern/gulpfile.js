@@ -97,7 +97,7 @@ const buildCss = () => {
 // Compile Templates
 const buildHtml = () => {
     const templateData = {
-        title: 'Petlove | Home',
+        petlove: 'Petlove',
     },
     options = {
             // ignorePartials: true,
