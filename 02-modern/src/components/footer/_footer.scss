@@ -67,6 +67,10 @@
     display: flex;
     padding: 0 7vw;
 
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
     @include respond(phone) {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
