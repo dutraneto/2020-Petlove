@@ -18,7 +18,7 @@ function updatePriceLabels() {
 }
 
 // toggle accordion function for hiding checkboxes
-(function toggleAccordion () {
+function toggleAccordion () {
     let acc = document.querySelectorAll(".accordion")
     let accordion = Array.from(acc)
     accordion.forEach(element => {
@@ -29,9 +29,9 @@ function updatePriceLabels() {
             panel.style.maxHeight ? panel.style.maxHeight = null : panel.style.maxHeight = panel.scrollHeight + "px"
         })
     })
-})()
+}
 
-(function resetFilters() {
+function resetFilters() {
     const reset = document.getElementsByClassName("filter-btn")[0]
     const ranges = document.querySelectorAll(".shopping-list__range input")
     const labels = document.querySelectorAll(".shopping-list__range .shopping-list__range-price label")
@@ -53,4 +53,4 @@ function updatePriceLabels() {
             control.checked = false
         });
     })
-})()
+}

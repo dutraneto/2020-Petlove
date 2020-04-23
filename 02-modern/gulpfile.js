@@ -16,6 +16,8 @@ const cache = require('gulp-cache')
 const babel = require('gulp-babel')
 const useref = require('gulp-useref')
 
+// import data
+const seed = require('./seed.js')
 
 // input files
 const input = {
@@ -26,7 +28,7 @@ const input = {
     home: 'src/components/home/*.html',
     list: 'src/components/shopping-list/*.html',
     sassPath: 'src/components/base/index.scss',
-    jsPath: 'src/assets/scripts/*.js',
+    jsPath: 'src/components/**/*.js',
     imgPath: 'src/assets/images/*',
     contentPath: 'src/content/images/*',
     port: 4000,
@@ -70,7 +72,7 @@ const buildJs = () => {
                 presets: ['@babel/env'],
             })
         )
-        // .pipe(concat(`main.js`, {newLine: ';'}))
+        .pipe(concat(`main.min.js`, {newLine: ';'}))
         .pipe(uglify())
         .pipe(dest(output.jsPath))
 }
@@ -96,9 +98,7 @@ const buildCss = () => {
 
 // Compile Templates
 const buildHtml = () => {
-    const templateData = {
-        petlove: 'Petlove',
-    },
+    const templateData = seed,
     options = {
             // ignorePartials: true,
             batch: [input.components],

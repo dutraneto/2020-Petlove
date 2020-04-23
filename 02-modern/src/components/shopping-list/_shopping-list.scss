@@ -5,17 +5,59 @@
 
 .shopping-list {
     margin-top: 1.8rem;
-}
 
-.shopping-list .shopping-list__select-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    margin-bottom: 0.5rem;
-    margin-top: calc(9.5rem + 5px);
+    &__select-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin-bottom: 0.5rem;
+        margin-top: calc(9.5rem + 5px);
+    }
+
+    &__select {
+        padding: 0.5rem 0.75rem 0.5rem 0;
+        font-family: var(--font-monserrat);
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: url(../images/filled-down-arrow.png) 100% / 7% no-repeat;
+    }
+
+    &__products {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__wrap {
+        margin-bottom: 2rem;
+    }
+
+    &__category {
+        width: 22%;
+    }
+
+    &__label {
+        font-family: var(--font-unna);
+        font-size: 20px;
+        display: block;
+        margin-bottom: 1.1rem;
+    }
+
+    &__controls {
+        margin-bottom: 0.9rem;
+        font-family: var(--font-Lato);
+        font-size: 14px;
+        text-transform: capitalize;
+    }
 }
 
 .arrow-selection {
@@ -28,52 +70,14 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
 
-.arrow-selection:hover {
-    -webkit-filter: opacity(0.8);
-    filter: opacity(0.8);
-    -webkit-transform: translateY(1px);
-    -ms-transform: translateY(1px);
-    transform: translateY(1px);
-}
-
-.shopping-list .shopping-list__select {
-    padding: 0.5rem 0.75rem 0.5rem 0;
-    font-family: var(--font-monserrat);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: url(../images/filled-down-arrow.png) 100% / 7% no-repeat;
-}
-
-.shopping-list .shopping-list__products {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.shopping-list__wrap {
-    margin-bottom: 2rem;
-}
-
-.shopping-list .shopping-list__products .shopping-list__category {
-    width: 22%;
-}
-
-.shopping-list .shopping-list__products .shopping-list__label {
-    font-family: var(--font-unna);
-    font-size: 20px;
-    display: block;
-    margin-bottom: 1.1rem;
-}
-
-.shopping-list .shopping-list__products .shopping-list__controls {
-    margin-bottom: 0.9rem;
-    font-family: var(--font-Lato);
-    font-size: 14px;
-    text-transform: capitalize;
+    &:hover {
+        -webkit-filter: opacity(0.8);
+        filter: opacity(0.8);
+        -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+        transform: translateY(1px);
+    }
 }
 
 .btn-arrow {

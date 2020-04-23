@@ -1,41 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {{> base/head title="Shopping List"}}
+{{> header/header bgStamp="bg-stamp-green"}}
 
-<body>
+<main class="u-mb-sm">
+    <section class="shopping-list u-pd-sm">
 
-    {{> header/header bgStamp="bg-stamp-green"}}
+        {{> shopping-list-selector/shopping-list-selector}}
 
-    <main class="u-mb-sm">
-        <section class="shopping-list u-pd-sm">
-            <!-- filter price top -->
-            <div class="shopping-list__select-wrap">
-                <select class="shopping-list__select arrow-selection" name="">
-                    <option value="price" selected>Sort By Price</option>
-                    <option value="">High To Low</option>
-                    <option value="">Low To High</option>
-                    <option value="">Best Sellers</option>
-                    <option value="">New Arrival</option>
-                </select>
-            </div>
+        <div class="shopping-list__products">
 
-            <div class="shopping-list__products">
+            {{> shopping-list-filters/shopping-list-filters}}
+            {{> shopping-list-catalog/shopping-list-catalog}}
 
-                {{> shopping-list-filters/shopping-list-filters}}
-                {{> shopping-list-catalog/shopping-list-catalog}}
+        </div>
+    </section>
 
-            </div>
-        </section>
+    {{> subscribe/subscribe}}
+</main>
 
-        {{> subscribe/subscribe}}
-    </main>
-
-    {{> footer/footer }}
-
-    <script src="assets/scripts/menu-toggle.js"></script>
-    <script src="./assets/scripts/accordion.js"></script>
-    <script src="./assets/scripts/update-price-labels.js"></script> --}}
-</body>
-
-</html>
+{{> footer/footer }}
