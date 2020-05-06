@@ -1,4 +1,4 @@
-const {src, watch, series, parallel, dest, task} = require('gulp')
+const { src, watch, series, parallel, dest, task } = require('gulp')
 const del = require('del')
 const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
@@ -27,6 +27,7 @@ const input = {
     components: 'src/components',
     home: 'src/components/home/*.html',
     list: 'src/components/shopping-list/*.html',
+    product: 'src/components/product-page/*.html',
     sassPath: 'src/components/base/index.scss',
     jsPath: 'src/components/**/*.js',
     imgPath: 'src/assets/images/*',
@@ -45,8 +46,7 @@ const output = {
 /** FUNCTIONS --------*/
 // serve files
 const serve = () => {
-    watch(input.source)
-    .on('change', series('buildAll', reloadBrowser))
+    watch(input.source).on('change', series('buildAll', reloadBrowser))
 
     browserSync.init({
         browser: 'Google Chrome',
@@ -72,7 +72,7 @@ const buildJs = () => {
                 presets: ['@babel/env'],
             })
         )
-        .pipe(concat(`main.min.js`, {newLine: ';'}))
+        .pipe(concat(`main.min.js`, { newLine: ';' }))
         .pipe(uglify())
         .pipe(dest(output.jsPath))
 }
@@ -82,10 +82,7 @@ const buildCss = () => {
     let sassOptions = {
         outputStyle: 'compressed',
     }
-    let plugins = [
-        autoprefixer(),
-        cssnano()
-    ]
+    let plugins = [autoprefixer(), cssnano()]
     return src(input.sassPath)
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on('error', sass.logError))
@@ -99,20 +96,22 @@ const buildCss = () => {
 // Compile Templates
 const buildHtml = () => {
     const templateData = seed,
-    options = {
+        options = {
             // ignorePartials: true,
             batch: [input.components],
         }
-    return src([input.home, input.list])
-        .pipe(handlebars(templateData, options))
-        // .pipe(rename('index.html'))
-        .pipe(
-            htmlmin({
-                removeComments: true,
-                collapseWhitespace: true,
-            })
-        )
-        .pipe(dest(output.public))
+    return (
+        src([input.home, input.list, input.product])
+            .pipe(handlebars(templateData, options))
+            // .pipe(rename('index.html'))
+            .pipe(
+                htmlmin({
+                    removeComments: true,
+                    collapseWhitespace: true,
+                })
+            )
+            .pipe(dest(output.public))
+    )
 }
 
 // Copy files to public
@@ -146,7 +145,6 @@ const buildImg = () => {
 // Clean public and tmp
 const cleanBuild = () => del([output.public, 'tmp/**/*'])
 
-
 /** TASKS --------*/
 task('serve', () => serve())
 task('buildHtml', () => buildHtml())
@@ -157,7 +155,4 @@ task('buildImg', () => buildImg())
 task('clearCache', () => clearCache())
 task('cleanBuild', () => cleanBuild())
 // exports.buildCopy = buildCopy
-task(
-    'buildAll',
-    series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs'))
-)
+task('buildAll', series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs')))
