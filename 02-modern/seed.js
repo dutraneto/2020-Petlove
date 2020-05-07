@@ -8,7 +8,7 @@ module.exports = {
             desc: 'bat dog toy',
             price: 1.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
         {
             suffix: 'deals',
@@ -16,7 +16,7 @@ module.exports = {
             desc: 'savory wet dog food',
             price: 4.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
         {
             suffix: 'deals',
@@ -24,7 +24,7 @@ module.exports = {
             desc: 'cat tunnel',
             price: 10.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
         {
             suffix: 'deals',
@@ -32,7 +32,7 @@ module.exports = {
             desc: 'ewok hallowen costume',
             price: 15.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
         {
             suffix: 'deals',
@@ -40,7 +40,7 @@ module.exports = {
             desc: 'batman costume',
             price: 15.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
         {
             suffix: 'deals',
@@ -48,7 +48,7 @@ module.exports = {
             desc: 'superman costume',
             price: 10.99,
             discount: true,
-            discountAmount: 20
+            discountAmount: 20,
         },
     ],
     pet: [
@@ -56,7 +56,7 @@ module.exports = {
             suffix: 'pets',
             path: 'content/images/elephant-costume.png',
             desc: 'elepahnt costume',
-            price: 16.90,
+            price: 16.9,
             discount: false,
         },
         {
@@ -115,6 +115,5 @@ module.exports = {
             price: 10.99,
             discount: false,
         },
-
-    ]
+    ],
 }
