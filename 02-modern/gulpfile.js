@@ -114,18 +114,21 @@ const buildHtml = () => {
     )
 }
 
-// Copy files to public
-// const buildCopy = () => {
-//     let sourceFiles = [
-//         input.all,
-//         `!${input.source}components`,
-//         `!${input.source}assets/images/*`,
-//         `!${files.source}assets/scripts/*`,
-//         `!${files.source}assets/styles`,
-//         `!${files.html}`
-//     ]
-//     return src(sourceFiles).pipe(dest(output.public))
-// }
+// Copy files to public folder
+const copy = () => {
+    let sourceFiles = [
+        `${input.source}assets/browserconfig.xml`,
+        `${input.source}assets/favicon.png`,
+        `${input.source}assets/humans.txt`,
+        `${input.source}assets/manifest.json`,
+        `${input.source}assets/robots.txt`,
+        `${input.source}assets/sites.txt`,
+        `${input.source}assets/tile-192X192.png`,
+        `${input.source}assets/tile-512X512.png`,
+        `seed.js`,
+    ]
+    return src(sourceFiles).pipe(dest(output.public))
+}
 
 // Optimize images
 const buildImg = () => {
@@ -154,5 +157,9 @@ task('buildImg', () => buildImg())
 // clear image caches
 task('clearCache', () => clearCache())
 task('cleanBuild', () => cleanBuild())
+task('copyStatic', () => copy())
 // exports.buildCopy = buildCopy
-task('buildAll', series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs')))
+task(
+    'buildAll',
+    series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs', 'copyStatic'))
+)
