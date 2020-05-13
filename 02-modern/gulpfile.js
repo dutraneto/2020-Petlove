@@ -15,6 +15,7 @@ const concat = require('gulp-concat')
 const cache = require('gulp-cache')
 const babel = require('gulp-babel')
 const useref = require('gulp-useref')
+const sitemap = require('gulp-sitemap')
 
 // import data
 const seed = require('./seed.js')
@@ -145,6 +146,17 @@ const buildImg = () => {
         .pipe(dest(output.contentPath))
 }
 
+// Create sitemap
+const buildSitemap = () => {
+    return src(`${output.public}*.html`, { read: false })
+        .pipe(
+            sitemap({
+                siteUrl: `https://petlove.com`,
+            })
+        )
+        .pipe(dest(output.public))
+}
+
 // Clean public and tmp
 const cleanBuild = () => del([output.public, 'tmp/**/*'])
 
@@ -158,8 +170,13 @@ task('buildImg', () => buildImg())
 task('clearCache', () => clearCache())
 task('cleanBuild', () => cleanBuild())
 task('copyStatic', () => copy())
+task('buildSitemap', () => buildSitemap())
 // exports.buildCopy = buildCopy
 task(
     'buildAll',
-    series('cleanBuild', parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs', 'copyStatic'))
+    series(
+        'cleanBuild',
+        parallel('buildImg', 'buildCss', 'buildHtml', 'buildJs', 'copyStatic'),
+        `buildSitemap`
+    )
 )
