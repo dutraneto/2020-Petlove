@@ -9,12 +9,10 @@ const cssnano = require('cssnano')
 const postcss = require('gulp-postcss')
 const htmlmin = require('gulp-htmlmin')
 const handlebars = require('gulp-compile-handlebars')
-const rename = require('gulp-rename')
 const sourcemaps = require('gulp-sourcemaps')
 const concat = require('gulp-concat')
 const cache = require('gulp-cache')
 const babel = require('gulp-babel')
-const useref = require('gulp-useref')
 const sitemap = require('gulp-sitemap')
 
 // import data
