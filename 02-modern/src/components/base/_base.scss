@@ -1,0 +1,55 @@
+/*
+//////////////////////////////////////////
+/ BASIC RESETS
+*/
+* {
+    margin: 0;
+    padding: 0;
+
+    &,
+    &::before,
+    &::after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        /* inherited from HTML */
+    }
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    color: var(--color-text-grey-dark);
+}
+
+a {
+    &:link,
+    &:visited {
+        color: currentColor;
+        text-decoration: none;
+        &:active {
+            color: currentColor;
+        }
+    }
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}

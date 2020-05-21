@@ -1,0 +1,23 @@
+// base
+@import 'variables';
+@import 'normalize';
+@import 'breakpoints';
+@import 'base';
+@import 'utils';
+// hero
+@import '../hero/hero';
+// header
+@import '../header/header';
+// navbar
+@import '../navbar/navbar';
+// catalog
+@import '../home-catalog/home-catalog';
+// subscribe
+@import '../subscribe/subscribe';
+// footer
+@import '../footer/footer';
+
+// Pages
+// shopping-list
+@import '../shopping-list/shopping-list';
+@import '../product-page/product-page';

@@ -1,0 +1,28 @@
+<!-- CATALOGUE -->
+<main class="u-mb-sm">
+
+    {{> hero/hero }}
+
+    <section class="catalog u-m-md">
+        <h2>Deals of the Day</h2>
+
+        <div id="catalog" class="catalog__deals">
+
+            <!-- data coming from ./seed.js -->
+            {{#each deal}}
+            {{> card/card suffix=suffix img-path=path card-desc=desc card-price=price discount=discount discount-amount=discountAmount id=@index}}
+            {{/each}}
+
+        </div>
+        <div class="catalog__show u-pd-sm">
+            <hr class="hr">
+            <a href="#">
+                <p id="show">show all</p>
+            </a>
+            <hr class="hr">
+        </div>
+    </section>
+
+    {{> subscribe/subscribe }}
+
+</main>

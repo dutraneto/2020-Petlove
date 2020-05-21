@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+	Chef: Marcelo Freitas (Marcelo Glacial)
+	Contributor: Jose Dutra (DutraNeto)
+	Contact: petlove [at] petlove.com
+	URL: https://github.com/marceloglacial/2019-petlove
+
+
+/* SITE */
+
+	Language: English
+	Doctype:HTML5
+	IDE: VS Code, figma
+	Tools:

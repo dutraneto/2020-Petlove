@@ -1,0 +1,189 @@
+/*
+//////////////////////////////////////////
+/ FOOTER
+*/
+.footer-wrap {
+    h5,
+    label {
+        display: block;
+        text-transform: uppercase;
+        margin: 8px 0;
+        font-size: 13px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 14px;
+        color: var(--color-text-grey-medium);
+        line-height: 21px;
+        margin-bottom: 1rem;
+    }
+}
+
+.deliveries {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 7vw;
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
+    @include respond(phone) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .borders {
+        border-left: 1px solid var(--color-text-grey-medium);
+        border-right: 1px solid var(--color-text-grey-medium);
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+
+        @include respond(phone) {
+            border: none;
+        }
+    }
+
+    &__info {
+        min-width: 33.333333%;
+        height: auto;
+        text-align: center;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+}
+
+.social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 7vw;
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
+    @include respond(phone) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    &__follow-us,
+    &__logo,
+    &__contact {
+        min-width: 33.333333%;
+        height: auto;
+        text-align: center;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__follow-us {
+        @include respond(phone) {
+            margin-bottom: 3rem;
+        }
+
+        .social-icons {
+            a {
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+            }
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            &--facebook,
+            &--instagram,
+            &--twitter,
+            &--gplus {
+                fill: var(--color-text-grey-medium);
+            }
+        }
+    }
+
+    &__logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-item-align: center;
+        align-self: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        @include respond(phone) {
+            -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+            order: 3;
+        }
+    }
+
+    &__signup {
+        position: relative;
+        padding: 0 1.5rem;
+
+        @include respond(tab-port) {
+            padding: 0;
+        }
+
+        &-control {
+            width: 100%;
+            height: 2.8rem;
+            padding-left: 8px;
+            border: 1px solid var(--color-text-grey-lighter);
+            border-radius: 0;
+            -webkit-appearance: none;
+            font-size: 16px;
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+    }
+
+    &__contact {
+        @include respond(phone) {
+            margin-bottom: 3rem;
+        }
+
+        &-btn {
+            width: 2.8rem;
+            height: 2.8rem;
+            font-size: 16px;
+            border: none;
+            background-color: #0d0d0d;
+            border: 1px solid var(--color-text-grey-lighter);
+            border-left: none;
+            cursor: pointer;
+            color: var(--color-white);
+            position: absolute;
+            right: 1.5rem;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            @include respond(tab-port) {
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
