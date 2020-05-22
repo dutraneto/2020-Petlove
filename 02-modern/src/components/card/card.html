@@ -1,0 +1,15 @@
+<figure class="card card-{{suffix}}">
+    <a href="./product-page.html?id={{id}}" rel="noreferrer">
+        <img class="card__img" src="{{img-path}}" loading="lazy" width="350" height="370" alt="{{card-desc}}">
+        <figcaption>
+            <h3 class="card__desc">{{card-desc}}</h3>
+            <p class="card__price">
+                {{#if discount}}
+                ${{card-price}} ({{discount-amount}}% off)
+                {{else}}
+                ${{card-price}}
+                {{/if}}
+            </p>
+        </figcaption>
+    </a>
+</figure>
