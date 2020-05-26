@@ -1,5 +1,36 @@
 module.exports = {
     petlove: 'Petlove',
+    // Content for navbar menu links
+    menuLink: [
+        {
+            link: './shopping-list.html',
+            label: 'dogs',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'cats',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'birds',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'fish',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'small pets',
+        },
+        {
+            link: './page-services.html',
+            label: 'services',
+        },
+        {
+            link: './page-about-us.html',
+            label: 'about us',
+        },
+    ],
     deal: [
         {
             suffix: 'deals',
@@ -139,36 +170,31 @@ module.exports = {
             desc: 'dog event services',
         },
     ],
-
-    // Content for navbar menu links
-    menuLink: [
+    // Page Services
+    aboutUs: [
         {
-            link: "./shopping-list.html",
-            label: "dogs",
+            label: 'our history',
+            link: './page-single-content.html',
+            path: '/assets/images/card-img-history.jpg',
+            desc: 'our history picture',
         },
         {
-            link: "./shopping-list.html",
-            label: "cats",
+            label: 'mission and values',
+            link: './page-mission-values.html',
+            path: '/assets/images/card-img-mission.jpg',
+            desc: 'mission and values picture',
         },
         {
-            link: "./shopping-list.html",
-            label: "birds",
+            label: 'contact us',
+            link: 'page-single-forms.html',
+            path: '/assets/images/card-img-contact.jpg',
+            desc: 'contact picture',
         },
         {
-            link: "./shopping-list.html",
-            label: "fish",
+            label: 'out team',
+            link: 'page-our-team.html',
+            path: '/assets/images/card-img-team.jpg',
+            desc: 'our team picture',
         },
-        {
-            link: "./shopping-list.html",
-            label: "small pets",
-        },
-        {
-            link: "./page-services.html",
-            label: "services",
-        },
-        {
-            link: "./page-about-us.html",
-            label: "about us",
-        },
-    ]
+    ],
 }
