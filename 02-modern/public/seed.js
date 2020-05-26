@@ -115,4 +115,26 @@ module.exports = {
             discount: false,
         },
     ],
+    service: [
+        {
+            service: 'gromming',
+            path: '/assets/images/card-img-grooming.jpg',
+            desc: 'dog gromming services',
+        },
+        {
+            service: 'adoption',
+            path: '/assets/images/card-img-adoption.jpg',
+            desc: 'dog adoption services',
+        },
+        {
+            service: 'pet wash',
+            path: '/assets/images/card-img-wash.jpg',
+            desc: 'dog pet wash services',
+        },
+        {
+            service: 'events',
+            path: '/assets/images/card-img-events.jpg',
+            desc: 'dog event services',
+        },
+    ],
 }
