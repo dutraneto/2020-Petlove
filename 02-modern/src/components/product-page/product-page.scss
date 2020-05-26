@@ -242,3 +242,16 @@
     color: var(--color-text-grey);
     margin-bottom: 1rem;
 }
+
+.page-single__social-wrap .social-icons a:not(:last-child) {
+    margin-right: 15px;
+}
+
+.page-single__social-wrap .social-icons a svg {
+    fill: var(--color-input);
+}
+
+.social-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
