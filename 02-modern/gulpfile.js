@@ -29,6 +29,7 @@ const input = {
     product: 'src/components/product-page/*.html',
     services: 'src/components/page-services/*.html',
     about: 'src/components/page-about-us/*.html',
+    ourHistory: 'src/components/page-single-content/*.html',
     sassPath: 'src/components/base/index.scss',
     jsPath: 'src/components/**/*.js',
     imgPath: 'src/assets/images/*',
@@ -101,7 +102,14 @@ const buildHtml = () => {
             // ignorePartials: true,
             batch: [input.components],
         },
-        pages = [input.home, input.list, input.product, input.services, input.about]
+        pages = [
+            input.home,
+            input.list,
+            input.product,
+            input.services,
+            input.about,
+            input.ourHistory,
+        ]
     return (
         src(pages)
             .pipe(handlebars(templateData, options))
