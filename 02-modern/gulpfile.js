@@ -32,6 +32,7 @@ const input = {
     ourHistory: 'src/components/page-single-content/*.html',
     missionValues: 'src/components/page-mission-values/*.html',
     ourTeam: 'src/components/page-our-team/*.html',
+    forms: 'src/components/page-single-forms/*.html',
     sassPath: 'src/components/base/index.scss',
     jsPath: 'src/components/**/*.js',
     imgPath: 'src/assets/images/*',
@@ -113,6 +114,7 @@ const buildHtml = () => {
             input.ourHistory,
             input.missionValues,
             input.ourTeam,
+            input.forms,
         ]
     return (
         src(pages)
