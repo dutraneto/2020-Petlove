@@ -197,4 +197,23 @@ module.exports = {
             desc: 'our team picture',
         },
     ],
+    // Page Our Team
+    ourTeam: [
+        {
+            name: 'sergiana freitas',
+            path: '/assets/images/teammate1.jpg',
+        },
+        {
+            name: 'mansi sojitra',
+            path: '/assets/images/teammate2.jpg',
+        },
+        {
+            name: 'juliana bastos',
+            path: '/assets/images/teammate3.jpg',
+        },
+        {
+            name: 'hui yang',
+            path: '/assets/images/teammate4.jpg',
+        },
+    ],
 }
