@@ -1,5 +1,36 @@
 module.exports = {
     petlove: 'Petlove',
+    // Content for navbar menu links
+    menuLink: [
+        {
+            link: './shopping-list.html',
+            label: 'dogs',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'cats',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'birds',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'fish',
+        },
+        {
+            link: './shopping-list.html',
+            label: 'small pets',
+        },
+        {
+            link: './page-services.html',
+            label: 'services',
+        },
+        {
+            link: './page-about-us.html',
+            label: 'about us',
+        },
+    ],
     deal: [
         {
             suffix: 'deals',
@@ -113,6 +144,76 @@ module.exports = {
             desc: 'prisoner costume',
             price: 10.99,
             discount: false,
+        },
+    ],
+
+    // Page Services
+    service: [
+        {
+            service: 'gromming',
+            path: '/assets/images/card-img-grooming.jpg',
+            desc: 'dog gromming services',
+        },
+        {
+            service: 'adoption',
+            path: '/assets/images/card-img-adoption.jpg',
+            desc: 'dog adoption services',
+        },
+        {
+            service: 'pet wash',
+            path: '/assets/images/card-img-wash.jpg',
+            desc: 'dog pet wash services',
+        },
+        {
+            service: 'events',
+            path: '/assets/images/card-img-events.jpg',
+            desc: 'dog event services',
+        },
+    ],
+    // Page Services
+    aboutUs: [
+        {
+            label: 'our history',
+            link: './page-single-content.html',
+            path: '/assets/images/card-img-history.jpg',
+            desc: 'our history picture',
+        },
+        {
+            label: 'mission and values',
+            link: './page-mission-values.html',
+            path: '/assets/images/card-img-mission.jpg',
+            desc: 'mission and values picture',
+        },
+        {
+            label: 'contact us',
+            link: 'page-single-forms.html',
+            path: '/assets/images/card-img-contact.jpg',
+            desc: 'contact picture',
+        },
+        {
+            label: 'out team',
+            link: 'page-our-team.html',
+            path: '/assets/images/card-img-team.jpg',
+            desc: 'our team picture',
+        },
+    ],
+    // Page Our Team
+    ourTeam: [
+        {
+            name: 'sergiana freitas',
+            path: '/assets/images/teammate1.jpg',
+        },
+        {
+            name: 'mansi sojitra',
+            path: '/assets/images/teammate2.jpg',
+        },
+        {
+            name: 'juliana bastos',
+            path: '/assets/images/teammate3.jpg',
+        },
+        {
+            name: 'hui yang',
+            path: '/assets/images/teammate4.jpg',
         },
     ],
 }

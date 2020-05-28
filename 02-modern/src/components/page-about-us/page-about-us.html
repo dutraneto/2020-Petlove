@@ -1,0 +1,24 @@
+{{> base/head title="Page our history"}}
+{{> header/header bgStamp="bg-stamp-green"}}
+
+<main class="u-mb-sm">
+    <section class="page-aboutus u-mx-md">
+        <article class="page-aboutus__container u-box-shadow u-pd-sm">
+            <header class="page-article">
+                <div class="page-article__heading u-mb-sm">
+                    <h2 class="u-mb-0">about us</h2>
+                    <hr class="hr w-10">
+                </div>
+            </header>
+            <div class="page-aboutus__wrap">
+                {{#each aboutUs}}
+                {{> page-about-us-card/page-about-us-card path=path desc=desc label=label link=link}}
+                {{/each}}
+            </div>
+        </article>
+    </section>
+
+    {{> subscribe/subscribe}}
+</main>
+
+{{> footer/footer }}

@@ -4,15 +4,13 @@
         <span class="fa fa-close" aria-hidden="true"></span>
     </a>
     <ul class="navbar__items">
-        <li class="navbar__items-item"><a href="./shopping-list.html">dogs</a></li>
-        <li class="navbar__items-item"><a href="./shopping-list.html">cats</a></li>
-        <li class="navbar__items-item"><a href="./shopping-list.html">birds</a></li>
-        <li class="navbar__items-item"><a href="./shopping-list.html">fish</a></li>
-        <li class="navbar__items-item"><a href="./shopping-list.html">small pets</a></li>
-        <li class="navbar__items-item"><a href="page-services.html">services</a></li>
-        <li class="navbar__items-item"><a href="./page-about-us.html">about us</a></li>
+        <!-- data coming from ./seed.js -->
+        {{#each menuLink}}
+        {{> navbar-menu-links/navbar-menu-links link=link label=label}}
+        {{/each}}
+
         <li class="navbar__items-item">
-            <a href=""><img src="./assets/images/bag-icon.png" alt="Image bag" /></a>
+            <a href="./"><img src="./assets/images/bag-icon.png" alt="Image bag" /></a>
         </li>
     </ul>
 </nav>

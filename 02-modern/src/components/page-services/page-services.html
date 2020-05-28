@@ -1,0 +1,25 @@
+{{> base/head title="Services"}}
+{{> header/header bgStamp="bg-stamp-green"}}
+
+<main class="u-mb-sm">
+    <section class="page-services u-mx-md">
+        <article class="page-services__container u-box-shadow u-pd-sm">
+            <header class="page-article">
+                <div class="page-article__heading u-mb-sm">
+                    <h2 class="u-mb-0">services</h2>
+                    <hr class="hr w-10">
+                </div>
+            </header>
+            <div class="page-services__wrap">
+                <!-- data coming from ./seed.js -->
+                {{#each service}}
+                {{> page-services-card/page-services-card path=path desc=desc service=service}}
+                {{/each}}
+            </div>
+        </article>
+    </section>
+
+    {{> subscribe/subscribe}}
+</main>
+
+{{> footer/footer }}
