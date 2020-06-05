@@ -35,6 +35,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/bat-dog-toy.png',
+            width: '350',
+            height: '370',
             desc: 'bat dog toy',
             price: 1.99,
             discount: true,
@@ -43,6 +45,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/dog-food.png',
+            width: '350',
+            height: '370',
             desc: 'savory wet dog food',
             price: 4.99,
             discount: true,
@@ -51,6 +55,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/cat-tunnel.png',
+            width: '350',
+            height: '370',
             desc: 'cat tunnel',
             price: 10.99,
             discount: true,
@@ -59,6 +65,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/ewok-hallowen-costume.png',
+            width: '350',
+            height: '370',
             desc: 'ewok hallowen costume',
             price: 15.99,
             discount: true,
@@ -67,6 +75,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/batman-hallowen-costume.png',
+            width: '350',
+            height: '370',
             desc: 'batman costume',
             price: 15.99,
             discount: true,
@@ -75,6 +85,8 @@ module.exports = {
         {
             suffix: 'deals',
             path: 'content/images/superman-hallowen-costume.png',
+            width: '350',
+            height: '370',
             desc: 'superman costume',
             price: 10.99,
             discount: true,
@@ -85,13 +97,17 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/elephant-costume.png',
-            desc: 'elepahnt costume',
-            price: 16.9,
+            width: '262',
+            height: '276',
+            desc: 'elephant costume',
+            price: 16.99,
             discount: false,
         },
         {
             suffix: 'pets',
             path: 'content/images/super-girl-costume.png',
+            width: '262',
+            height: '276',
             desc: 'supergirl costume',
             price: 10.99,
             discount: false,
@@ -99,6 +115,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/wonder-woman-costume.png',
+            width: '262',
+            height: '276',
             desc: 'wonder woman costume',
             price: 12.99,
             discount: false,
@@ -106,6 +124,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/super-rat-costume.png',
+            width: '262',
+            height: '276',
             desc: 'super rat costume',
             price: 9.99,
             discount: false,
@@ -113,6 +133,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/witch-costume.png',
+            width: '262',
+            height: '276',
             desc: 'witch costume',
             price: 9.99,
             discount: false,
@@ -120,6 +142,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/dragon-costume.png',
+            width: '262',
+            height: '276',
             desc: 'dragon costume',
             price: 16.99,
             discount: false,
@@ -127,6 +151,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/marmaid-costume.png',
+            width: '262',
+            height: '276',
             desc: 'mermaid costume',
             price: 12.99,
             discount: false,
@@ -134,6 +160,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/tortilla-costume.png',
+            width: '262',
+            height: '276',
             desc: 'tortilla costume',
             price: 18.99,
             discount: false,
@@ -141,6 +169,8 @@ module.exports = {
         {
             suffix: 'pets',
             path: 'content/images/prisioner-costume.png',
+            width: '262',
+            height: '276',
             desc: 'prisoner costume',
             price: 10.99,
             discount: false,

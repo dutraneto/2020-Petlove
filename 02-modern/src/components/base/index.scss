@@ -10,16 +10,24 @@
 @import '../header/header';
 // navbar
 @import '../navbar/navbar';
+@import '../navbar/navbar';
 // catalog
 @import '../home-catalog/home-catalog';
 // subscribe
 @import '../subscribe/subscribe';
 // footer
 @import '../footer/footer';
+@import '../social-icons/social-icons';
 
+// Home card
+@import '../card/card';
+
+@import '../page-article-info/page-article-info';
 // Pages
-// shopping-list, product-page, page-services ...
+// Shop List
 @import '../shopping-list/shopping-list';
+@import '../shopping-list-catalog/shopping-list-catalog';
+
 @import '../product-page/product-page';
 @import '../page-services/page-services';
 @import '../page-about-us/page-about-us';

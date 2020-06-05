@@ -94,30 +94,6 @@
         @include respond(phone) {
             margin-bottom: 3rem;
         }
-
-        .social-icons {
-            a {
-                &:not(:last-child) {
-                    margin-right: 1.5rem;
-                }
-            }
-
-            svg {
-                width: 1.5rem;
-                height: 1.5rem;
-
-                &:hover {
-                    opacity: 0.7;
-                }
-            }
-
-            &--facebook,
-            &--instagram,
-            &--twitter,
-            &--gplus {
-                fill: var(--color-text-grey-medium);
-            }
-        }
     }
 
     &__logo {
