@@ -5,6 +5,20 @@
         margin-left: 5px;
         width: calc(100% - 22% - (5px));
 
+        &-wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
         #show {
             font-size: 0.75rem;
             margin: 1rem 0;
