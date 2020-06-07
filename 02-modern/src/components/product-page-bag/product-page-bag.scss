@@ -19,18 +19,6 @@
             }
         }
 
-        &-addbag {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-
-            &__btn-wrap {
-                display: flex;
-                align-items: center;
-            }
-        }
-
         &-price {
             display: inline-block;
             font-family: var(--font-unna);
