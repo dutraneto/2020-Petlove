@@ -1,0 +1,15 @@
+.product-page {
+    &__bag {
+        &-more {
+            width: 100%;
+
+            a {
+                display: block;
+                font-family: var(--font-lato);
+                font-size: 14px;
+                color: var(--color-text-grey);
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

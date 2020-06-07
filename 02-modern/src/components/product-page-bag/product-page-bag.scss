@@ -26,17 +26,5 @@
             color: var(--color-text-grey-dark);
             margin-left: 1.5rem;
         }
-
-        &-more {
-            width: 100%;
-
-            a {
-                display: block;
-                font-family: var(--font-lato);
-                font-size: 14px;
-                color: var(--color-text-grey);
-                margin-bottom: 1rem;
-            }
-        }
     }
 }
