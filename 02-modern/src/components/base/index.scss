@@ -10,7 +10,7 @@
 @import '../header/header';
 // navbar
 @import '../navbar/navbar';
-@import '../navbar/navbar';
+@import '../navbar-menu-links/navbar-menu-links';
 // catalog
 @import '../home-catalog/home-catalog';
 // subscribe
@@ -30,7 +30,12 @@
 @import '../shopping-list-filters/shopping-list-filters';
 @import '../shopping-list-catalog/shopping-list-catalog';
 
+// Product Page
 @import '../product-page/product-page';
+@import '../product-page-bag/product-page-bag';
+@import '../product-page-item-description/product-page-item-description';
+@import '../product-page-item-selector/product-page-item-selector';
+
 @import '../page-services/page-services';
 @import '../page-about-us/page-about-us';
 @import '../page-single-content/page-single-content';
