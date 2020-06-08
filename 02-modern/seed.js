@@ -180,21 +180,25 @@ module.exports = {
     // Page Services
     service: [
         {
+            suffix: 'services',
             service: 'gromming',
             path: '/assets/images/card-img-grooming.jpg',
             desc: 'dog gromming services',
         },
         {
+            suffix: 'services',
             service: 'adoption',
             path: '/assets/images/card-img-adoption.jpg',
             desc: 'dog adoption services',
         },
         {
+            suffix: 'services',
             service: 'pet wash',
             path: '/assets/images/card-img-wash.jpg',
             desc: 'dog pet wash services',
         },
         {
+            suffix: 'services',
             service: 'events',
             path: '/assets/images/card-img-events.jpg',
             desc: 'dog event services',
@@ -203,24 +207,28 @@ module.exports = {
     // Page Services
     aboutUs: [
         {
+            suffix: 'aboutus',
             label: 'our history',
             link: './page-single-content.html',
             path: '/assets/images/card-img-history.jpg',
             desc: 'our history picture',
         },
         {
+            suffix: 'aboutus',
             label: 'mission and values',
             link: './page-mission-values.html',
             path: '/assets/images/card-img-mission.jpg',
             desc: 'mission and values picture',
         },
         {
+            suffix: 'aboutus',
             label: 'contact us',
             link: 'page-single-forms.html',
             path: '/assets/images/card-img-contact.jpg',
             desc: 'contact picture',
         },
         {
+            suffix: 'aboutus',
             label: 'out team',
             link: 'page-our-team.html',
             path: '/assets/images/card-img-team.jpg',
