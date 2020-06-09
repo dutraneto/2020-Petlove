@@ -2,6 +2,11 @@
     &-card {
         width: calc(50%);
         height: auto;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
         &__fig {
             padding: 15px;
             display: flex;
@@ -17,6 +22,9 @@
             -o-object-fit: cover;
             object-fit: cover;
             transition: filter 2s ease;
+            @include respond(phone) {
+                filter: brightness(100%);
+            }
         }
         &__caption {
             position: absolute;

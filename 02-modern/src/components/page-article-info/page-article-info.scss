@@ -15,6 +15,11 @@
                     letter-spacing: 1px;
                     color: var(--color-text-grey-medium);
 
+                    @include respond(phone) {
+                        font-size: 10px;
+                        letter-spacing: 0;
+                    }
+
                     &:hover {
                         filter: opacity(70%);
                     }

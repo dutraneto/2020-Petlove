@@ -16,7 +16,9 @@
                 cursor: -moz-zoom-in;
                 cursor: -webkit-zoom-in;
                 cursor: zoom-in;
-
+                @include respond(phone) {
+                    height: auto;
+                }
                 &:hover {
                     transform: scale(1.5);
                 }

@@ -1,6 +1,14 @@
 .shopping-list {
     &__category {
         width: 22%;
+
+        @include respond(laptop) {
+            width: 30%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
     &__label {
@@ -15,6 +23,13 @@
         font-family: var(--font-Lato);
         font-size: 14px;
         text-transform: capitalize;
+
+        p,
+        .label-item {
+            @include respond(phone) {
+                font-size: 18px !important;
+            }
+        }
     }
 
     .btn-arrow {
@@ -102,12 +117,19 @@
                     }
                 }
                 display: none;
+
+                @include respond(phone) {
+                    font-size: 18px !important;
+                }
             }
         }
     }
 
     .label-item {
         line-height: 0;
+        @include respond(phone) {
+            font-size: 18px !important;
+        }
     }
 
     .checkbox-model {
@@ -119,6 +141,10 @@
         right: 1px;
         background-color: transparent;
         cursor: pointer;
+
+        @include respond(phone) {
+            font-size: 18px !important;
+        }
     }
 
     /* search input */
@@ -139,6 +165,10 @@
         padding-left: 5px;
         padding-top: 10px;
         width: 100%;
+
+        @include respond(phone) {
+            font-size: 18px !important;
+        }
 
         &::-webkit-input-placeholder {
             visibility: hidden;
@@ -162,6 +192,12 @@
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
+
+        .search-label {
+            @include respond(phone) {
+                font-size: 18px !important;
+            }
+        }
     }
 
     /* input range */
@@ -189,6 +225,10 @@
                 font-family: var(--font-lato);
                 font-size: 14px;
                 margin-bottom: 10px;
+
+                @include respond(phone) {
+                    font-size: 16px !important;
+                }
             }
         }
     }
@@ -218,6 +258,11 @@
             background-color: var(--color-input);
             cursor: pointer;
             z-index: 10;
+
+            @include respond(phone) {
+                width: 1rem;
+                height: 1rem;
+            }
         }
 
         &::-moz-range-thumb {
@@ -252,6 +297,12 @@
             flex-direction: column;
             -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
+
+            label {
+                @include respond(phone) {
+                    font-size: 18px !important;
+                }
+            }
         }
     }
 
@@ -273,6 +324,11 @@
         -webkit-border-radius: 0;
         -webkit-appearance: none;
         -moz-appearance: none;
+
+        @include respond(phone) {
+            font-size: 18px !important;
+            height: 3.75rem;
+        }
 
         &:hover {
             color: var(--color-white);

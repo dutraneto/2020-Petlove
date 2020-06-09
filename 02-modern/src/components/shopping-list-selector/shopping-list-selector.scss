@@ -18,6 +18,10 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         background: url(../images/filled-down-arrow.png) 100% / 7% no-repeat;
+
+        @include respond(phone) {
+            font-size: 18px !important;
+        }
     }
 }
 

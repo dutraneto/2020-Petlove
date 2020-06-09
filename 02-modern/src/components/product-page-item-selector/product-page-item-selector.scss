@@ -6,6 +6,10 @@
             width: 80%;
             justify-content: space-between;
 
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
             &-mysize {
                 font-size: 0.75rem;
                 font-family: var(--font-lato);

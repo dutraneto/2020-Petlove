@@ -27,6 +27,10 @@
     width: calc(50%);
     height: auto;
 
+    @include respond(phone) {
+        width: 100%;
+    }
+
     a {
         display: block;
         width: 100%;
@@ -40,6 +44,10 @@
         width: 100%;
         height: auto;
         position: relative;
+        @include respond(phone) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__caption {
         position: absolute;
@@ -53,6 +61,15 @@
         width: 70%;
         text-align: center;
         transition: all 1s ease;
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+        @include respond(phone) {
+            background-color: var(--color-background);
+            filter: opacity(90%);
+            font-size: 1.5rem;
+        }
     }
     &__img {
         width: 100%;
@@ -62,6 +79,10 @@
         filter: brightness(50%);
         transition: filter 2s ease;
         &:hover {
+            filter: brightness(100%);
+        }
+
+        @include respond(phone) {
             filter: brightness(100%);
         }
     }
@@ -81,4 +102,13 @@
     text-align: center;
     font-weight: 400;
     text-transform: capitalize;
+
+    @include respond(tab-port) {
+        max-width: 70%;
+    }
+
+    @include respond(phone) {
+        font-size: 9vw;
+        max-width: 100%;
+    }
 }

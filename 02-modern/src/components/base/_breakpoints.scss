@@ -26,7 +26,7 @@
     }
 
     @if $breakpoint == laptop {
-        @media only screen and (max-width: 75em) {
+        @media only screen and (max-width: 76.25em) {
             @content;
         } // 1200px
     }

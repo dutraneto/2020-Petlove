@@ -12,6 +12,10 @@
                 letter-spacing: 1.2px;
                 margin-bottom: 1rem;
                 color: var(--color-text-grey-dark);
+
+                @include respond(tab-port) {
+                    font-size: 2rem;
+                }
             }
 
             p {
@@ -22,6 +26,11 @@
                 color: var(--color-text-grey-medium);
                 margin-bottom: 1.5rem;
                 width: 80%;
+                @include respond(tab-port) {
+                    font-size: 0.75rem;
+                    margin-bottom: 1rem;
+                }
+
             }
         }
     }

@@ -6,9 +6,18 @@
             align-items: center;
             margin-bottom: 1.5rem;
 
+            @include respond(tab-port) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+
             &__btn-wrap {
                 display: flex;
                 align-items: center;
+
+                @include respond(tab-port) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -26,6 +35,10 @@
         border: none;
         width: 16.25rem;
         height: 3rem;
+
+        @include respond(tab-port) {
+            width: calc(100% - 3rem - 6px);
+        }
 
         &:hover {
             filter: saturate(1.5);
