@@ -1,7 +1,6 @@
 // toggle accordion function for hiding checkboxes
-console.log(window.top.location.pathname)
-if (window.top.location.pathname === '/') {
-    ;(function toggleAccordion() {
+if (window.top.location.pathname === '/shopping-list.html') {
+    (function toggleAccordion() {
         let acc = document.querySelectorAll('.accordion')
         let accordion = Array.from(acc)
         accordion.forEach((element) => {

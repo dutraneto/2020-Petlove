@@ -77,7 +77,7 @@ const buildJs = () => {
                 presets: ['@babel/env'],
             })
         )
-        .pipe(concat(`main.min.js`, { newLine: ';' }))
+        .pipe(concat(`main.min.js`))
         .pipe(uglify())
         .pipe(dest(output.jsPath))
 }

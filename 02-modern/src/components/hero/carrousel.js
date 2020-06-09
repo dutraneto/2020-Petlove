@@ -2,7 +2,6 @@
 * Carrousel slider based on
     https://fooobar.com/questions/17301564/multiple-carousels-on-one-page-not-working-single-carousel-works-great-2nd-carousel-disrupts-first
 */
-console.log(window.top.location.pathname)
 if (window.top.location.pathname === '/') {
     const track = document.querySelector('.hero__carrousel-track')
 
