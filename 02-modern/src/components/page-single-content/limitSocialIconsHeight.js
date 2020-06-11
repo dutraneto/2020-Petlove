@@ -1,4 +1,7 @@
-if (window.top.location.pathname === '/page-single-content.html' || window.top.location.pathname === '/page-mission-values.html') {
+if (
+    window.top.location.pathname === '/page-single-content.html' ||
+    window.top.location.pathname === '/page-mission-values.html'
+) {
     (function limitSocialIconsHeight() {
         let iconsList = document.getElementsByClassName('page-single__follow-us')[0]
         let subscribe = document.getElementsByClassName('subscribe')[0]
