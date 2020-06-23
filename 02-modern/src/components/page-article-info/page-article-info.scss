@@ -1,0 +1,38 @@
+.page-single {
+    .page-article {
+        &__info {
+            margin-bottom: 3.812rem;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    color: var(--color-text-grey-medium);
+
+                    @include respond(phone) {
+                        font-size: 10px;
+                        letter-spacing: 0;
+                    }
+
+                    &:hover {
+                        filter: opacity(70%);
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 1.875rem;
+                    }
+
+                    span {
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

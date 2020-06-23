@@ -1,6 +1,7 @@
 // base
 @import 'variables';
 @import 'normalize';
+@import 'mixins';
 @import 'breakpoints';
 @import 'base';
 @import 'utils';
@@ -10,20 +11,54 @@
 @import '../header/header';
 // navbar
 @import '../navbar/navbar';
+@import '../navbar-menu-links/navbar-menu-links';
 // catalog
 @import '../home-catalog/home-catalog';
 // subscribe
 @import '../subscribe/subscribe';
 // footer
 @import '../footer/footer';
+// social icons
+@import '../social-icons/social-icons';
+
+// Home card
+@import '../card/card';
 
 // Pages
-// shopping-list, product-page, page-services ...
+// Shop List
 @import '../shopping-list/shopping-list';
+@import '../shopping-list-selector/shopping-list-selector';
+@import '../shopping-list-filters/shopping-list-filters';
+@import '../shopping-list-catalog/shopping-list-catalog';
+
+// Product Page
 @import '../product-page/product-page';
+@import '../product-page-bag/product-page-bag';
+@import '../product-page-item-description/product-page-item-description';
+@import '../product-page-item-selector/product-page-item-selector';
+@import '../product-page-item-add/product-page-item-add';
+@import '../product-page-item-more-details/product-page-item-more-details';
+@import '../product-page-photo/product-page-photo';
+@import '../product-image/product-image';
+
+// Page Services
 @import '../page-services/page-services';
-@import '../page-about-us/page-about-us';
+@import '../page-services-card/page-services-card';
+
+// Page Our History
 @import '../page-single-content/page-single-content';
+@import '../page-article-info/page-article-info';
+
+// Page About Us
+@import '../page-about-us/page-about-us';
+@import '../page-about-us-card/page-about-us-card';
+
+// Page Mission and Values
 @import '../page-mission-values/page-mission-values';
+
+// Page Our Team
 @import '../page-our-team/page-our-team';
+@import '../page-our-team-card/page-our-team-card';
+
+// Page Single Form
 @import '../page-single-forms/page-single-forms';
