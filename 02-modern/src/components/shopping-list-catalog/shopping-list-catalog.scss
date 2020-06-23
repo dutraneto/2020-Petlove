@@ -1,0 +1,47 @@
+.shopping-list {
+    &__catalogue {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: 5px;
+        width: calc(100% - 22% - (5px));
+
+        @include respond(laptop) {
+            width: calc(100% - 30% - (5px));
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &-wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: center;
+            margin-bottom: 1rem;
+
+            @include respond(laptop) {
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+
+        #show {
+            font-size: 0.75rem;
+            margin: 1rem 0;
+            text-align: center;
+            color: var(--color-text-grey);
+            text-transform: uppercase;
+            -webkit-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+        }
+    }
+}

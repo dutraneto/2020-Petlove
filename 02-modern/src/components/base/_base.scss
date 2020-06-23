@@ -53,3 +53,7 @@ li {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
+
+:focus {
+    outline: 3px solid var(--color-box-product);
+}
