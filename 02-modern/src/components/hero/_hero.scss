@@ -2,7 +2,11 @@
 .hero {
     height: 90vh;
     width: 100%;
-    background: #222;
+    background: var(--color-primary);
+
+    @include respond(tab-land) {
+        max-height: 540px;
+    }
 
     &__carrousel {
         position: relative;
@@ -100,6 +104,11 @@
                 margin: 0;
                 margin-bottom: 2rem;
                 width: 80vmin;
+
+                @include respond(phone) {
+                    font-size: 2.25rem;
+                    line-height: 2.5rem;
+                }
             }
 
             .btn {
