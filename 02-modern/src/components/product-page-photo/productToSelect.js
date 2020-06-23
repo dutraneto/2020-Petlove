@@ -1,3 +1,4 @@
+if (window.top.location.pathname === '/product-page') {
 (function productToSelect() {
     const productToSelect = document.getElementsByClassName('img-to-select')
     const selectedProduct = document.getElementById('selected-img')
@@ -9,3 +10,4 @@
         })
     })
 })()
+}

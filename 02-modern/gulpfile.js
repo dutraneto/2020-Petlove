@@ -17,6 +17,7 @@ const sitemap = require('gulp-sitemap')
 
 // import data
 const seed = require('./seed.js')
+const routes = require('./routes.js')
 
 // input files
 const input = {
@@ -77,7 +78,7 @@ const buildJs = () => {
                 presets: ['@babel/env'],
             })
         )
-        .pipe(concat(`main.min.js`, { newLine: ';' }))
+        .pipe(concat(`main.min.js`))
         .pipe(uglify())
         .pipe(dest(output.jsPath))
 }
@@ -100,22 +101,22 @@ const buildCss = () => {
 
 // Compile Templates
 const buildHtml = () => {
-    const templateData = seed,
-        options = {
-            // ignorePartials: true,
-            batch: [input.components],
-        },
-        pages = [
-            input.home,
-            input.list,
-            input.product,
-            input.services,
-            input.about,
-            input.ourHistory,
-            input.missionValues,
-            input.ourTeam,
-            input.forms,
-        ]
+    const templateData = { ...seed, ...routes }
+    const options = {
+        // ignorePartials: true,
+        batch: [input.components],
+    }
+    const pages = [
+        input.home,
+        input.list,
+        input.product,
+        input.services,
+        input.about,
+        input.ourHistory,
+        input.missionValues,
+        input.ourTeam,
+        input.forms,
+    ]
     return (
         src(pages)
             .pipe(handlebars(templateData, options))
@@ -142,6 +143,7 @@ const copy = () => {
         `${input.source}assets/tile-192X192.png`,
         `${input.source}assets/tile-512X512.png`,
         `seed.js`,
+        `routes.js`,
     ]
     return src(sourceFiles).pipe(dest(output.public))
 }
