@@ -109,8 +109,8 @@
 .follow-us {
     &--fixed {
         position: fixed;
-        bottom: 50%;
-        transform: translateY(50%);
+        top: 470px;
+        // transform: translateY(-50%);
         transition: all 0.5s ease-in-out;
     }
     &--absolute {
