@@ -38,6 +38,7 @@
 
     .page-article {
         max-width: 1440px;
+        min-height: 50vh;
         margin-left: auto;
         margin-right: auto;
         margin-top: 4.125rem;
@@ -108,8 +109,7 @@
 .follow-us {
     &--fixed {
         position: fixed;
-        bottom: 50%;
-        transform: translateY(50%);
+        top: 470px;
         transition: all 0.5s ease-in-out;
     }
     &--absolute {
