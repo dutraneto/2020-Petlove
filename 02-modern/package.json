@@ -1,0 +1,44 @@
+{
+    "name": "2019-petlove",
+    "version": "2.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "gulp serve",
+        "dev": "gulp serve",
+        "build": "gulp buildAll"
+    },
+    "browserslist": [
+        "last 3 versions"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marceloglacial/2019-petlove/tree/master/02-modern"
+    },
+    "author": "@dutraneto, @marceloglacial",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.5",
+        "autoprefixer": "^9.7.6",
+        "browser-sync": "^2.26.7",
+        "cssnano": "^4.1.10",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-cache": "^1.1.3",
+        "gulp-cli": "^2.2.0",
+        "gulp-compile-handlebars": "^0.6.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2",
+        "node-sass": "^4.13.1"
+    },
+    "dependencies": {
+        "gulp-sitemap": "^7.6.0"
+    }
+}

@@ -1,0 +1,27 @@
+{{> base/head title="Page our team"}}
+{{> header/header bgStamp="bg-stamp-green"}}
+
+<main class="u-mb-sm">
+    <section class="page-single page-single-team u-pd-sm">
+        <header class="page-article">
+            <div class="page-article__heading">
+                <h6>about us</h6>
+                <h2>our team</h2>
+            </div>
+        </header>
+
+        <aside class="page-single__follow-us follow-us--fixed">
+            {{> social-icons/social-icons}}
+        </aside>
+
+        <div class="team team__wrap">
+            {{#each ourTeam}}
+            {{> page-our-team-card/page-our-team-card path=path name=name}}
+            {{/each}}
+        </div>
+    </section>
+
+    {{> subscribe/subscribe}}
+</main>
+
+{{> footer/footer }}

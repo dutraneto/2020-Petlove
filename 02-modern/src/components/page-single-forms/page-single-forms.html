@@ -1,0 +1,66 @@
+{{> base/head title="Page our history"}}
+{{> header/header bgStamp="bg-stamp-green"}}
+
+<main class="u-mb-sm">
+    <section class="page-single u-mx-md">
+        <article class="page-single__container u-box-shadow u-pd-sm">
+            <header class="page-article">
+                <div class="page-article__heading u-mb-sm">
+                    <h2 class="u-mb-0">contact us</h2>
+                    <hr class="hr w-10">
+                </div>
+            </header>
+            <div class="page-single__wrap">
+                <div class="page-single__heading u-mb-xs">
+                    <h3>We are always ready to cooperate. Write to us and we will contact you.</h3>
+                </div>
+                <div class="page-single__content">
+                    <aside class="page-single__contact-info">
+                        <div class="page-single__email">
+                            <h5>email</h5>
+                            <p>hello@petlove.ca</p>
+                        </div>
+                        <div class="page-single__phone">
+                            <h5>phone</h5>
+                            <p>319-133-1875</p>
+                        </div>
+                        <div class="page-single__address">
+                            <h5>address</h5>
+                            <p>25 Boehm Cape Suite 549 Ottawa, ON</p>
+                        </div>
+                        <div class="page-single__social">
+                            <h5>social</h5>
+                            <div class="page-single__social-wrap">
+                                {{> social-icons/social-icons}}
+                            </div>
+                    </aside>
+                    <aside class="page-single__contact-form">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="page-single__name">name</label>
+                                <input id="page-single__name" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="page-single__email">email address</label>
+                                <input id="page-single__email" type="email" class="form-control"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="page-single__message">message</label>
+                                <textarea name="" id="page-single__message" cols="" rows="8" class="form-message"
+                                    required></textarea>
+                            </div>
+                            <button class="page-single__btn">send</button>
+                        </form>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    {{> subscribe/subscribe}}
+
+</main>
+
+{{> footer/footer }}

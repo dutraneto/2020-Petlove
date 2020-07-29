@@ -1,0 +1,45 @@
+{{> base/head title="Page our history"}}
+{{> header/header bgStamp="bg-stamp-green"}}
+
+<main class="u-mb-sm">
+    <section class="page-single u-pd-sm">
+        <header class="page-article">
+            <div class="page-article__heading">
+                <h6>about us</h6>
+                <h2>Our History</h2>
+            </div>
+
+            <!-- Time to read, comments, share -->
+            {{> page-article-info/page-article-info}}
+
+            <div class="page-article__about">
+                <h3>What is the story behind your brand?</h3>
+                <p>Petlove's story began in 2014 when 4 friends decided to open their veterinary clinic and pet
+                    product store in Ottawa. In order to more efficiently serve customers who went to their clinic
+                    just to buy products, in 2017 they created the first version of e-commerce that would one day
+                    become one of the most complete online petshop.
+                </p>
+                <p>In 2016, Premium Pets (our first name) became Petlove, a change that helped us make it clear
+                    that our greatest motivator is the love of pets. In 2018, from several conversations with
+                    petlovers throughout Ottawa, we adopted a new brand positioning with the objective of
+                    transmitting better what we believe, as well as a closer relationship with our clients: parents
+                    and mothers of pets.
+                    Today, it has been more than 3 years transforming the love of animals into inspiration to bring
+                    joy to thousands of families. Our thanks to all who are part of our pack!</p>
+            </div>
+            <figure class="page-article__img">
+                <img src="./assets/images/cat-dog.jpg" loading="lazy" width="881" height="518"
+                    alt="picture cat and dog getting along">
+            </figure>
+        </header>
+        <aside class="page-single__follow-us follow-us--fixed">
+
+            {{> social-icons/social-icons}}
+
+        </aside>
+    </section>
+
+    {{> subscribe/subscribe}}
+</main>
+
+{{> footer/footer }}

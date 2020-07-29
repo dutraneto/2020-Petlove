@@ -1,0 +1,46 @@
+/*
+//////////////////////////////////////////
+/ CATALOGUE
+*/
+.catalog {
+    max-width: 1440px;
+
+    h2 {
+        @include headingH2;
+    }
+
+    &__deals {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 4rem;
+
+        @include respond(laptop) {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+
+    #show {
+        font-size: 0.75rem;
+        margin: 1rem 0;
+        text-align: center;
+        color: var(--color-text-grey);
+        text-transform: uppercase;
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

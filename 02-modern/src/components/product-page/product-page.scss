@@ -1,0 +1,45 @@
+/*
+//////////////////////////////////////////
+/ Page Product
+*/
+.product-page {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 12rem;
+    margin-bottom: 3.75rem;
+
+    @include respond(phone) {
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        padding-top: 15rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        @include respond(phone) {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }
+}
+
+.page-single {
+    &__social-wrap {
+        .social-icons {
+            a {
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+
+                svg {
+                    fill: var(--color-input);
+                }
+            }
+        }
+    }
+}

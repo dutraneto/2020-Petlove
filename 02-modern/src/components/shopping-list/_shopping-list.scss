@@ -1,0 +1,66 @@
+/*
+//////////////////////////////////////////
+/ SHOPPING LIST LAYOUT
+*/
+.shopping-list {
+    margin-top: 1.8rem;
+
+    &__products {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__wrap {
+        margin-bottom: 2rem;
+    }
+
+    &__pages {
+        a {
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__seq {
+        font-family: var(--font-monserrat);
+        padding: 0.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
+            li {
+                color: var(--color-text-grey);
+                font-size: 0.75rem;
+                font-weight: 700;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

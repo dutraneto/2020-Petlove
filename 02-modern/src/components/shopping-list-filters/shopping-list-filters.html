@@ -1,0 +1,208 @@
+<!-- filters -->
+<aside class="shopping-list__category">
+    <form action="#">
+        <div class="shopping-list__wrap">
+            <label class="shopping-list__label" for="">Category</label>
+            <!-- food -->
+            <div class="shopping-list__controls" id="">
+                <div class="accordion">
+                    <p class="">Food</p>
+                    <button class=" btn-arrow"></button>
+                </div>
+
+                <div class="panel">
+                    <div class="checkbox-wrap u-mt-sm u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="cookies" type="checkbox" value="">
+                            <label class="checkbox-model" for="cookies"></label>
+                        </div>
+                        <label class="label-item" for="cookies">Cookies</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="can-meats" type="checkbox" value="">
+                            <label class="checkbox-model" for="can-meats"></label>
+                        </div>
+                        <label class="label-item" for="can-meats">Cans Meat</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="snacks" type="checkbox" value="">
+                            <label class="checkbox-model" for="snacks"></label>
+                        </div>
+                        <label class="label-item" for="snacks">Snacks</label>
+                    </div>
+                </div>
+            </div>
+            <!-- toys -->
+            <div class="shopping-list__controls" id="">
+                <div class="accordion">
+                    <p class="">Toys</p>
+                    <button class="btn-arrow"></button>
+                </div>
+                <div class="panel">
+                    <div class="checkbox-wrap u-mt-sm u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="balls" type="checkbox" value="">
+                            <label class="checkbox-model" for="balls"></label>
+                        </div>
+                        <label class="label-item" for="balls">Balls</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="bones" type="checkbox" value="">
+                            <label class="checkbox-model" for="bones"></label>
+                        </div>
+                        <label class="label-item" for="bones">Bones</label>
+                    </div>
+                </div>
+            </div>
+            <!-- clothing -->
+            <div class="shopping-list__controls" id="">
+                <div class="accordion">
+                    <p class="">Clothing</p>
+                    <button class="btn-arrow"></button>
+                </div>
+                <div class="panel">
+                    <div class="checkbox-wrap u-mt-sm u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="tops" type="checkbox" value="">
+                            <label class="checkbox-model" for="tops"></label>
+                        </div>
+                        <label class="label-item" for="tops">Tops</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="costumes" type="checkbox" value="">
+                            <label class="checkbox-model" for="costumes"></label>
+                        </div>
+                        <label class="label-item" for="costumes">Costumes</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="hats" type="checkbox" value="">
+                            <label class="checkbox-model" for="hats"></label>
+                        </div>
+                        <label class="label-item" for="hats">Hats</label>
+                    </div>
+                    <div class="checkbox-wrap u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="collars" type="checkbox" value="">
+                            <label class="checkbox-model" for="collars"></label>
+                        </div>
+                        <label class="label-item" for="collars">Collars</label>
+                    </div>
+                </div>
+            </div>
+            <!-- treats -->
+            <div class="shopping-list__controls" id="">
+                <div class="accordion">
+                    <p class="">Treats</p>
+                    <button class="btn-arrow"></button>
+                </div>
+                <div class="panel">
+                    <div class="checkbox-wrap u-mt-sm u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="dental-floss" type="checkbox" value="">
+                            <label class="checkbox-model" for="dental-floss"></label>
+                        </div>
+                        <label class="label-item" for="dental-floss">Dental Floss</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Accessories -->
+            <div class="shopping-list__controls" id="">
+                <div class="accordion">
+                    <p class="">Accessories</p>
+                    <button class="btn-arrow"></button>
+                </div>
+                <div class="panel">
+                    <div class="checkbox-wrap u-mt-sm u-ml-sm" name="" id="">
+                        <div class="checkbox-control">
+                            <input id="comb" type="checkbox" value="">
+                            <label class="checkbox-model" for="comb"></label>
+                        </div>
+                        <label class="label-item" for="comb">Dog Comb</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- search input -->
+        <div class="shopping-list__wrap">
+            <label class="shopping-list__label" for="search-brand">Brands</label>
+            <div class="shopping-list__content">
+                <input id="search-brand" class="shopping-list__control-search" type="search" placeholder="Search">
+                <label for="search-brand" class="content-label">Search
+                </label>
+            </div>
+        </div>
+        <!-- range input -->
+        <div class="shopping-list__wrap">
+            <label class="shopping-list__label">Price</label>
+            <div class="shopping-list__range">
+                <div class="shopping-list__range-price">
+                    <label for="range-left" class="shopping-list__range-price--left">$ 300</label>
+                    <label for="range-right" class="shopping-list__range-price--right">$ 7200</label>
+                </div>
+                <input id="range-left" class="input-range" type="range" name="amount" multiple step="10" min="0"
+                    max="10000" value="300" oninput="updatePriceLabels()">
+                <input id="range-right" class="input-range" type="range" name="amount" multiple step="10" min="0"
+                    max="10000" value="7200" oninput="updatePriceLabels()">
+            </div>
+        </div>
+        <div class="shopping-list__wrap">
+            <label class="shopping-list__label">Size</label>
+            <div class="shopping-list__sizes-row ">
+                <div class="shopping-list__sizes-col">
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input class="" id="xs" type="checkbox" name="xs">
+                            <label class="checkbox-model" for="xs"></label>
+                        </div>
+                        <label for="xs">XS</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input id="s" type="checkbox" name="s">
+                            <label class="checkbox-model" for="s"></label>
+                        </div>
+                        <label for="s">S</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input id="m" type="checkbox" name="m">
+                            <label class="checkbox-model" for="m"></label>
+                        </div>
+                        <label for="m">M</label>
+                    </div>
+                </div>
+                <div class="shopping-list__sizes-col">
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input id="l" type="checkbox" name="l">
+                            <label class="checkbox-model" for="l"></label>
+                        </div>
+                        <label for="l">L</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input id="xl" type="checkbox" name="xl">
+                            <label class="checkbox-model" for="xl"></label>
+                        </div>
+                        <label for="xl">XL</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <div class="checkbox-control">
+                            <input id="xxl" type="checkbox" name="xxl">
+                            <label class="checkbox-model" for="xxl"></label>
+                        </div>
+                        <label for="xxl">XXL</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shopping-list__wrap">
+            <input type="submit" class="filter-btn" name="" value="reset filter">
+        </div>
+    </form>
+</aside>

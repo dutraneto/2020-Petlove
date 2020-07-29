@@ -1,0 +1,9 @@
+http://127.0.0.1:8000/01-basic/index.html
+http://127.0.0.1:8000/01-basic/shopping-list.html
+http://127.0.0.1:8000/01-basic/product-page.html
+http://127.0.0.1:8000/01-basic/page-about-us.html
+http://127.0.0.1:8000/01-basic/page-mission-values.html
+http://127.0.0.1:8000/01-basic/page-our-team.html
+http://127.0.0.1:8000/01-basic/page-services.html
+http://127.0.0.1:8000/01-basic/page-single-content.html
+http://127.0.0.1:8000/01-basic/page-single-forms.html

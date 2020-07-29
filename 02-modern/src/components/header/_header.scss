@@ -1,0 +1,133 @@
+/*
+//////////////////////////////////////////
+/ HEADER
+*/
+.main-header {
+    position: relative;
+    z-index: 99;
+
+    /* simple nav */
+    .bg-stamp-green {
+        background-image: url(../images/img-menu-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 3px 5px var(--color-text-grey);
+        z-index: 99;
+    }
+
+    .container {
+        background-color: transparent;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        .row {
+            width: 85%;
+            padding: 1.9rem 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            @include respond(tab-land) {
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+
+    @include respond(tab-land) {
+        width: 8.75rem;
+        height: auto;
+    }
+}
+
+/* MENU */
+/* no scrolling on active mobile menu */
+.no-scroll {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-open {
+    display: none;
+    align-self: flex-end;
+
+    @include respond(tab-port) {
+        align-self: center;
+        display: inline-block;
+    }
+
+    &:hover {
+        .fa-bars {
+            color: var(--color-secondary);
+        }
+    }
+
+    .fa-bars {
+        color: var(--color-white);
+        font-size: 24px;
+    }
+}
+
+.menu-close {
+    display: none;
+    align-self: flex-end;
+
+    @include respond(tab-port) {
+        display: inline-block;
+    }
+
+    &:hover {
+        .fa-close {
+            color: var(--color-secondary);
+        }
+    }
+
+    .fa-close {
+        color: var(--color-white);
+        font-size: 24px;
+    }
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.menu-open {
+    @include respond(tab-port) {
+        align-self: center;
+    }
+}
+
+.menu-open,
+.menu-close {
+    @include respond(tab-port) {
+        display: inline-block;
+    }
+}
