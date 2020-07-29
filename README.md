@@ -7,7 +7,7 @@ Front-end Development POC focused on different development approaches.
 
 - <a href="https://www.figma.com/proto/HF1RZ2pjfehOGYsxvVIyCtgh/Petlove-(2019)?node-id=0%3A778&scaling=min-zoom">Figma</a>
 
-## Approaches
+## Development Approaches
 
 - <strong>Basic</strong>
   - XHTML
