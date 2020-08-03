@@ -1,3 +1,9 @@
+import * as S from './styled'
+
 export default function Main() {
-    return <main>Petlove 2020</main>
+    return (
+        <S.Wrapper>
+            <S.Title>Petlove 2020</S.Title>
+        </S.Wrapper>
+    )
 }
