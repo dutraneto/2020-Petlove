@@ -1,7 +1,7 @@
-import { seed } from '../../../seed'
+import { seeds } from './seeds'
 
 export default function handler(req, res) {
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(seed))
+    res.end(JSON.stringify(seeds))
 }

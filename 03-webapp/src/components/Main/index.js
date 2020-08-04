@@ -1,9 +1,12 @@
 import * as S from './styled'
 
-export default function Main() {
+const Main = (props) => {
+    const { title, routes } = props
     return (
         <S.Wrapper>
-            <S.Title>Petlove 2020</S.Title>
+            <S.Title>{title}</S.Title>
         </S.Wrapper>
     )
 }
+
+export default Main
