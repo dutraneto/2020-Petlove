@@ -1,7 +1,7 @@
 import * as S from './styled'
 
 const Main = (props) => {
-    const { title, routes } = props
+    const { title } = props
     return (
         <S.Wrapper>
             <S.Title>{title}</S.Title>
