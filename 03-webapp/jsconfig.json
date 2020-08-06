@@ -1,0 +1,7 @@
+// https://nextjs.org/docs/advanced-features/module-path-aliases
+// tsconfig.json or jsconfig.json
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    }
+}
