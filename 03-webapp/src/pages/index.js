@@ -3,23 +3,20 @@ import React from 'react'
 
 import Main from 'components/Main'
 
-const Home = () => {
-    const [API] = React.useState('http://localhost:3000/api')
-    const [data, setData] = React.useState('')
-
-    // Request endpoint
-    React.useEffect(() => {
-        const fetchAPI = async () => {
-            try {
-                const api = await axios.get(API)
-                setData(api.data[0])
-            } catch (error) {
-                console.log('Could not get requested data')
-            }
-        }
-        fetchAPI()
-    }, [API])
+const Home = (props) => {
+    const [data, setData] = React.useState(props.fetchedData)
     return <Main {...data} />
+}
+
+Home.getInitialProps = async () => {
+    const API = 'http://localhost:3000/api'
+    try {
+        const fetch = await axios.get(API)
+        const fetchedData = fetch.data[0]
+        return { fetchedData }
+    } catch (error) {
+        console.log('Could not get requested data')
+    }
 }
 
 export default Home
