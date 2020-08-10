@@ -26,11 +26,71 @@ export const Navbar = styled.nav`
     `}
 `
 
-export const LinkList = styled.ul``
+export const LinkList = styled.ul`
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
-export const LinkItem = styled.li``
+    ${media.lessThan('tabPort')`
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 70vh;
+            overflow-y: scroll;
+            width: 100%;
+    `}
 
-export const Link = styled.a``
+    ${media.lessThan('phone')`
+        align-items: center;
+    `}
+`
+
+export const LinkItem = styled.li`
+    margin-right: 2em;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+        ${media.lessThan('phone')`
+            margin-right: 0;
+        `}
+
+        ${media.lessThan('tabPort')`
+            margin-bottom: 1rem;
+        `}
+
+        ${media.lessThan('tabLand')`
+            margin-right: 1rem;
+    `}
+    }
+
+
+`
+
+export const Link = styled.a`
+    color: var(--color-white);
+    font-family: var(--font-monserrat);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--color-secondary);
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+`
 
 // &.open {
 //     @include respond(tab-port) {
