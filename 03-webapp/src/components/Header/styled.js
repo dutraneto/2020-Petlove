@@ -13,6 +13,7 @@ export const Container = styled.div`
 `
 
 export const Row = styled.div`
+    position: absolute;
     width: 85%;
     padding: 1.9rem 0;
     display: flex;

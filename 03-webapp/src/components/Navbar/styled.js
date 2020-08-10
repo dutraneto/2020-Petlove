@@ -56,6 +56,7 @@ export const LinkList = styled.ul`
 export const LinkItem = styled.li`
     margin-right: 2em;
     text-transform: uppercase;
+    color: var(--color-white);
 
     &:not(:last-child) {
         ${media.lessThan('phone')`
@@ -75,7 +76,6 @@ export const LinkItem = styled.li`
 `
 
 export const Link = styled.a`
-    color: var(--color-white);
     font-family: var(--font-monserrat);
     font-weight: 500;
     font-size: 0.75rem;
@@ -91,6 +91,8 @@ export const Link = styled.a`
         transition: all 0.3s;
     }
 `
+
+export const ImgCart = styled.img``
 
 // &.open {
 //     @include respond(tab-port) {

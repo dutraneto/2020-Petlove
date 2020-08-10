@@ -17,6 +17,11 @@ function MyApp({ Component, pageProps }) {
                     name='description'
                     content='Project starter for Petlove 2020 using React, NextJs and styled components'
                 />
+
+                <link
+                    href='https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300,500,700|Unna:400,700'
+                    rel='stylesheet'
+                />
             </Head>
             <GlobalStyles />
             <Component {...pageProps} />
