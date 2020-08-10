@@ -3,7 +3,7 @@ import Header from 'components/Header'
 
 const Layout = (props) => (
     <>
-        <Header>{props.title}</Header>
+        <Header {...props}>{props.title}</Header>
         <Main>{props.children}</Main>
         <footer>FOOTER</footer>
     </>
