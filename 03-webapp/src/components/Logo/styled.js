@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import customMedia from 'styles/customMedia'
+import media from 'styles/breakpoints'
 
 export const LogoWrapper = styled.a``
 
@@ -9,7 +9,7 @@ export const Logo = styled.img`
     object-fit: fill;
     transition: all 0.2s;
 
-    ${customMedia.lessThan('tabLand')`
+    ${media.lessThan('tabLand')`
         width: 8.75rem;
         height: auto;
     `}

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import customMedia from 'styled-media-query'
+import media from 'styles/breakpoints'
 
 export const Navbar = styled.nav`
-    ${customMedia.lessThan('tabPort')`
+    ${media.lessThan('tabPort')`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -19,7 +19,7 @@ export const Navbar = styled.nav`
         box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
     `}
 
-    ${customMedia.lessThan('phone')`
+    ${media.lessThan('phone')`
         left: 0;
         width: 100%;
         align-items: center;

@@ -4,22 +4,20 @@ import Link from 'next/link'
 
 const Navbar = (props) => {
     const { routes } = props
-    console.log(routes)
-    const NavItems = routes.map((route) => {
-        return (
-            <S.LinkItem>
-                <Link href='./' passHref>
-                    <S.Link>{route['label']}</S.Link>
-                </Link>
-            </S.LinkItem>
-        )
-    })
 
-    return (
-        <S.LinkList>
-            <NavItems />
-        </S.LinkList>
-    )
+    const NavItems = routes
+        .map((route, index) => {
+            return (
+                <S.LinkItem key={index}>
+                    <Link href='./' as={route.link} passHref>
+                        <S.Link>{route.label.toUpperCase()}</S.Link>
+                    </Link>
+                </S.LinkItem>
+            )
+        })
+        .map((navItem) => navItem)
+
+    return <S.LinkList>{NavItems}</S.LinkList>
 }
 
 export default Navbar

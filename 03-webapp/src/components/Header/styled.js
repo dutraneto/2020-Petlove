@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import customMedia from 'styles/customMedia'
+import media from 'styles/breakpoints'
 
 export const Header = styled.header`
     position: relative;
@@ -19,7 +19,7 @@ export const Row = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    ${customMedia.lessThan('tabPort')`
+    ${media.lessThan('tabPort')`
         padding-top: 2rem;
         padding-bottom: 2rem;
     `}
