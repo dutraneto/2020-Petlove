@@ -7,7 +7,7 @@ const Header = (props) => (
     <S.Header>
         <S.Container>
             <S.Row>
-                <Logo />
+                <Logo path={props.logo} />
                 <Navbar routes={props.routes} />
             </S.Row>
         </S.Container>

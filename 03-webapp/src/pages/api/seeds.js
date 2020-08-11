@@ -1,7 +1,10 @@
 export const seeds = [
     {
         title: 'petlove',
-
+        logo:
+            'https://res.cloudinary.com/duim1pyqp/image/upload/v1597103045/petlove/content/petlove-logo_n4koxa.png',
+        bgImg:
+            'https://res.cloudinary.com/duim1pyqp/image/upload/v1597103045/petlove/content/hero-bg_ktx74n.png',
         routes: [
             {
                 link: '/shopping-list.html',

@@ -1,5 +1,4 @@
 import * as S from './styled'
-
 import Link from 'next/link'
 
 const Navbar = (props) => {
@@ -10,7 +9,7 @@ const Navbar = (props) => {
             return (
                 <S.LinkItem key={index}>
                     <Link href='./' as={route.link} passHref>
-                        <S.Link>{route.label}</S.Link>
+                        <S.Link title={route.label}>{route.label}</S.Link>
                     </Link>
                 </S.LinkItem>
             )
@@ -20,10 +19,11 @@ const Navbar = (props) => {
     return (
         <S.LinkList>
             {NavItems}
-
             <Link href='./' as='' passHref>
-                <S.Link>
-                    <S.ImgCart src='./images/bag-icon.png' alt='Click here to go to shop cart' />
+                <S.Link title='Click on Shop Cart'>
+                    <S.IconWrapper>
+                        <S.IconHandbag />
+                    </S.IconWrapper>
                 </S.Link>
             </Link>
         </S.LinkList>

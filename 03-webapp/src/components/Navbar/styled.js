@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styles/breakpoints'
+import { Handbag } from '@styled-icons/bootstrap/Handbag'
 
 export const Navbar = styled.nav`
     ${media.lessThan('tabPort')`
@@ -92,7 +93,21 @@ export const Link = styled.a`
     }
 `
 
-export const ImgCart = styled.img``
+export const IconWrapper = styled.div.attrs({
+    alt: 'Click here to go to shop cart',
+})`
+    width: 25px;
+    height: 25px;
+`
+
+export const IconHandbag = styled(Handbag)`
+    fill: var(--color-white);
+    transition: all 0.3s;
+
+    &:hover {
+        fill: var(--color-secondary);
+    }
+`
 
 // &.open {
 //     @include respond(tab-port) {

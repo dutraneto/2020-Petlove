@@ -4,7 +4,7 @@ import Hero from 'components/Hero'
 
 const Main = (props) => (
     <S.MainWrapper className='u-mb-sm'>
-        <Hero />
+        <Hero bgImg={props.bgImg} />
 
         <section className='catalog u-m-md'>
             <h2>Deals of the Day</h2>

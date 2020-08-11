@@ -1,6 +1,6 @@
 import * as S from './styled'
 
-const Hero = (props) => {
+const Hero = ({ bgImg }) => {
     return (
         <S.Hero>
             <S.CarrouselWrapper>
@@ -16,13 +16,7 @@ const Hero = (props) => {
                     <S.SlideList>
                         <S.Slide>
                             <S.ImgWrapper>
-                                <S.Img
-                                    src='./images/hero-bg.png'
-                                    loading='lazy'
-                                    width='1440'
-                                    height='700'
-                                    alt='cat on snow image'
-                                ></S.Img>
+                                <S.Img src={bgImg}></S.Img>
                             </S.ImgWrapper>
                         </S.Slide>
                     </S.SlideList>
