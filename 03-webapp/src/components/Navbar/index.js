@@ -1,9 +1,7 @@
 import * as S from './styled'
 import Link from 'next/link'
 
-const Navbar = (props) => {
-    const { routes } = props
-
+const Navbar = ({ routes }) => {
     const NavItems = routes
         .map((route, index) => {
             return (

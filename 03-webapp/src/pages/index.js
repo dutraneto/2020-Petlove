@@ -3,9 +3,16 @@ import React from 'react'
 
 import Layout from 'components/Layout'
 
+import { DataContext } from 'context/DataContext'
+
 const Home = (props) => {
     const [data, setData] = React.useState(props.fetchedData)
-    return <Layout {...data} />
+
+    return (
+        <DataContext.Provider value={data}>
+            <Layout />
+        </DataContext.Provider>
+    )
 }
 
 export async function getStaticProps() {
