@@ -152,6 +152,14 @@ li {
     width: 10%;
 }
 
+.u-d-flex {
+    display: flex;
+}
+
+.u-justify-center {
+    justify-content: center;
+}
+
 `
 
 export default GlobalStyles

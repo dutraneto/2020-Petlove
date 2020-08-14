@@ -94,7 +94,7 @@ export const Link = styled.a`
 `
 
 export const IconWrapper = styled.div.attrs({
-    alt: 'Click here to go to shop cart',
+    title: 'Click here to go to shop cart',
 })`
     width: 25px;
     height: 25px;

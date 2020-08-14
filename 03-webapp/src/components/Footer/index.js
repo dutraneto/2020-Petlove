@@ -1,5 +1,7 @@
 import * as S from './styled'
 
+import SocialIcons from 'components/SocialIcons'
+
 const Footer = (props) => {
     return (
         <S.Footer>
@@ -23,10 +25,11 @@ const Footer = (props) => {
                     <S.HR className='hr u-mb-sm' />
                 </S.HRWrapper>
 
-                <S.SocialWrapper>
+                <S.SocialWrapper className='u-mb-sm'>
                     <S.FollowUs>
                         <S.Info>follow us</S.Info>
-                        <div>SOCIAL ICONS</div>
+                        {/* Social Icons */}
+                        <SocialIcons />
                     </S.FollowUs>
                     <S.LogoWrapper>
                         <S.LogoLink href='#'>
