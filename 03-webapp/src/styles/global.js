@@ -44,7 +44,6 @@ html {
 }
 
 body {
-    background-color: var(--color-background);
     font-family: var(--font-lato);
     line-height: 1.6;
     color: var(--color-text-grey-dark);
