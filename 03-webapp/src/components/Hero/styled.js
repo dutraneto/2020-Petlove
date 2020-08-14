@@ -153,6 +153,39 @@ export const Img = styled.img.attrs({
     object-fit: cover;
 `
 
-export const CarrouselNavigation = styled.div``
+export const CarrouselNavigation = styled.div`
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    bottom: 5%;
+    margin-left: 7vw;
 
-export const NavigationBtn = styled.button``
+    .current-slide {
+        background-color: var(--color-text-grey-lighter);
+    }
+`
+
+export const NavigationBtn = styled.button`
+    width: 0.75rem;
+    height: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--color-text-grey-lighter);
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-text-grey-lighter);
+    }
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+`

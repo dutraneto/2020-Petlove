@@ -17,10 +17,17 @@ const Hero = ({ bgImg }) => {
                         <S.Slide>
                             <S.ImgWrapper>
                                 <S.Img src={bgImg}></S.Img>
+                                <S.Img src={bgImg}></S.Img>
+                                <S.Img src={bgImg}></S.Img>
                             </S.ImgWrapper>
                         </S.Slide>
                     </S.SlideList>
                 </S.Carrousel>
+                <S.CarrouselNavigation>
+                    <S.NavigationBtn />
+                    <S.NavigationBtn />
+                    <S.NavigationBtn />
+                </S.CarrouselNavigation>
             </S.CarrouselWrapper>
         </S.Hero>
     )
