@@ -1,6 +1,7 @@
 import * as S from './styled'
 
 import Hero from 'components/Hero'
+import Subscribe from 'components/Subscribe'
 
 import { DataContext } from 'context/DataContext'
 import { useContext } from 'react'
@@ -26,6 +27,8 @@ const Main = () => {
                     <hr className='hr' />
                 </div>
             </section>
+
+            <Subscribe />
         </S.MainWrapper>
     )
 }
