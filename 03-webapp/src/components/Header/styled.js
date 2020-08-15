@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import media from 'styles/breakpoints'
 
+import { Menu } from '@styled-icons/ionicons-solid/Menu'
+
 export const Header = styled.header`
     position: relative;
     z-index: 99;
@@ -24,6 +26,30 @@ export const Row = styled.div`
         padding-top: 2rem;
         padding-bottom: 2rem;
     `}
+`
+
+export const IconMenuWrapper = styled.div.attrs({
+    title: 'Click to open menu',
+})`
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-self: flex-end;
+
+    ${media.lessThan('tabPort')`
+        display: inline-block;
+        align-self: center;
+    `}
+`
+
+export const IconMenu = styled(Menu)`
+    color: var(--color-white);
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-secondary);
+    }
 `
 
 /* simple nav */

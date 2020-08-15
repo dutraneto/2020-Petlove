@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styles/breakpoints'
 import { Handbag } from '@styled-icons/bootstrap/Handbag'
 
-export const Navbar = styled.nav`
+export const NavbarWrapper = styled.nav`
     ${media.lessThan('tabPort')`
         display: flex;
         flex-direction: column;
@@ -70,7 +70,7 @@ export const LinkItem = styled.li`
 
         ${media.lessThan('tabLand')`
             margin-right: 1rem;
-    `}
+        `}
     }
 
 
@@ -84,6 +84,10 @@ export const Link = styled.a`
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+
+    ${media.lessThan('phone')`
+            font-size: 1rem;
+        `}
 
     &:hover {
         color: var(--color-secondary);

@@ -15,16 +15,18 @@ const Navbar = ({ routes }) => {
         .map((navItem) => navItem)
 
     return (
-        <S.LinkList>
-            {NavItems}
-            <Link href='./' as='' passHref>
-                <S.Link title='Click on Shop Cart'>
-                    <S.IconWrapper>
-                        <S.IconHandbag />
-                    </S.IconWrapper>
-                </S.Link>
-            </Link>
-        </S.LinkList>
+        <S.NavbarWrapper>
+            <S.LinkList>
+                {NavItems}
+                <Link href='./' as='' passHref>
+                    <S.Link title='Click on Shop Cart'>
+                        <S.IconWrapper>
+                            <S.IconHandbag />
+                        </S.IconWrapper>
+                    </S.Link>
+                </Link>
+            </S.LinkList>
+        </S.NavbarWrapper>
     )
 }
 

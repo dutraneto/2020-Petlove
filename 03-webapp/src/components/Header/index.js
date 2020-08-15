@@ -14,6 +14,9 @@ const Header = (props) => {
                 <S.Row className='u-pos-absolute'>
                     <Logo logo={logo} />
                     <Navbar routes={routes} />
+                    <S.IconMenuWrapper>
+                        <S.IconMenu />
+                    </S.IconMenuWrapper>
                 </S.Row>
             </S.Container>
         </S.Header>
