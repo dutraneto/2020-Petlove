@@ -1,17 +1,8 @@
 import * as S from './styled'
 
-import AwesomeSlider from 'react-awesome-slider'
-import images from './images'
+import Slider from './slider'
 
 const Hero = (props) => {
-    const Slider = () => (
-        <AwesomeSlider>
-            {images.map((imageSrc, index) => {
-                return <S.Img key={index} data-src={imageSrc} />
-            })}
-        </AwesomeSlider>
-    )
-
     return (
         <S.Hero>
             <S.CarrouselWrapper>
