@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from './breakpoints'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -158,6 +159,38 @@ li {
 
 .u-justify-center {
     justify-content: center;
+}
+
+.menu-open {
+    display: none;
+    align-self: flex-end;
+
+    ${media.lessThan('tabPort')`
+        align-self: center;
+        display: inline-block;
+    `}
+
+}
+
+.menu-close {
+    display: none;
+    align-self: flex-end;
+
+    ${media.lessThan('tabPort')`
+        display: inline-block;
+    `}
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 `

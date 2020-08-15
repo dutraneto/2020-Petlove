@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'styles/breakpoints'
 import { Handbag } from '@styled-icons/bootstrap/Handbag'
+import { Close } from '@styled-icons/evaicons-solid/Close'
 
 export const NavbarWrapper = styled.nav`
     ${media.lessThan('tabPort')`
@@ -25,6 +26,13 @@ export const NavbarWrapper = styled.nav`
         width: 100%;
         align-items: center;
     `}
+
+    &.open {
+        ${media.lessThan('tabPort')`
+            transform: translateX(0);
+            transition: all 0.3s ease-in-out;
+        `}
+    }
 `
 
 export const LinkList = styled.ul`
@@ -39,7 +47,6 @@ export const LinkList = styled.ul`
     justify-content: space-between;
 
     ${media.lessThan('tabPort')`
-            margin-top: 2rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -71,11 +78,13 @@ export const LinkItem = styled.li`
         ${media.lessThan('tabLand')`
             margin-right: 1rem;
         `}
+
+        ${media.lessThan('tabPort')`
+            margin-right: 0;
+        `}
     }
 
-
 `
-
 export const Link = styled.a`
     font-family: var(--font-monserrat);
     font-weight: 500;
@@ -113,21 +122,26 @@ export const IconHandbag = styled(Handbag)`
     }
 `
 
-// &.open {
-//     @include respond(tab-port) {
-//         transition: all 0.3s ease-in-out;
-//         transform: translateX(0);
-//     }
-// }
+export const IconMenuWrapper = styled.a.attrs({
+    title: 'Click to close menu',
+})`
+    width: 30px;
+    height: 30px;
+    display: none;
+    align-self: flex-end !important;
 
-// &.close {
-//     @include respond(tab-port) {
-//         transition: all 0.3s ease-in-out;
-//     }
-// }
+    ${media.lessThan('tabPort')`
+        display: inline-block;
+        align-self: center;
+    `}
+`
 
-// a {
-//     @include respond(phone) {
-//         font-size: 1rem;
-//     }
-// }
+export const IconCloseMenu = styled(Close)`
+    color: var(--color-white);
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-secondary);
+    }
+`

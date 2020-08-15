@@ -28,7 +28,7 @@ export const Row = styled.div`
     `}
 `
 
-export const IconMenuWrapper = styled.div.attrs({
+export const IconMenuWrapper = styled.a.attrs({
     title: 'Click to open menu',
 })`
     width: 30px;

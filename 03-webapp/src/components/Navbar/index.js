@@ -1,7 +1,8 @@
 import * as S from './styled'
 import Link from 'next/link'
 
-const Navbar = ({ routes }) => {
+const Navbar = ({ routes, isMenuOpen, setIsMenuOpen, openMenu }) => {
+    const state = isMenuOpen ? 'open' : ''
     const NavItems = routes
         .map((route, index) => {
             return (
@@ -15,8 +16,11 @@ const Navbar = ({ routes }) => {
         .map((navItem) => navItem)
 
     return (
-        <S.NavbarWrapper>
+        <S.NavbarWrapper className={state}>
             <S.LinkList>
+                <S.IconMenuWrapper onClick={openMenu}>
+                    <S.IconCloseMenu />
+                </S.IconMenuWrapper>
                 {NavItems}
                 <Link href='./' as='' passHref>
                     <S.Link title='Click on Shop Cart'>
