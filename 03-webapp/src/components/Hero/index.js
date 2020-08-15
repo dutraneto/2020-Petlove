@@ -1,33 +1,34 @@
 import * as S from './styled'
 
-const Hero = ({ bgImg }) => {
+import AwesomeSlider from 'react-awesome-slider'
+import images from './images'
+
+const Hero = (props) => {
+    const Slider = () => (
+        <AwesomeSlider>
+            {images.map((imageSrc, index) => {
+                return <S.Img key={index} data-src={imageSrc} />
+            })}
+        </AwesomeSlider>
+    )
+
     return (
         <S.Hero>
             <S.CarrouselWrapper>
-                <S.CarrouselBtn className='left' aria-label='left' />
-                <S.CarrouselBtn className='right' aria-label='right' />
                 <S.DescriptionWrapper>
                     <S.Title>cats jackets</S.Title>
                     <S.Description>Protect your buddy during Winter</S.Description>
                     <S.ShopBtn>shop now</S.ShopBtn>
                 </S.DescriptionWrapper>
-
                 <S.Carrousel>
                     <S.SlideList>
                         <S.Slide>
                             <S.ImgWrapper>
-                                <S.Img src={bgImg}></S.Img>
-                                <S.Img src={bgImg}></S.Img>
-                                <S.Img src={bgImg}></S.Img>
+                                <Slider />
                             </S.ImgWrapper>
                         </S.Slide>
                     </S.SlideList>
                 </S.Carrousel>
-                <S.CarrouselNavigation>
-                    <S.NavigationBtn />
-                    <S.NavigationBtn />
-                    <S.NavigationBtn />
-                </S.CarrouselNavigation>
             </S.CarrouselWrapper>
         </S.Hero>
     )

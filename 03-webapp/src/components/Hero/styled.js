@@ -62,7 +62,7 @@ export const DescriptionWrapper = styled.div`
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 7vw;
-    z-index: 1;
+    z-index: 3;
 `
 
 export const Title = styled.p`

@@ -15,7 +15,7 @@ const Header = (props) => {
     return (
         <S.Header>
             <S.Container>
-                <S.Row className='u-pos-absolute'>
+                <S.Row className=''>
                     <Logo logo={logo} />
                     <Navbar
                         routes={routes}
@@ -23,7 +23,6 @@ const Header = (props) => {
                         isMenuOpen={isMenuOpen}
                         openMenu={openMenu}
                     />
-
                     <S.IconMenuWrapper onClick={openMenu} className='menu-open'>
                         <S.IconMenu />
                     </S.IconMenuWrapper>
