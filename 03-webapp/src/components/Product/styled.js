@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styles/breakpoints'
 
-export const ProductWrapper = styled.figure`
+export const ProductItem = styled.li`
     min-width: 33.333333%;
     height: auto;
     -webkit-transition: all 0.3s ease;
@@ -19,15 +19,13 @@ export const ProductWrapper = styled.figure`
     }
 `
 
+export const ProductWrapper = styled.figure``
+
 export const ProductLink = styled.a`
     display: block;
 `
 
-export const ProductImg = styled.img.attrs({
-    loading: 'lazy',
-    width: '350',
-    height: '370',
-})`
+export const ProductImg = styled.img`
     max-width: 100%;
     height: auto;
     -o-object-fit: cover;

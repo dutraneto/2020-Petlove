@@ -36,7 +36,7 @@ export const seeds = [
             },
         ],
 
-        deal: [
+        deals: [
             {
                 suffix: 'deals',
                 path:
@@ -46,7 +46,7 @@ export const seeds = [
                 desc: 'bat dog toy',
                 price: 1.99,
                 discount: true,
-                discountAmount: 20,
+                discountAmount: 10,
             },
             {
                 suffix: 'deals',
@@ -68,7 +68,7 @@ export const seeds = [
                 desc: 'cat tunnel',
                 price: 10.99,
                 discount: true,
-                discountAmount: 20,
+                discountAmount: 25,
             },
             {
                 suffix: 'deals',
@@ -104,7 +104,7 @@ export const seeds = [
                 discountAmount: 20,
             },
         ],
-        pet: [
+        pets: [
             {
                 suffix: 'pets',
                 path: 'content/images/elephant-costume.png',

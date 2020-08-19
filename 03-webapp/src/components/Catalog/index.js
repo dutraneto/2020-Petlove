@@ -1,20 +1,13 @@
 import * as S from './styled'
 
-import Product from 'components/Product'
+import ProductList from 'components/ProductList'
 
 const Catalog = () => {
     return (
         <S.CatalogWrapper className='u-m-md'>
             <S.CatalogTitle>Deals of the Day</S.CatalogTitle>
 
-            <S.Deals>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-            </S.Deals>
+            <ProductList />
 
             <S.CatalogShow className='u-pd-sm'>
                 <hr className='hr' />

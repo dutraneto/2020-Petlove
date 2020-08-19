@@ -16,7 +16,8 @@
     "styled-components": "^5.1.1",
     "styled-icons": "^10.15.0",
     "styled-media-query": "^2.1.2",
-    "swr": "^0.3.0"
+    "swr": "^0.3.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1"

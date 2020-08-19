@@ -1,19 +1,30 @@
 import * as S from './styled'
 
-const Product = () => {
+const Product = (props) => {
+    const { desc, discount, discountAmount, path, price, suffix, width, height } = props
+
+    const priceWithDiscount = (discount ? price - (price * discountAmount) / 100 : price).toFixed(2)
+
     return (
-        <S.ProductWrapper className='deals'>
-            <S.ProductLink href=''>
-                <S.ProductImg
-                    src='https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/bat-dog-toy_mrylbb.png'
-                    alt=''
-                />
-                <S.ProductDescription>
-                    <S.ProductTitle>Bat Dog</S.ProductTitle>
-                    <S.ProductPrice>1.99</S.ProductPrice>
-                </S.ProductDescription>
-            </S.ProductLink>
-        </S.ProductWrapper>
+        <S.ProductItem className={suffix}>
+            <S.ProductWrapper>
+                <S.ProductLink href=''>
+                    <S.ProductImg
+                        src={path}
+                        alt={desc}
+                        loading='lazy'
+                        width={width}
+                        height={height}
+                    />
+                    <S.ProductDescription>
+                        <S.ProductTitle>{desc}</S.ProductTitle>
+                        <S.ProductPrice>
+                            ${priceWithDiscount} ({discount ? discountAmount : null}% off)
+                        </S.ProductPrice>
+                    </S.ProductDescription>
+                </S.ProductLink>
+            </S.ProductWrapper>
+        </S.ProductItem>
     )
 }
 
