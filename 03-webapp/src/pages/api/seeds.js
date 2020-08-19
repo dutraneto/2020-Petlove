@@ -39,7 +39,8 @@ export const seeds = [
         deal: [
             {
                 suffix: 'deals',
-                path: 'content/images/bat-dog-toy.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/bat-dog-toy_mrylbb.png',
                 width: '350',
                 height: '370',
                 desc: 'bat dog toy',
@@ -49,7 +50,8 @@ export const seeds = [
             },
             {
                 suffix: 'deals',
-                path: 'content/images/dog-food.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/dog-food_fs1upo.png',
                 width: '350',
                 height: '370',
                 desc: 'savory wet dog food',
@@ -59,7 +61,8 @@ export const seeds = [
             },
             {
                 suffix: 'deals',
-                path: 'content/images/cat-tunnel.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550363/petlove/content/cat-tunnel_w78omz.png',
                 width: '350',
                 height: '370',
                 desc: 'cat tunnel',
@@ -69,7 +72,8 @@ export const seeds = [
             },
             {
                 suffix: 'deals',
-                path: 'content/images/ewok-hallowen-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/ewok-hallowen-costume_ortqac.png',
                 width: '350',
                 height: '370',
                 desc: 'ewok hallowen costume',
@@ -79,7 +83,8 @@ export const seeds = [
             },
             {
                 suffix: 'deals',
-                path: 'content/images/batman-hallowen-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/batman-hallowen-costume_ymrwmc.png',
                 width: '350',
                 height: '370',
                 desc: 'batman costume',
@@ -89,7 +94,8 @@ export const seeds = [
             },
             {
                 suffix: 'deals',
-                path: 'content/images/superman-hallowen-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/superman-hallowen-costume_ojd6lk.png',
                 width: '350',
                 height: '370',
                 desc: 'superman costume',

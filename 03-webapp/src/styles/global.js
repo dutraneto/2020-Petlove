@@ -627,6 +627,17 @@ li {
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0); } }
 
+    /* products */
+    .pets {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .deals {
+      padding: 30px 0;
+        margin-bottom: 3.5rem;
+        text-align: center;
+    }
 `
 
 export default GlobalStyles
