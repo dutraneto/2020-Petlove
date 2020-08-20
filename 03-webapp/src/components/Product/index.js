@@ -19,7 +19,8 @@ const Product = (props) => {
                     <S.ProductDescription>
                         <S.ProductTitle>{desc}</S.ProductTitle>
                         <S.ProductPrice>
-                            ${priceWithDiscount} ({discount ? discountAmount : null}% off)
+                            ${priceWithDiscount}{' '}
+                            {discount ? '(' + discountAmount + '% off' + ')' : null}
                         </S.ProductPrice>
                     </S.ProductDescription>
                 </S.ProductLink>

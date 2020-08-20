@@ -36,7 +36,7 @@ export const seeds = [
             },
         ],
 
-        deals: [
+        products: [
             {
                 suffix: 'deals',
                 path:
@@ -103,11 +103,10 @@ export const seeds = [
                 discount: true,
                 discountAmount: 20,
             },
-        ],
-        pets: [
             {
                 suffix: 'pets',
-                path: 'content/images/elephant-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/elephant-costume_jzrgqj.png',
                 width: '262',
                 height: '276',
                 desc: 'elephant costume',
@@ -116,7 +115,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/super-girl-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/super-girl-costume_jph9ta.png',
                 width: '262',
                 height: '276',
                 desc: 'supergirl costume',
@@ -125,7 +125,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/wonder-woman-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550361/petlove/content/wonder-woman-costume_xoqoq5.png',
                 width: '262',
                 height: '276',
                 desc: 'wonder woman costume',
@@ -134,7 +135,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/super-rat-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/super-rat-costume_xybkax.png',
                 width: '262',
                 height: '276',
                 desc: 'super rat costume',
@@ -143,7 +145,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/witch-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550361/petlove/content/witch-costume_ta0w5o.png',
                 width: '262',
                 height: '276',
                 desc: 'witch costume',
@@ -152,7 +155,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/dragon-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/dragon-costume_ghavxx.png',
                 width: '262',
                 height: '276',
                 desc: 'dragon costume',
@@ -161,7 +165,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/marmaid-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/marmaid-costume_ptarh6.png',
                 width: '262',
                 height: '276',
                 desc: 'mermaid costume',
@@ -170,7 +175,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/tortilla-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/tortilla-costume_in1sya.png',
                 width: '262',
                 height: '276',
                 desc: 'tortilla costume',
@@ -179,7 +185,8 @@ export const seeds = [
             },
             {
                 suffix: 'pets',
-                path: 'content/images/prisioner-costume.png',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/prisioner-costume_o6wa6z.png',
                 width: '262',
                 height: '276',
                 desc: 'prisoner costume',
