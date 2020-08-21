@@ -3,10 +3,10 @@ import { v1 as uuidv1 } from 'uuid'
 
 import Product from 'components/Product'
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, visible }) => {
     return (
         <ProductListWrapper>
-            {products.map((product, id) => {
+            {products.slice(0, visible).map((product, id) => {
                 product.id = uuidv1()
                 return <Product {...product} key={product.id} />
             })}
