@@ -9,16 +9,10 @@ const ProductListWrapper = styled.ul`
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-top: 4rem;
-
-    ${media.lessThan('desktop')`
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        `}
 `
 
 export default ProductListWrapper

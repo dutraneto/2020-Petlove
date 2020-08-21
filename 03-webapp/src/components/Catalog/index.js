@@ -7,17 +7,14 @@ import { useState, useContext } from 'react'
 
 const Catalog = () => {
     const { products } = useContext(DataContext)
+
     // Set quantity of products to show initially
-    const [visible, setVisible] = useState(3)
+    const initialValue = 3
+    const [visible, setVisible] = useState(initialValue)
 
     // Should filter only products with big deals (with discount)
     const onlyProductsWithDiscountApplied = products.filter((productWith) => productWith.discount)
-
-    // Show all products with big deals
-    const showAll = (e) => {
-        e.preventDefault()
-        setVisible(onlyProductsWithDiscountApplied.length)
-    }
+    console.log(onlyProductsWithDiscountApplied)
 
     return (
         <S.CatalogWrapper className='u-m-md'>
@@ -29,7 +26,16 @@ const Catalog = () => {
                 {visible < onlyProductsWithDiscountApplied.length && (
                     <>
                         <hr className='hr' />
-                        <S.Show onClick={showAll}>show all</S.Show>
+                        <S.Show onClick={() => setVisible(onlyProductsWithDiscountApplied.length)}>
+                            show all
+                        </S.Show>
+                        <hr className='hr' />
+                    </>
+                )}
+                {visible > initialValue && (
+                    <>
+                        <hr className='hr' />
+                        <S.Show onClick={() => setVisible(initialValue)}>show less</S.Show>
                         <hr className='hr' />
                     </>
                 )}
