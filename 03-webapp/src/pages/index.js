@@ -16,10 +16,12 @@ const Home = (props) => {
 }
 
 export async function getStaticProps() {
-    const API = 'http://localhost:3000/api'
+    const localAPI = 'http://localhost:3000/api'
+    const webAPI = 'https://testapi.io/api/dutraneto/petlove/v1'
+    const URL = webAPI || localAPI
     try {
-        const fetch = await axios.get(API)
-        const fetchedData = await fetch.data[0]
+        const fetcher = await axios.get(URL).then((res) => res.data)
+        const fetchedData = await fetcher[0]
         return { props: { fetchedData } }
     } catch (error) {
         console.log('Could not get requested data')
