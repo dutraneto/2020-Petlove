@@ -37,72 +37,72 @@ export const seeds = [
         ],
 
         products: [
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/bat-dog-toy_mrylbb.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'bat dog toy',
-            //     price: 1.99,
-            //     discount: true,
-            //     discountAmount: 10,
-            // },
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/dog-food_fs1upo.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'savory wet dog food',
-            //     price: 4.99,
-            //     discount: true,
-            //     discountAmount: 20,
-            // },
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550363/petlove/content/cat-tunnel_w78omz.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'cat tunnel',
-            //     price: 10.99,
-            //     discount: true,
-            //     discountAmount: 25,
-            // },
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/ewok-hallowen-costume_ortqac.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'ewok hallowen costume',
-            //     price: 15.99,
-            //     discount: true,
-            //     discountAmount: 20,
-            // },
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/batman-hallowen-costume_ymrwmc.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'batman costume',
-            //     price: 15.99,
-            //     discount: true,
-            //     discountAmount: 20,
-            // },
-            // {
-            //     suffix: 'deals',
-            //     path:
-            //         'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/superman-hallowen-costume_ojd6lk.png',
-            //     width: '350',
-            //     height: '370',
-            //     desc: 'superman costume',
-            //     price: 10.99,
-            //     discount: true,
-            //     discountAmount: 20,
-            // },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/bat-dog-toy_mrylbb.png',
+                width: '350',
+                height: '370',
+                desc: 'bat dog toy',
+                price: 1.99,
+                discount: true,
+                discountAmount: 10,
+            },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550359/petlove/content/dog-food_fs1upo.png',
+                width: '350',
+                height: '370',
+                desc: 'savory wet dog food',
+                price: 4.99,
+                discount: true,
+                discountAmount: 20,
+            },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550363/petlove/content/cat-tunnel_w78omz.png',
+                width: '350',
+                height: '370',
+                desc: 'cat tunnel',
+                price: 10.99,
+                discount: true,
+                discountAmount: 25,
+            },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/ewok-hallowen-costume_ortqac.png',
+                width: '350',
+                height: '370',
+                desc: 'ewok hallowen costume',
+                price: 15.99,
+                discount: true,
+                discountAmount: 20,
+            },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/batman-hallowen-costume_ymrwmc.png',
+                width: '350',
+                height: '370',
+                desc: 'batman costume',
+                price: 15.99,
+                discount: true,
+                discountAmount: 20,
+            },
+            {
+                suffix: 'deals',
+                path:
+                    'https://res.cloudinary.com/duim1pyqp/image/upload/v1596550360/petlove/content/superman-hallowen-costume_ojd6lk.png',
+                width: '350',
+                height: '370',
+                desc: 'superman costume',
+                price: 10.99,
+                discount: true,
+                discountAmount: 20,
+            },
             {
                 suffix: 'pets',
                 path:

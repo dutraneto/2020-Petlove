@@ -14,7 +14,6 @@ const Catalog = () => {
 
     // Should filter only products with big deals (with discount)
     const onlyProductsWithDiscountApplied = products.filter((productWith) => productWith.discount)
-    console.log(onlyProductsWithDiscountApplied)
 
     return (
         <S.CatalogWrapper className='u-m-md'>

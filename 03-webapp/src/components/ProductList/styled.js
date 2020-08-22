@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styles/breakpoints'
 
-const ProductListWrapper = styled.ul`
+export const ProductListWrapper = styled.ul`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -15,4 +15,9 @@ const ProductListWrapper = styled.ul`
     margin-top: 4rem;
 `
 
-export default ProductListWrapper
+export const NoProductsAvailable = styled.p`
+    font-size: 16px;
+    color: var(--color-text-grey-medium);
+    line-height: 21px;
+    text-align: center;
+`
