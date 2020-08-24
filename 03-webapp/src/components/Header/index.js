@@ -7,7 +7,7 @@ import { DataContext } from 'context/DataContext'
 import { useContext, useState } from 'react'
 
 const Header = (props) => {
-    const { logo, routes } = useContext(DataContext)
+    const { routes } = useContext(DataContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const openMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -16,7 +16,7 @@ const Header = (props) => {
         <S.Header>
             <S.Container>
                 <S.Row className=''>
-                    <Logo logo={logo} />
+                    <Logo logo='/images/petlove-logo.png' />
                     <Navbar
                         routes={routes}
                         setIsMenuOpen={setIsMenuOpen}

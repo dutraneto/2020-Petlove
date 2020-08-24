@@ -5,27 +5,28 @@ import Layout from 'components/Layout'
 
 import { DataContext } from 'context/DataContext'
 
-const Home = (props) => {
-    const [data, setData] = React.useState(props.fetchedData)
+const URL = 'https://testapi.io/api/dutraneto/petlove/v1'
 
-    return (
-        <DataContext.Provider value={data}>
-            <Layout />
-        </DataContext.Provider>
-    )
-}
+const fetcher = (URL) => axios.get(URL).then((res) => res.data[0])
 
 export async function getStaticProps() {
-    const localAPI = 'http://localhost:3000/api'
-    const webAPI = 'https://testapi.io/api/dutraneto/petlove/v1'
-    const URL = webAPI || localAPI
     try {
-        const fetcher = await axios.get(URL).then((res) => res.data)
-        const fetchedData = await fetcher[0]
-        return { props: { fetchedData } }
+        const initialProps = await fetcher(URL)
+        return { props: { initialProps } }
     } catch (error) {
         console.log('Could not get requested data')
     }
+}
+
+const Home = ({ initialProps }) => {
+    if (Object.keys(initialProps).length === 0)
+        return <h3 className='u-pd-sm u-m-md'>Loading...</h3>
+
+    return (
+        <DataContext.Provider value={initialProps}>
+            <Layout />
+        </DataContext.Provider>
+    )
 }
 
 export default Home

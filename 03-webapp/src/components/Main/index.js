@@ -8,11 +8,9 @@ import { DataContext } from 'context/DataContext'
 import { useContext } from 'react'
 
 const Main = () => {
-    const { bgImg } = useContext(DataContext)
-
     return (
         <S.MainWrapper className='u-mb-sm'>
-            <Hero bgImg={bgImg} />
+            <Hero />
 
             <Catalog />
 
