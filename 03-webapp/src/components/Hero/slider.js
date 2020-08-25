@@ -13,7 +13,7 @@ const Slider = () => (
         interval={5000}
     >
         {images.map((image, index) => {
-            return <Img key={index} data-src={image.src} />
+            return <Img key={index} data-src={image.src} alt={image.desc} />
         })}
     </AutoplaySlider>
 )

@@ -145,7 +145,6 @@ export const Img = styled.img.attrs({
     loading: 'lazy',
     width: '1440',
     height: '700',
-    alt: 'Cat playing on snow',
 })`
     width: 100%;
     height: 100%;
