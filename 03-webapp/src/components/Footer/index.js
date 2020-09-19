@@ -1,8 +1,12 @@
 import * as S from './styled'
+import Button from 'components/Button'
 
 import SocialIcons from 'components/SocialIcons'
 
 const Footer = (props) => {
+    
+    const buttonStyle = 'btn-signup'
+
     return (
         <S.Footer>
             <S.FooterWrapper className='u-pd-sm'>
@@ -49,7 +53,7 @@ const Footer = (props) => {
                                         pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
                                         required
                                     />
-                                    <S.SignupBtn>&rarr;</S.SignupBtn>
+                                    <Button buttonStyle={buttonStyle}>&rarr;</Button>
                                 </S.SignupWrapper>
                             </S.SignupWrapper>
                         </S.ContactForm>

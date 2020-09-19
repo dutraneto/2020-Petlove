@@ -93,28 +93,6 @@ export const Description = styled.h1`
     `}
 `
 
-export const ShopBtn = styled.a`
-    color: var(--color-white);
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.8rem 2.2rem;
-    background-color: transparent;
-    border: 2px solid var(--color-white);
-    cursor: pointer;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    letter-spacing: 2px;
-
-    &:hover {
-        background-color: var(--color-white);
-        color: currentColor;
-    }
-`
-
 export const Carrousel = styled.div`
     overflow: hidden;
     position: relative;

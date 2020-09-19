@@ -81,6 +81,80 @@ li {
     outline: 3px solid var(--color-box-product);
 }
 
+/* BUTTONS */
+.btn-shop {
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.8rem 2.2rem;
+    border: 2px solid var(--color-white);
+    letter-spacing: 2px;
+    &:hover {
+        background-color: var(--color-white);
+        color: currentColor;
+    }
+}
+
+.btn-showAll {
+    display: block;
+    border: none;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-text-grey);
+    width: 100%;
+    padding: 1rem;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-subscribe {
+    width: 9.6rem;
+    min-height: 2.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    background-color: var(--color-white);
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+    color: #a99f8c;
+    letter-spacing: 1px;
+
+    &:hover {
+        -webkit-filter: opacity(0.9);
+        filter: opacity(0.9);
+    }
+
+    ${media.lessThan('phone')`
+        width: 100%;
+    `}
+}
+
+.btn-signup {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 16px;
+    border: none;
+    background-color: #0d0d0d;
+    border: 1px solid var(--color-text-grey-lighter);
+    border-left: none;
+    color: var(--color-white);
+    position: absolute;
+    right: 1.5rem;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    ${media.lessThan('tabPort')`
+        right: 0;
+        top: 0;
+    `}
+}
+
 /* UTILS */
 .u-m-md {
     margin: 5rem auto 5rem auto !important;

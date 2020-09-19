@@ -66,31 +66,3 @@ export const FormControl = styled.input`
         margin: 0 0 15px 0;
     `}
 `
-
-export const SubscribeBtn = styled.button`
-    width: 9.6rem;
-    min-height: 2.75rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border: none;
-    background-color: var(--color-white);
-    -ms-flex-item-align: stretch;
-    -ms-grid-row-align: stretch;
-    align-self: stretch;
-    cursor: pointer;
-    color: #a99f8c;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-
-    &:hover {
-        -webkit-filter: opacity(0.9);
-        filter: opacity(0.9);
-    }
-
-    ${media.lessThan('phone')`
-        width: 100%;
-    `}
-`

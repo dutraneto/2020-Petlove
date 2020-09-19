@@ -27,25 +27,3 @@ export const CatalogTitle = styled.h2`
 `
 
 export const CatalogShow = styled.div``
-
-export const Show = styled.button`
-    display: block;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 0.75rem;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--color-text-grey);
-    text-transform: uppercase;
-    -webkit-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    cursor: pointer;
-    width: 100%;
-    padding: 1rem;
-
-    &:hover {
-        opacity: 0.8;
-    }
-`

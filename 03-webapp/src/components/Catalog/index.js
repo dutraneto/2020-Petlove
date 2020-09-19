@@ -1,5 +1,7 @@
 import * as S from './styled'
 
+import Button from 'components/Button'
+
 import ProductList from 'components/ProductList'
 
 import { DataContext } from 'context/DataContext'
@@ -11,6 +13,9 @@ const Catalog = () => {
     // Set quantity of products to show initially
     const initialValue = 3
     const [visible, setVisible] = useState(initialValue)
+
+    // Btn Style
+    const buttonStyle = 'btn-showAll'
 
     // Should filter only products with big deals (with discount)
     const onlyProductsWithDiscountApplied = products.filter((productWith) => productWith.discount)
@@ -25,16 +30,21 @@ const Catalog = () => {
                 {visible < onlyProductsWithDiscountApplied.length && (
                     <>
                         <hr className='hr' />
-                        <S.Show onClick={() => setVisible(onlyProductsWithDiscountApplied.length)}>
+                        <Button
+                            buttonStyle={buttonStyle}
+                            onClick={() => setVisible(onlyProductsWithDiscountApplied.length)}
+                        >
                             show all
-                        </S.Show>
+                        </Button>
                         <hr className='hr' />
                     </>
                 )}
                 {visible > initialValue && (
                     <>
                         <hr className='hr' />
-                        <S.Show onClick={() => setVisible(initialValue)}>show less</S.Show>
+                        <Button buttonStyle={buttonStyle} onClick={() => setVisible(initialValue)}>
+                            show less
+                        </Button>
                         <hr className='hr' />
                     </>
                 )}

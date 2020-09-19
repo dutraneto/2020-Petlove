@@ -175,26 +175,3 @@ export const SignupControl = styled.input`
     background-color: var(--color-white);
     color: var(--color-primary);
 `
-
-export const SignupBtn = styled.button`
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 16px;
-    border: none;
-    background-color: #0d0d0d;
-    border: 1px solid var(--color-text-grey-lighter);
-    border-left: none;
-    cursor: pointer;
-    color: var(--color-white);
-    position: absolute;
-    right: 1.5rem;
-
-    &:hover {
-        opacity: 0.8;
-    }
-
-    ${media.lessThan('tabPort')`
-        right: 0;
-        top: 0;
-    `}
-`
