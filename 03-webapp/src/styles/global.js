@@ -116,7 +116,7 @@ li {
     font-size: 0.75rem;
     font-weight: 700;
     border: none;
-    background-color: var(--color-white);
+    background-color: var(--color-white) !important;
     -ms-flex-item-align: stretch;
     -ms-grid-row-align: stretch;
     align-self: stretch;
@@ -138,7 +138,7 @@ li {
     height: 2.8rem;
     font-size: 16px;
     border: none;
-    background-color: #0d0d0d;
+    background-color: #0d0d0d !important;
     border: 1px solid var(--color-text-grey-lighter);
     border-left: none;
     color: var(--color-white);

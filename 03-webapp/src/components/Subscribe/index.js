@@ -2,8 +2,7 @@ import * as S from './styled'
 import Button from 'components/Button'
 
 const Subscribe = () => {
-
-    const buttonStyle = "btn-subscribe"
+    const buttonStyle = 'btn-subscribe'
 
     return (
         <S.SubscribeWrapper className='u-pd-sm'>

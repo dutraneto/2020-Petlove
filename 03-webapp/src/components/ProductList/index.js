@@ -3,7 +3,7 @@ import { v1 as uuidv1 } from 'uuid'
 
 import Product from 'components/Product'
 
-const ProductList = ({ products, visible }) => {
+const ProductList = ({ products, visibleItems }) => {
     if (products === undefined || products.length == 0)
         return (
             <S.NoProductsAvailable>
@@ -12,7 +12,7 @@ const ProductList = ({ products, visible }) => {
         )
     return (
         <S.ProductListWrapper>
-            {products.slice(0, visible).map((product, id) => {
+            {products.slice(0, visibleItems).map((product, id) => {
                 product.id = uuidv1()
                 return <Product {...product} key={product.id} />
             })}

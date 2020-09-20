@@ -11,8 +11,8 @@ const Catalog = () => {
     const { products } = useContext(DataContext)
 
     // Set quantity of products to show initially
-    const initialValue = 3
-    const [visible, setVisible] = useState(initialValue)
+    const showOnlyThreeItems = 3
+    const [showAll, setShowAll] = useState(false)
 
     // Btn Style
     const buttonStyle = 'btn-showAll'
@@ -20,34 +20,21 @@ const Catalog = () => {
     // Should filter only products with big deals (with discount)
     const onlyProductsWithDiscountApplied = products.filter((productWith) => productWith.discount)
 
+    const allItems = onlyProductsWithDiscountApplied.length
+
     return (
         <S.CatalogWrapper className='u-m-md'>
             <S.CatalogTitle>Deals of the Day</S.CatalogTitle>
-
-            <ProductList products={onlyProductsWithDiscountApplied} visible={visible} />
-
+            <ProductList
+                products={onlyProductsWithDiscountApplied}
+                visibleItems={showAll ? allItems : showOnlyThreeItems}
+            />
             <S.CatalogShow className='u-pd-sm'>
-                {visible < onlyProductsWithDiscountApplied.length && (
-                    <>
-                        <hr className='hr' />
-                        <Button
-                            buttonStyle={buttonStyle}
-                            onClick={() => setVisible(onlyProductsWithDiscountApplied.length)}
-                        >
-                            show all
-                        </Button>
-                        <hr className='hr' />
-                    </>
-                )}
-                {visible > initialValue && (
-                    <>
-                        <hr className='hr' />
-                        <Button buttonStyle={buttonStyle} onClick={() => setVisible(initialValue)}>
-                            show less
-                        </Button>
-                        <hr className='hr' />
-                    </>
-                )}
+                <hr className='hr' />
+                <Button buttonStyle={buttonStyle} onClick={() => setShowAll(!showAll)}>
+                    show {showAll ? 'less' : 'all'}
+                </Button>
+                <hr className='hr' />
             </S.CatalogShow>
         </S.CatalogWrapper>
     )
